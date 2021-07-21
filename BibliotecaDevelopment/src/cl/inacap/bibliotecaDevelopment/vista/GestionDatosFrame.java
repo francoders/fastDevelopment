@@ -52,6 +52,7 @@ public class GestionDatosFrame extends javax.swing.JFrame {
         setTitle("Gestión de Datos");
 
         jPanel1.setBackground(new java.awt.Color(39, 151, 212));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         flechaBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/flecha_img.png"))); // NOI18N
         flechaBtn.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -59,33 +60,12 @@ public class GestionDatosFrame extends javax.swing.JFrame {
                 flechaBtnMouseClicked(evt);
             }
         });
+        jPanel1.add(flechaBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 14, 72, 74));
 
-        jLabel1.setFont(new java.awt.Font("Microsoft YaHei Light", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Gestion de Datos");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(flechaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(237, 237, 237)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(flechaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(92, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(339, 46, 514, 66));
 
         jPanel2.setBackground(new java.awt.Color(51, 51, 51));
 
@@ -113,11 +93,21 @@ public class GestionDatosFrame extends javax.swing.JFrame {
         autorBtn.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         autorBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/autor_img.png"))); // NOI18N
         autorBtn.setText("  Autor");
+        autorBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                autorBtnActionPerformed(evt);
+            }
+        });
 
         categoriaBtn.setBackground(new java.awt.Color(44, 115, 162));
         categoriaBtn.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         categoriaBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/categoria_img.png"))); // NOI18N
         categoriaBtn.setText("  Categoria");
+        categoriaBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                categoriaBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -159,6 +149,11 @@ public class GestionDatosFrame extends javax.swing.JFrame {
         trabajadorBtn.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         trabajadorBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/trabajador_img.png"))); // NOI18N
         trabajadorBtn.setText("  Trabajador");
+        trabajadorBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                trabajadorBtnActionPerformed(evt);
+            }
+        });
 
         distribuidorBtn.setBackground(new java.awt.Color(44, 115, 162));
         distribuidorBtn.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
@@ -191,7 +186,7 @@ public class GestionDatosFrame extends javax.swing.JFrame {
                 .addComponent(trabajadorBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(42, 42, 42)
                 .addComponent(distribuidorBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(72, Short.MAX_VALUE))
+                .addContainerGap(81, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -208,7 +203,7 @@ public class GestionDatosFrame extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -226,7 +221,10 @@ public class GestionDatosFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_idiomaBtnActionPerformed
 
     private void distribuidorBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_distribuidorBtnActionPerformed
-        // TODO add your handling code here:
+        // TODO: DistribuidorFrame
+        DistribuidorFrame distribuidorFrame = new DistribuidorFrame();
+        distribuidorFrame.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_distribuidorBtnActionPerformed
 
     private void libroBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_libroBtnActionPerformed
@@ -242,6 +240,26 @@ public class GestionDatosFrame extends javax.swing.JFrame {
         principalFrame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_flechaBtnMouseClicked
+
+    private void autorBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_autorBtnActionPerformed
+        // TODO: AutorFrame
+        AutorFrame autorFrame = new AutorFrame();
+        autorFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_autorBtnActionPerformed
+
+    private void categoriaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoriaBtnActionPerformed
+        // TODO: CategoriaFrame
+        CategoriaFrame categoriaFrame = new CategoriaFrame();
+        categoriaFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_categoriaBtnActionPerformed
+
+    private void trabajadorBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_trabajadorBtnActionPerformed
+        // TODO: Trabajador
+        TrabajadorFrame trabajadorFrame = new TrabajadorFrame();
+        trabajadorFrame.setVisible(true);
+        this.dispose();    }//GEN-LAST:event_trabajadorBtnActionPerformed
 
     /**
      * @param args the command line arguments

@@ -169,8 +169,8 @@ public class IdiomaFrame extends javax.swing.JFrame {
 
     private void flecha_volverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_flecha_volverMouseClicked
         // TODO: FLECHA VOLVER
-        GestionDatosFrame gestionDatosFrame = new GestionDatosFrame();
-        gestionDatosFrame.setVisible(true);
+        GestionDatosFrame datosFrame = new GestionDatosFrame();
+        datosFrame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_flecha_volverMouseClicked
 
