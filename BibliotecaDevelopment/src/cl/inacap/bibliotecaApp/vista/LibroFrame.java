@@ -5,9 +5,9 @@ import cl.inacap.bilbiotecaApp.controlador.ControladorLibro;
 
 
 
-public class LibroVista extends javax.swing.JFrame{
+public class LibroFrame extends javax.swing.JFrame{
     LibroDAO dao = new LibroDAO();
-    public LibroVista(){
+    public LibroFrame(){
         initComponents();
         this.setLocationRelativeTo(null);
         dao.buscarIdioma(cbxIdioma);
@@ -415,7 +415,7 @@ public class LibroVista extends javax.swing.JFrame{
     }//GEN-LAST:event_cbxEditorialActionPerformed
 
     public static void main(String args[]){
-       LibroVista l = new LibroVista();
+       LibroFrame l = new LibroFrame();
        ControladorLibro con = new ControladorLibro(l);
        l.setVisible(true);
        l.setLocationRelativeTo(null);

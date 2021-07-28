@@ -14,7 +14,7 @@ import cl.inacap.bilbiotecaApp.controlador.ControladorDistribuidor;
 public class IngresoVentas extends javax.swing.JFrame {
 
     /**
-     * Creates new form Principal
+     * Creates new form PrincipalFrame
      */
     public IngresoVentas() {
         initComponents();
@@ -197,7 +197,7 @@ public class IngresoVentas extends javax.swing.JFrame {
     }//GEN-LAST:event_panelCompraMouseClicked
 
     private void btnBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBackMouseClicked
-         Principal principal = new Principal();
+         PrincipalFrame principal = new PrincipalFrame();
         principal.setVisible(true);
         this.dispose();
         

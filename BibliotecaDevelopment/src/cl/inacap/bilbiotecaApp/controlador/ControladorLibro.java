@@ -8,7 +8,7 @@ package cl.inacap.bilbiotecaApp.controlador;
 import cl.inacap.bibliotecaApp.modelo.Conexion;
 import cl.inacap.bibliotecaApp.modelo.Libro;
 import cl.inacap.bibliotecaApp.modelo.LibroDAO;
-import cl.inacap.bibliotecaApp.vista.LibroVista;
+import cl.inacap.bibliotecaApp.vista.LibroFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
@@ -28,14 +28,14 @@ import javax.swing.table.DefaultTableModel;
 public class ControladorLibro implements ActionListener{
     LibroDAO dao = new LibroDAO();
     Libro l = new Libro();
-    LibroVista libroVista = new LibroVista();
+    LibroFrame libroVista = new LibroFrame();
     Connection con;
     Conexion conectar = new Conexion();
     PreparedStatement ps;
     ResultSet rs;
     DefaultTableModel modelo = new DefaultTableModel();
 
-    public ControladorLibro(LibroVista l){
+    public ControladorLibro(LibroFrame l){
         this.libroVista = l;
         this.libroVista.btnListar.addActionListener(this);
         this.libroVista.btnActualizar.addActionListener(this);

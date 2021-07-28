@@ -17,7 +17,7 @@ import cl.inacap.bilbiotecaApp.controlador.ControladorIdioma;
 public class IngresoDatos extends javax.swing.JFrame {
 
     /**
-     * Creates new form Principal
+     * Creates new form PrincipalFrame
      */
     public IngresoDatos() {
         initComponents();
@@ -316,7 +316,7 @@ public class IngresoDatos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void panelLibroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelLibroMouseClicked
-       LibroVista libro = new LibroVista();
+       LibroFrame libro = new LibroFrame();
        libro.setVisible(true);
        this.dispose();
        
@@ -355,7 +355,7 @@ public class IngresoDatos extends javax.swing.JFrame {
     }//GEN-LAST:event_panelCategoriaMouseClicked
 
     private void btnBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBackMouseClicked
-        Principal principal = new Principal();
+        PrincipalFrame principal = new PrincipalFrame();
         principal.setVisible(true);
         this.dispose();
         // TODO add your handling code here:
