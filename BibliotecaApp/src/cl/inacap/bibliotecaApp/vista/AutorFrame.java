@@ -6,10 +6,8 @@
 package cl.inacap.bibliotecaApp.vista;
 
 import cl.inacap.bilbiotecaApp.controlador.ControladorAutor;
-import cl.inacap.bilbiotecaApp.controlador.ControladorCategoria;
 import java.awt.Image;
 import java.awt.Toolkit;
-import javax.swing.JOptionPane;
 
 /**
  *

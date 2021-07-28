@@ -128,7 +128,7 @@ public class LibroDAO {
             rs = ps.executeQuery();
             cbxCategoria.removeAllItems();
             while (rs.next()) {
-                cbxCategoria.addItem(rs.getInt("id_categoria") + "");
+                cbxCategoria.addItem(rs.getString("Nombre_categoria") + "");
             }
             //ArrayList<Autor> lista = con.ge
         } catch (Exception e) {
@@ -144,7 +144,7 @@ public class LibroDAO {
             rs = ps.executeQuery();
             cbxIdioma.removeAllItems();
             while (rs.next()) {
-                cbxIdioma.addItem(rs.getInt("id_idioma") + "");
+                cbxIdioma.addItem(rs.getString("Nombre_idioma") + "");
             }
             //ArrayList<Autor> lista = con.ge
         } catch (Exception e) {
@@ -160,7 +160,7 @@ public class LibroDAO {
             rs = ps.executeQuery();
             cbxEditorial.removeAllItems();
             while (rs.next()) {
-                cbxEditorial.addItem(rs.getInt("id_editorial") + "");
+                cbxEditorial.addItem(rs.getString("Nombre_editorial") + "");
             }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error editorial");
@@ -190,7 +190,7 @@ public class LibroDAO {
             rs = ps.executeQuery();
             cbxAutor.removeAllItems();
             while (rs.next()) {
-                cbxAutor.addItem(rs.getInt("id_autor") + "");
+                cbxAutor.addItem(rs.getString("Nombre_autor") + "");
 
             }
             //ArrayList<Autor> lista = con.ge

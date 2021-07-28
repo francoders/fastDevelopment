@@ -34,8 +34,8 @@ public class IdiomaDAO {
             rs = ps.executeQuery();
             while (rs.next()) {                
                 Idioma i = new Idioma();
-                i.setNombreIdioma(rs.getString(1));
-                i.setIdIdioma(rs.getInt(2));
+                i.setNombreIdioma(rs.getString(2));
+                i.setIdIdioma(rs.getInt(1));
                 datos.add(i);
             }
         } catch (Exception e) {

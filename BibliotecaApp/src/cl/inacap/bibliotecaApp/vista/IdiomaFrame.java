@@ -104,6 +104,7 @@ public class IdiomaFrame extends javax.swing.JFrame {
         id_idioma_txt.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         id_idioma_txt.setToolTipText("");
         id_idioma_txt.setBorder(null);
+        id_idioma_txt.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         id_idioma_txt.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         id_idioma_txt.setSelectedTextColor(new java.awt.Color(11, 0, 32));
 
