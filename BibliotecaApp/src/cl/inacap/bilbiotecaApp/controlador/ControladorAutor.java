@@ -125,16 +125,22 @@ public class ControladorAutor implements ActionListener {
         a.setNombre(nombre);
         a.setApellidoPaterno(apellidoPaterno);
         a.setApellidoMaterno(apellidoMaterno);
-        int r = dao.agregar(a);
-        if (r == 1) {
-            JOptionPane.showMessageDialog(autorVista, "Autor agregado");
-        }else{
-            JOptionPane.showMessageDialog(autorVista, "Error al agregar");
+
+        //Validacion de campo vacio de las 3 cajas
+        if (nombre.equals("") || apellidoPaterno.equals("") || apellidoMaterno.equals("")) {
+            JOptionPane.showMessageDialog(autorVista, "Hay campos vacios, Rellenelos todos");
+        } else {
+            int r = dao.agregar(a);
+            if (r == 1) {
+                JOptionPane.showMessageDialog(autorVista, "Autor agregado");
+            } else {
+                JOptionPane.showMessageDialog(autorVista, "Error al agregar!");
+            }
+            limpiarTabla();
         }
-        limpiarTabla();
     }
-    
-    
+
+
     /**
      * actualizar: metodo publico que al seleccionar un autor, muestra los valores nuevamente
      * en los jTextField para poder ser modificados

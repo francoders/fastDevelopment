@@ -34,11 +34,6 @@ public class DistribuidorFrame extends javax.swing.JFrame{
         jLabel11 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         agregar_distribuidor_btn = new javax.swing.JButton();
-        jSeparator1 = new javax.swing.JSeparator();
-        jSeparator2 = new javax.swing.JSeparator();
-        jSeparator3 = new javax.swing.JSeparator();
-        jSeparator4 = new javax.swing.JSeparator();
-        jSeparator5 = new javax.swing.JSeparator();
         limpiar_distribuidor_btn = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
         btnActualizar = new javax.swing.JButton();
@@ -196,11 +191,6 @@ public class DistribuidorFrame extends javax.swing.JFrame{
             }
         });
         jPanel4.add(agregar_distribuidor_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 490, 140, 40));
-        jPanel4.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 470, 320, 10));
-        jPanel4.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 320, 10));
-        jPanel4.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 320, 10));
-        jPanel4.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, 320, 10));
-        jPanel4.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, 320, 10));
 
         limpiar_distribuidor_btn.setBackground(java.awt.SystemColor.controlHighlight);
         limpiar_distribuidor_btn.setText("Limpiar textos");
@@ -357,11 +347,6 @@ public class DistribuidorFrame extends javax.swing.JFrame{
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JSeparator jSeparator4;
-    private javax.swing.JSeparator jSeparator5;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
