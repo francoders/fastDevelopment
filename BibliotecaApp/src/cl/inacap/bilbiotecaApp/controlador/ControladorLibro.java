@@ -49,33 +49,74 @@ public class ControladorLibro implements ActionListener{
             agregar();
             listar(libroVista.tabla);
         }
-         if (e.getSource() == libroVista.btnEliminar) {  
+        if (e.getSource() == libroVista.btnEliminar) {
             eliminar();
-            listar(libroVista.tabla);   
+            listar(libroVista.tabla);
         }
         if (e.getSource() == libroVista.btnEditar) {
             int fila = libroVista.tabla.getSelectedRow();
             if (fila == -1) {
                 JOptionPane.showMessageDialog(libroVista, "Debe seleccionar una fila");
-           }else{
-                JOptionPane.showMessageDialog(libroVista, "Modifica el dato y haz click en Actualizar"); 
+            } else {
+                JOptionPane.showMessageDialog(libroVista, "Modifica el dato y haz click en Actualizar");
             }
         }
         if (e.getSource() == libroVista.btnActualizar) {
             actualizar();
             listar(libroVista.tabla);
-            
+
         }
     }
-    
-    public void eliminar(){
+
+    public void agregar() {
+        int nSerie = Integer.parseInt(libroVista.txtNSerie.getText());
+        int isbn = Integer.parseInt(libroVista.txtIsbn.getText());
+        String titulo = libroVista.txtTitulo.getText();
+        int nPaginas = Integer.parseInt(libroVista.txtNPaginas.getText());
+        int pReferencia = Integer.parseInt(libroVista.txtPReferencia.getText());
+        int anioPublic = Integer.parseInt(libroVista.txtAnio.getText());
+        int idioma = Integer.parseInt((String) libroVista.cbxIdioma.getSelectedItem());
+        int autor = Integer.parseInt((String) libroVista.cbxAutor.getSelectedItem());
+        int editorial = Integer.parseInt((String) libroVista.cbxEditorial.getSelectedItem());
+        int categoria = Integer.parseInt((String) libroVista.cbxCategoria.getSelectedItem());
+        int estado = Integer.parseInt((String) libroVista.cbxEstado.getSelectedItem());
+        l.setNSerie(nSerie);
+        l.setIsbn(isbn);
+        l.setTitulo(titulo);
+        l.setNumeroDePag(nPaginas);
+        l.setPrecioReferencia(pReferencia);
+        l.setAñoDePublicacion(anioPublic);
+        l.setIdiomas(idioma);
+        l.setAutores(autor);
+        l.setEditorial(editorial);
+        l.setCategorias(categoria);
+        l.setEstado(estado);
+        
+        //VALIDACION de ISBN que posea 8 dijitos
+        if (isbn <= 8) {
+            int r = dao.agregar(l);
+            if (r == 1) {
+                JOptionPane.showMessageDialog(libroVista, "Libro Agregado.");
+
+            } else {
+                JOptionPane.showMessageDialog(libroVista, "Error al Registrar");
+                System.out.println(titulo + " " + isbn + " " + idioma + " " + autor + " " + editorial + " " + categoria + " " + estado);
+            }
+            limpiarTabla();
+        } else {
+            JOptionPane.showMessageDialog(libroVista, "EL ISBN tiene que poseer 8 dijitos");
+        }
+
+    }
+
+    public void eliminar() {
         int fila = libroVista.tabla.getSelectedRow();
-        String libro =  (String) libroVista.tabla.getValueAt(fila,2);
+        String libro = (String) libroVista.tabla.getValueAt(fila, 2);
         try {
             if (fila == -1) {
-            JOptionPane.showMessageDialog(libroVista, "Debe seleccionar una fila");
+                JOptionPane.showMessageDialog(libroVista, "Debe seleccionar una fila");
         }else{
-            JOptionPane.showMessageDialog(libroVista, "El libro llamado "+libro+" fue eliminado");
+            JOptionPane.showMessageDialog(libroVista, "El libro llamado " + libro + " fue eliminado");
             int nSerie = Integer.parseInt((String) libroVista.tabla.getValueAt(fila, 0).toString());
             dao.eliminar(nSerie); 
         }
@@ -121,39 +162,6 @@ public class ControladorLibro implements ActionListener{
         limpiarTabla();
     }
     
-    public void agregar(){
-        int nSerie = Integer.parseInt(libroVista.txtNSerie.getText());
-        int isbn = Integer.parseInt(libroVista.txtIsbn.getText());
-        String titulo = libroVista.txtTitulo.getText();
-        int nPaginas = Integer.parseInt(libroVista.txtNPaginas.getText());
-        int pReferencia = Integer.parseInt(libroVista.txtPReferencia.getText());
-        int anioPublic = Integer.parseInt(libroVista.txtAnio.getText());
-        int idioma = Integer.parseInt((String) libroVista.cbxIdioma.getSelectedItem());
-        int autor = Integer.parseInt((String) libroVista.cbxAutor.getSelectedItem());
-        int editorial = Integer.parseInt((String) libroVista.cbxEditorial.getSelectedItem());
-        int categoria = Integer.parseInt((String) libroVista.cbxCategoria.getSelectedItem());
-        int estado = Integer.parseInt((String) libroVista.cbxEstado.getSelectedItem());
-        l.setNSerie(nSerie);
-        l.setIsbn(isbn);
-        l.setTitulo(titulo);
-        l.setNumeroDePag(nPaginas);
-        l.setPrecioReferencia(pReferencia);
-        l.setAñoDePublicacion(anioPublic);
-        l.setIdiomas(idioma);
-        l.setAutores(autor);
-        l.setEditorial(editorial);
-        l.setCategorias(categoria);
-        l.setEstado(estado);
-        int r = dao.agregar(l);
-        if (r == 1) {
-            JOptionPane.showMessageDialog(libroVista, "Libro agregado");
-            
-        }else{
-            JOptionPane.showMessageDialog(libroVista, "Error al agregar");
-            System.out.println(titulo+" "+isbn+" "+idioma+" "+autor+" "+editorial+" "+categoria+" "+estado);
-        }
-        limpiarTabla();
-    }
     public void listar(JTable tabla) {
         centrarCeldas(tabla);
         modelo = (DefaultTableModel) tabla.getModel();

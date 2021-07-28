@@ -193,7 +193,7 @@ public class IngresoVentas extends javax.swing.JFrame {
     }//GEN-LAST:event_panelVentaMouseClicked
 
     private void panelCompraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelCompraMouseClicked
-        CompraVista compra = new CompraVista();
+        CompraFrame compra = new CompraFrame();
         compra.setVisible(true);
         this.dispose();
         

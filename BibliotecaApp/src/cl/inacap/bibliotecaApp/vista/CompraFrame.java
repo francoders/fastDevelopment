@@ -11,12 +11,12 @@ import javax.swing.JOptionPane;
  *
  * @author Cristobal
  */
-public class CompraVista extends javax.swing.JFrame {
+public class CompraFrame extends javax.swing.JFrame {
 
     /**
      * Creates new form Libro
      */
-    public CompraVista() {
+    public CompraFrame() {
         initComponents();
         this.setLocationRelativeTo(null);
     }

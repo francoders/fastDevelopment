@@ -2,8 +2,8 @@ package cl.inacap.bibliotecaApp.vista;
 import cl.inacap.bilbiotecaApp.controlador.ControladorDistribuidor;
 import javax.swing.JOptionPane;
 
-public class Factura extends javax.swing.JFrame{
-    public Factura() {
+public class FacturaFrame extends javax.swing.JFrame{
+    public FacturaFrame() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -381,7 +381,7 @@ public class Factura extends javax.swing.JFrame{
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Factura().setVisible(true);
+                new FacturaFrame().setVisible(true);
             }
         });
     }
