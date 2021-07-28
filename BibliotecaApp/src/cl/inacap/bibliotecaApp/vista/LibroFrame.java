@@ -2,6 +2,8 @@ package cl.inacap.bibliotecaApp.vista;
 
 import cl.inacap.bibliotecaApp.modelo.LibroDAO;
 import cl.inacap.bilbiotecaApp.controlador.ControladorLibro;
+import java.awt.Image;
+import java.awt.Toolkit;
 
 
 
@@ -9,13 +11,21 @@ public class LibroFrame extends javax.swing.JFrame{
     LibroDAO dao = new LibroDAO();
     public LibroFrame(){
         initComponents();
+        setIconImage(getIconImage());
         this.setLocationRelativeTo(null);
         dao.buscarIdioma(cbxIdioma);
         dao.buscarEditorial(cbxEditorial);
         dao.buscarAutor(cbxAutor);
         dao.buscarEstado(cbxEstado);
         dao.buscarCategoria(cbxCategoria);
+    }   
+    
+    @Override
+    public Image getIconImage(){
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/icono_img.png"));
+        return retValue;
     }
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -125,7 +135,7 @@ public class LibroFrame extends javax.swing.JFrame{
         txtIdioma.setBorder(null);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("CRUD - JAVA - PATRON DE DISEÑO MVC");
+        setTitle("Libro - FastDevelopment");
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());

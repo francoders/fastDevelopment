@@ -108,7 +108,7 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="title" type="java.lang.String" value="CRUD - JAVA - PATRON DE DISE&#xd1;O MVC"/>
+    <Property name="title" type="java.lang.String" value="Libro - FastDevelopment"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
