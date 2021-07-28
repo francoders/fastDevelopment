@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package cl.inacap.bibliotecaApp.modelo;
 
 import java.sql.Connection;
@@ -12,36 +7,36 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Clase AutorDAO: contiene los metodos para crear, modificar, eliminar y actualizar un autor
- * mediante sentencias DML a la base de datos bibliotecadb en la tabla autor
- * @author Cristobal Cortés
- * @since 02/06/2020
- * @version 1.0
- * 
+ * Clase AutorDAO: contiene los metodos para crear, modificar, eliminar y
+ * actualizar un autor mediante sentencias DML a la base de datos bibliotecadb
+ * en la tabla autor
+ *
  */
 public class AutorDAO {
+
     PreparedStatement ps;
     ResultSet rs;
     Connection con;
     Conexion conectar = new Conexion();
     Autor a = new Autor();
-    
-    
-    /**
-     * 
-     * listar: metodo publico que se conecta en la base de datos
-     * prepara una sentencia sql que selecciona todos los autores en la base de datos,
-     * cuando el resultado este listo crea un nuevo autor y los almacena en la lista datos.
-     * @return devuelve una lista con todos los autores en la base de datos.
 
+    /**
+     *
+     * listar: metodo publico que se conecta en la base de datos prepara una
+     * sentencia sql que selecciona todos los autores en la base de datos,
+     * cuando el resultado este listo crea un nuevo autor y los almacena en la
+     * lista datos.
+     *
+     * @return devuelve una lista con todos los autores en la base de datos.
+     *
      */
-    public List listar(){
+    public List listar() {
         List<Autor> datos = new ArrayList<>();
         try {
             con = conectar.getConnection();
             ps = con.prepareStatement("select * from autor");
             rs = ps.executeQuery();
-            while (rs.next()) {                
+            while (rs.next()) {
                 Autor a = new Autor();
                 a.setNombre(rs.getString(1));
                 a.setId(rs.getInt(2));
@@ -54,14 +49,15 @@ public class AutorDAO {
         }
         return datos;
     }
-    
+
     /**
-     * agregar: metodo publico que inserta los datos de un nuevo autor en la base de datos mediante 
-     * una sentencia sql de insercion
+     * agregar: metodo publico que inserta los datos de un nuevo autor en la
+     * base de datos mediante una sentencia sql de insercion
+     *
      * @param au de tipo Autor
      * @return la respuesta del PrepareStatement
      */
-    public int agregar(Autor au){
+    public int agregar(Autor au) {
         int r = 0;
         String sql = "insert into autor(Nombre_autor, Id_autor, Apellido_paterno, Apellido_materno) values(?,?,?,?)";
         try {
@@ -74,7 +70,7 @@ public class AutorDAO {
             r = ps.executeUpdate();
             if (r == 1) {
                 return 1;
-            }else{
+            } else {
                 return 2;
             }
         } catch (Exception e) {
@@ -82,28 +78,30 @@ public class AutorDAO {
         }
         return r;
     }
-    
+
     /**
-     * actualizar: metodo publico int que modifica los datos de un autor ya existente mediante una 
-     * sentencia sql donde se modificara desde el id seleccionado
+     * actualizar: metodo publico int que modifica los datos de un autor ya
+     * existente mediante una sentencia sql donde se modificara desde el id
+     * seleccionado
+     *
      * @param au de tipo Autor
      * @return la respuesta del PrepareStatement
      */
-    public int actualizar(Autor au){
+    public int actualizar(Autor au) {
         int r = 0;
         con = conectar.getConnection();
         PreparedStatement ps = null;
         String sql = "update autor set Nombre_autor=?, Apellido_paterno=?, Apellido_materno=? where Id_autor=?";
         try {
             ps = con.prepareStatement(sql);
-            ps.setString(1,au.getNombre());
-            ps.setString(2,au.getApellidoPaterno());
-            ps.setString(3,au.getApellidoMaterno());
-            ps.setInt(4,au.getId());
+            ps.setString(1, au.getNombre());
+            ps.setString(2, au.getApellidoPaterno());
+            ps.setString(3, au.getApellidoMaterno());
+            ps.setInt(4, au.getId());
             r = ps.executeUpdate();
-            if (r==1) {
+            if (r == 1) {
                 return 1;
-            }else{
+            } else {
                 return 0;
             }
         } catch (Exception e) {
@@ -111,16 +109,17 @@ public class AutorDAO {
         }
         return r;
     }
-    
+
     /**
-     * eliminar: metodo public int que recibe el id del autor seleccionado y lo elimina mediante
-     * una sentencia SQL DELETE 
+     * eliminar: metodo public int que recibe el id del autor seleccionado y lo
+     * elimina mediante una sentencia SQL DELETE
+     *
      * @param id de tipo int
      * @return la respuesta del PrepareStatement
      */
-    public int eliminar(int id){
+    public int eliminar(int id) {
         int r = 0;
-        String sql = "delete from autor where Id_autor="+id;
+        String sql = "delete from autor where Id_autor=" + id;
         try {
             con = conectar.getConnection();
             ps = con.prepareStatement(sql);
@@ -129,6 +128,6 @@ public class AutorDAO {
             System.out.println(e);
         }
         return r;
-        
+
     }
 }

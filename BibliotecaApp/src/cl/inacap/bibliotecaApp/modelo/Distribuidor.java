@@ -1,13 +1,5 @@
 package cl.inacap.bibliotecaApp.modelo;
 
-/**
- * Clase Distribuidor: respresenta el distribuidor en la base datos, consta de su rut 
- * que es el identificador unico, nombre de la empresa, direccion, telefono y el año de venta.
- * @author Cristobal Cortés
- * @since 12/05/2020
- * @version 1.0
- * 
- */
 public class Distribuidor {
     private int rutDistribuidor;
     private String nombreEmpresa;
@@ -15,14 +7,9 @@ public class Distribuidor {
     private int telefono;
     private int anioVenta;
 
-    /**
-     * Constructor recibe los valores del distribuidor
-     * @param rutDistribuidor tipo int
-     * @param nombreEmpresa tipo String
-     * @param direccion tipo String
-     * @param telefono tipo int
-     * @param anioVenta tipo int
-     */
+    
+    // Constructor recibe los valores del distribuidor
+     
     public Distribuidor(int rutDistribuidor, String nombreEmpresa, String direccion, int telefono, int anioVenta) {
         this.rutDistribuidor = rutDistribuidor;
         this.nombreEmpresa = nombreEmpresa;

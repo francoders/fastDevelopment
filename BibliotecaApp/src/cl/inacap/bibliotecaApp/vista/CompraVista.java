@@ -34,18 +34,13 @@ public class CompraVista extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         btnBack = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel13 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
         txtFolio = new javax.swing.JTextField();
         txtRutDistr = new javax.swing.JTextField();
         btnAgregar = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-        jSeparator2 = new javax.swing.JSeparator();
         txtNSerie = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
-        jSeparator3 = new javax.swing.JSeparator();
-        jTextField7 = new javax.swing.JTextField();
         jLabel21 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -70,31 +65,22 @@ public class CompraVista extends javax.swing.JFrame {
         });
         jPanel1.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
 
-        jPanel2.setBackground(new java.awt.Color(11, 0, 32));
+        jPanel2.setBackground(new java.awt.Color(39, 151, 212));
         jPanel2.setForeground(new java.awt.Color(51, 0, 51));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel13.setBackground(new java.awt.Color(102, 102, 102));
-        jLabel13.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 12)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setText("Registra que libro deseas comprar");
-        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(152, 62, -1, -1));
-
-        jSeparator1.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 205, 320, 10));
-
-        txtFolio.setBackground(new java.awt.Color(11, 0, 32));
+        txtFolio.setBackground(new java.awt.Color(255, 255, 255));
         txtFolio.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
-        txtFolio.setForeground(new java.awt.Color(255, 255, 255));
+        txtFolio.setForeground(new java.awt.Color(0, 0, 0));
         txtFolio.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txtFolio.setToolTipText("");
         txtFolio.setBorder(null);
         txtFolio.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         txtFolio.setSelectedTextColor(new java.awt.Color(11, 0, 32));
-        jPanel2.add(txtFolio, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 168, 320, 30));
+        jPanel2.add(txtFolio, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 320, 30));
 
-        txtRutDistr.setBackground(new java.awt.Color(11, 0, 32));
-        txtRutDistr.setForeground(new java.awt.Color(255, 255, 255));
+        txtRutDistr.setBackground(new java.awt.Color(255, 255, 255));
+        txtRutDistr.setForeground(new java.awt.Color(0, 0, 0));
         txtRutDistr.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         txtRutDistr.setToolTipText("");
         txtRutDistr.setBorder(null);
@@ -110,59 +96,43 @@ public class CompraVista extends javax.swing.JFrame {
                 btnAgregarActionPerformed(evt);
             }
         });
-        jPanel2.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 459, 143, 38));
+        jPanel2.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 448, 160, 50));
 
         jLabel11.setBackground(new java.awt.Color(11, 0, 32));
         jLabel11.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Compra de libros");
-        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(142, 23, -1, -1));
+        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, -1, -1));
 
         jLabel16.setBackground(new java.awt.Color(102, 102, 102));
         jLabel16.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("Folio");
-        jPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 137, -1, -1));
+        jPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, -1, -1));
 
-        jSeparator2.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel2.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 296, 320, 10));
-
-        txtNSerie.setBackground(new java.awt.Color(11, 0, 32));
+        txtNSerie.setBackground(new java.awt.Color(255, 255, 255));
         txtNSerie.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
-        txtNSerie.setForeground(new java.awt.Color(255, 255, 255));
+        txtNSerie.setForeground(new java.awt.Color(0, 0, 0));
         txtNSerie.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txtNSerie.setToolTipText("");
         txtNSerie.setBorder(null);
         txtNSerie.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         txtNSerie.setSelectedTextColor(new java.awt.Color(11, 0, 32));
-        jPanel2.add(txtNSerie, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 259, 320, 30));
+        jPanel2.add(txtNSerie, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 320, 30));
 
         jLabel17.setBackground(new java.awt.Color(102, 102, 102));
         jLabel17.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("N° Serie");
-        jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 228, -1, -1));
-
-        jSeparator3.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel2.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 390, 320, 10));
-
-        jTextField7.setBackground(new java.awt.Color(11, 0, 32));
-        jTextField7.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
-        jTextField7.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField7.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        jTextField7.setToolTipText("");
-        jTextField7.setBorder(null);
-        jTextField7.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        jTextField7.setSelectedTextColor(new java.awt.Color(11, 0, 32));
-        jPanel2.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 350, 320, 30));
+        jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, -1, -1));
 
         jLabel21.setBackground(new java.awt.Color(102, 102, 102));
         jLabel21.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(255, 255, 255));
         jLabel21.setText("Rut del distribuidor");
-        jPanel2.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 320, -1, -1));
+        jPanel2.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, -1, -1));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 470, 510));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 470, 590));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -177,7 +147,7 @@ public class CompraVista extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 310, 390, 100));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 280, 550, 150));
 
         jLabel18.setBackground(new java.awt.Color(11, 0, 32));
         jLabel18.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
@@ -193,7 +163,7 @@ public class CompraVista extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 180, 320, 37));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 200, 360, 37));
 
         jButton7.setBackground(new java.awt.Color(255, 255, 255));
         jButton7.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
@@ -203,7 +173,7 @@ public class CompraVista extends javax.swing.JFrame {
                 jButton7ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 140, 100, 37));
+        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 150, 110, 37));
 
         jButton8.setBackground(new java.awt.Color(255, 255, 255));
         jButton8.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
@@ -213,7 +183,7 @@ public class CompraVista extends javax.swing.JFrame {
                 jButton8ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 140, 100, 37));
+        jPanel1.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 150, 110, 37));
 
         jButton9.setBackground(new java.awt.Color(255, 255, 255));
         jButton9.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
@@ -223,17 +193,17 @@ public class CompraVista extends javax.swing.JFrame {
                 jButton9ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 140, 100, 37));
+        jPanel1.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 150, 120, 37));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 960, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1202, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 584, Short.MAX_VALUE)
         );
 
         pack();
@@ -268,55 +238,6 @@ public class CompraVista extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnBackMouseClicked
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CompraVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CompraVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CompraVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CompraVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new CompraVista().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAgregar;
@@ -327,7 +248,6 @@ public class CompraVista extends javax.swing.JFrame {
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
@@ -335,11 +255,7 @@ public class CompraVista extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JSeparator jSeparator3;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField txtFolio;
     private javax.swing.JTextField txtNSerie;
     private javax.swing.JTextField txtRutDistr;

@@ -1,18 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package cl.inacap.bibliotecaApp.modelo;
 
-
-/**
- * Clase Categoria: respresenta la categoria en la base datos, consta de un nombre de categoria y un id que lo identifica
- * @author Cristobal Cortés
- * @since 08/06/2020
- * @version 1.0
- * 
- */
 public class Categoria {
     private String nombreCategoria;
     private int idCategoria;

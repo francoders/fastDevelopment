@@ -1,10 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package cl.inacap.bibliotecaApp.modelo;
-
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -16,19 +10,20 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Cristobal
+ * @author Corvalan
  */
 public class LibroDAO {
+
     PreparedStatement ps;
     ResultSet rs;
     Connection con;
     Conexion conectar = new Conexion();
     Libro l = new Libro();
-    
-    public int agregar(Libro li){
-        int r=0;
-        String sql ="insert into libro (N_serie, Isbn, Titulo, N_paginas, P_referencia, Anio_publicacion, Id_idioma, Id_autor, Id_categoria, Id_editorial, Id_estado) values(?,?,?,?,?,?,?,?,?,?,?)";
-        try{
+
+    public int agregar(Libro li) {
+        int r = 0;
+        String sql = "insert into libro (N_serie, Isbn, Titulo, N_paginas, P_referencia, Anio_publicacion, Id_idioma, Id_autor, Id_categoria, Id_editorial, Id_estado) values(?,?,?,?,?,?,?,?,?,?,?)";
+        try {
             con = conectar.getConnection();
             ps = con.prepareStatement(sql);
             ps.setInt(1, li.getNSerie());
@@ -43,18 +38,19 @@ public class LibroDAO {
             ps.setInt(10, li.getEditorial());
             ps.setInt(11, li.getEstado());
             r = ps.executeUpdate();
-            if (r==1) {
+            if (r == 1) {
                 return 1;
-            }else{
+            } else {
                 return 0;
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             System.out.println(e);
         }
-         return r;
+        return r;
     }
-    public int actualizar(Libro li){
-        int r =0;
+
+    public int actualizar(Libro li) {
+        int r = 0;
         con = conectar.getConnection();
         PreparedStatement ps = null;
         String sql = "update libro set N_serie=?, Isbn=?, Titulo=?, N_paginas=?, P_referencia=?, Anio_publicacion=?, Id_idioma=?, Id_autor=?, Id_categoria=?, Id_editorial=?, Id_estado=? where N_serie=?";
@@ -71,25 +67,25 @@ public class LibroDAO {
             ps.setInt(9, li.getEditorial());
             ps.setInt(10, li.getCategorias());
             ps.setInt(11, li.getEstado());
-            r=ps.executeUpdate();
-            if (r==1) {
+            r = ps.executeUpdate();
+            if (r == 1) {
                 return 1;
-            }else{
+            } else {
                 return 0;
             }
         } catch (Exception e) {
-            System.out.println("error"+e);
+            System.out.println("error" + e);
         }
         return r;
     }
-    
+
     public List listar() {
         List<Libro> datos = new ArrayList<>();
         try {
             con = conectar.getConnection();
             ps = con.prepareStatement("select * from libro");
             rs = ps.executeQuery();
-            while(rs.next()){
+            while (rs.next()) {
                 Libro l = new Libro();
                 l.setNSerie(rs.getInt(1));
                 l.setIsbn(rs.getInt(2));
@@ -108,9 +104,10 @@ public class LibroDAO {
         }
         return datos;
     }
-     public int eliminar(int nSerie){
-        int r =0;
-        String sql = "delete from libro where N_serie="+nSerie;
+
+    public int eliminar(int nSerie) {
+        int r = 0;
+        String sql = "delete from libro where N_serie=" + nSerie;
         try {
             con = conectar.getConnection();
             ps = con.prepareStatement(sql);
@@ -120,85 +117,85 @@ public class LibroDAO {
         }
         return r;
     }
-    
-    public void buscarCategoria(JComboBox cbxCategoria){
+
+    public void buscarCategoria(JComboBox cbxCategoria) {
 
         String sql = "select * from categoria";
-        int idCategoria =0;
+        int idCategoria = 0;
         try {
             con = conectar.getConnection();
             ps = con.prepareStatement(sql);
             rs = ps.executeQuery();
             cbxCategoria.removeAllItems();
-            while(rs.next()){
-                cbxCategoria.addItem(rs.getInt("id_categoria")+"");
+            while (rs.next()) {
+                cbxCategoria.addItem(rs.getInt("id_categoria") + "");
             }
             //ArrayList<Autor> lista = con.ge
         } catch (Exception e) {
         }
-        
-        
+
     }
-    public void buscarIdioma(JComboBox cbxIdioma){
+
+    public void buscarIdioma(JComboBox cbxIdioma) {
         String sql = "select * from idioma";
         try {
             con = conectar.getConnection();
             ps = con.prepareStatement(sql);
             rs = ps.executeQuery();
             cbxIdioma.removeAllItems();
-            while(rs.next()){
-                cbxIdioma.addItem(rs.getInt("id_idioma")+"");
+            while (rs.next()) {
+                cbxIdioma.addItem(rs.getInt("id_idioma") + "");
             }
             //ArrayList<Autor> lista = con.ge
         } catch (Exception e) {
         }
-        
+
     }
-    public void buscarEditorial(JComboBox cbxEditorial){
+
+    public void buscarEditorial(JComboBox cbxEditorial) {
         String sql = "select * from editorial";
         try {
             con = conectar.getConnection();
             ps = con.prepareStatement(sql);
             rs = ps.executeQuery();
             cbxEditorial.removeAllItems();
-            while(rs.next()){
-                cbxEditorial.addItem(rs.getInt("id_editorial")+"");
+            while (rs.next()) {
+                cbxEditorial.addItem(rs.getInt("id_editorial") + "");
             }
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null,"Error editorial");
+            JOptionPane.showMessageDialog(null, "Error editorial");
         }
     }
-    public void buscarEstado(JComboBox cbxEstado){
+
+    public void buscarEstado(JComboBox cbxEstado) {
         String sql = "select * from estado";
         try {
             con = conectar.getConnection();
             ps = con.prepareStatement(sql);
             rs = ps.executeQuery();
             cbxEstado.removeAllItems();
-            while(rs.next()){
-                cbxEstado.addItem(rs.getInt("id_estado")+"");
+            while (rs.next()) {
+                cbxEstado.addItem(rs.getInt("id_estado") + "");
             }
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null,"Error estado");
+            JOptionPane.showMessageDialog(null, "Error estado");
         }
     }
-    public void buscarAutor(JComboBox cbxAutor){
+
+    public void buscarAutor(JComboBox cbxAutor) {
         String sql = "select * from autor";
         try {
             con = conectar.getConnection();
             ps = con.prepareStatement(sql);
             rs = ps.executeQuery();
             cbxAutor.removeAllItems();
-            while(rs.next()){
-                cbxAutor.addItem(rs.getInt("id_autor")+"");
-                
+            while (rs.next()) {
+                cbxAutor.addItem(rs.getInt("id_autor") + "");
+
             }
             //ArrayList<Autor> lista = con.ge
         } catch (Exception e) {
         }
-       
-    }
- }
-    
-    
 
+    }
+}

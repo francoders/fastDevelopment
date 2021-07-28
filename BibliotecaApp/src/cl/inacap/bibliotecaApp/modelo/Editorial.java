@@ -8,9 +8,6 @@ package cl.inacap.bibliotecaApp.modelo;
 /**
  * Clase Editorial: respresenta la editorial en la base datos, consta de su nombre 
  * de editorial y su id para poder ser identificado.
- * @author Cristobal Cortés
- * @since 19/06/2020
- * @version 1.0
  * 
  */
 public class Editorial {
