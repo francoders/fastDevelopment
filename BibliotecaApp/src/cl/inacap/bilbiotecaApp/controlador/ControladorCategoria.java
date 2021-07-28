@@ -88,9 +88,8 @@ public class ControladorCategoria implements ActionListener {
 
     }
 
-    /**
-     * nuevo: metodo que deja en blanco los jTextField
-     */
+
+    // nuevo: metodo que deja en blanco los jTextField
     void nuevo() {
         categoriaVista.txtCategoria.setText("");
         categoriaVista.txtId.setText("");

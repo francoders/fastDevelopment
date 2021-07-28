@@ -88,13 +88,19 @@ public class ControladorIdioma implements ActionListener {
     public void agregar() {
         String idiomaTxt = iFrame.nom_idioma_txt.getText();
         idioma.setNombreIdioma(idiomaTxt);
-        int r = dao.agregar(idioma);
-        if (r == 1) {
-            JOptionPane.showMessageDialog(iFrame, "Idioma agregado");
+        
+        //VALIDACION de campo vacio
+        if (idiomaTxt.equals("")) {
+
         } else {
-            JOptionPane.showMessageDialog(iFrame, "Error al agregar");
+            int r = dao.agregar(idioma);
+            if (r == 1) {
+                JOptionPane.showMessageDialog(iFrame, "Idioma agregado");
+            } else {
+                JOptionPane.showMessageDialog(iFrame, "Error al agregar");
+            }
+            limpiarTabla();
         }
-        limpiarTabla();
     }
 
     public void actualizar() {
