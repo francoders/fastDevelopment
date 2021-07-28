@@ -141,7 +141,7 @@ public class FacturaFrame extends javax.swing.JFrame{
         jLabel11.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Factura");
-        jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, -1, -1));
+        jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 60, -1, -1));
 
         btnAgregar.setBackground(java.awt.SystemColor.controlHighlight);
         btnAgregar.setText("Agregar");

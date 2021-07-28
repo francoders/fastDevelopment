@@ -15,8 +15,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  * Clase ControladorDistribuidor: contiene los metodos para crear, modificar, eliminar y actualizar un distribuidor,
- * este tiene relacion con la parte grafica de la aplicacion, es el que valida el ingreso de los datos y 
- * los muestra en pantalla.
+ * este tiene relacion con la parte grafica de la aplicacion, es el que valida el ingreso de los datos y los muestra en pantalla.
  */
 public class ControladorDistribuidor implements ActionListener {
 

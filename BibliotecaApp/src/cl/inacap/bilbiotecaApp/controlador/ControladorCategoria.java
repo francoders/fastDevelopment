@@ -15,8 +15,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  * Clase ControladorAutor: contiene los metodos para crear, modificar, eliminar y actualizar una categoria,
- * este tiene relacion con la parte grafica de la aplicacion, es el que valida el ingreso de los datos y 
- * los muestra en pantalla.
+ * este tiene relacion con la parte grafica de la aplicacion, es el que valida el ingreso de los datos y los muestra en pantalla.
  */
 public class ControladorCategoria implements ActionListener {
     CategoriaDAO dao = new CategoriaDAO();

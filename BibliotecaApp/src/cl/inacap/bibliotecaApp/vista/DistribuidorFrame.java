@@ -32,9 +32,9 @@ public class DistribuidorFrame extends javax.swing.JFrame{
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
         agregar_distribuidor_btn = new javax.swing.JButton();
         limpiar_distribuidor_btn = new javax.swing.JButton();
+        flecha = new javax.swing.JLabel();
         btnDelete = new javax.swing.JButton();
         btnActualizar = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
@@ -42,7 +42,6 @@ public class DistribuidorFrame extends javax.swing.JFrame{
         jScrollPane5 = new javax.swing.JScrollPane();
         tabla = new javax.swing.JTable();
         jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -175,13 +174,7 @@ public class DistribuidorFrame extends javax.swing.JFrame{
         jLabel11.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Distribuidor");
-        jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, -1, -1));
-
-        jLabel13.setBackground(new java.awt.Color(102, 102, 102));
-        jLabel13.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 12)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setText("Ingresa al distribuidor de los libros");
-        jPanel4.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, -1, -1));
+        jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, -1, -1));
 
         agregar_distribuidor_btn.setBackground(java.awt.SystemColor.controlHighlight);
         agregar_distribuidor_btn.setText("Agregar");
@@ -200,6 +193,14 @@ public class DistribuidorFrame extends javax.swing.JFrame{
             }
         });
         jPanel4.add(limpiar_distribuidor_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 490, 140, 40));
+
+        flecha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/flecha_img.png"))); // NOI18N
+        flecha.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                flechaMouseClicked(evt);
+            }
+        });
+        jPanel4.add(flecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 80, 70));
 
         jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 590));
 
@@ -260,19 +261,13 @@ public class DistribuidorFrame extends javax.swing.JFrame{
         jLabel21.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(11, 0, 32));
         jLabel21.setText("Tabla de distribuidores");
-        jPanel3.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 30, -1, -1));
-
-        jLabel22.setBackground(new java.awt.Color(102, 102, 102));
-        jLabel22.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 12)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(11, 0, 32));
-        jLabel22.setText("y eliminar los datos si lo deseas");
-        jPanel3.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 70, -1, 30));
+        jPanel3.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 40, -1, -1));
 
         jLabel23.setBackground(new java.awt.Color(102, 102, 102));
         jLabel23.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 12)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(11, 0, 32));
         jLabel23.setText("Selecciona un distribuidor en la tabla, puedes listar, editar, ");
-        jPanel3.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 60, -1, -1));
+        jPanel3.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 80, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -293,8 +288,8 @@ public class DistribuidorFrame extends javax.swing.JFrame{
     }//GEN-LAST:event_btnListarActionPerformed
 
     private void agregar_distribuidor_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregar_distribuidor_btnActionPerformed
-        
-        
+
+
     }//GEN-LAST:event_agregar_distribuidor_btnActionPerformed
 
     private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
@@ -306,7 +301,7 @@ public class DistribuidorFrame extends javax.swing.JFrame{
     }//GEN-LAST:event_btnEditarActionPerformed
 
     private void limpiar_distribuidor_btnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_limpiar_distribuidor_btnMouseClicked
-        
+
         // TODO add your handling code here:
     }//GEN-LAST:event_limpiar_distribuidor_btnMouseClicked
 
@@ -314,11 +309,17 @@ public class DistribuidorFrame extends javax.swing.JFrame{
         // TODO add your handling code here:
     }//GEN-LAST:event_nom_distribuidor_txtActionPerformed
 
+    private void flechaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_flechaMouseClicked
+        GestionDatosFrame gtFrame = new GestionDatosFrame();
+        gtFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_flechaMouseClicked
+
     public static void main(String args[]) {
-       DistribuidorFrame v=new DistribuidorFrame();
-       ControladorDistribuidor con = new ControladorDistribuidor(v);
-       v.setVisible(true);
-       v.setLocationRelativeTo(null);
+        DistribuidorFrame v = new DistribuidorFrame();
+        ControladorDistribuidor con = new ControladorDistribuidor(v);
+        v.setVisible(true);
+        v.setLocationRelativeTo(null);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -329,16 +330,15 @@ public class DistribuidorFrame extends javax.swing.JFrame{
     public javax.swing.JButton btnEditar;
     public javax.swing.JButton btnListar;
     public javax.swing.JTextField direccion_distribuidor_txt;
+    public javax.swing.JLabel flecha;
     public javax.swing.JTextField fono_distribuidor_txt;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     public javax.swing.JPanel jPanel3;
     public javax.swing.JPanel jPanel4;
