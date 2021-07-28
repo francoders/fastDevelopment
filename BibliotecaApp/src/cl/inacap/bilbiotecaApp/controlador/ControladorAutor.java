@@ -33,12 +33,12 @@ public class ControladorAutor implements ActionListener {
     
     public ControladorAutor(AutorFrame a){
         this.autorVista = a;
-        this.autorVista.btnListar.addActionListener(this);
-        this.autorVista.btnAgregar.addActionListener(this);
-        this.autorVista.btnNuevo.addActionListener(this);
-        this.autorVista.btnEditar.addActionListener(this);
-        this.autorVista.btnActualizar.addActionListener(this);
-        this.autorVista.btnEliminar.addActionListener(this);
+        this.autorVista.listar_autor_btn.addActionListener(this);
+        this.autorVista.agregar_autor_btn.addActionListener(this);
+        this.autorVista.limpiar_autor_btn.addActionListener(this);
+        this.autorVista.editar_autor_btn.addActionListener(this);
+        this.autorVista.actualizar_autor_btn.addActionListener(this);
+        this.autorVista.eliminar_autor_btn.addActionListener(this);
     }
     
     /**
@@ -48,20 +48,20 @@ public class ControladorAutor implements ActionListener {
      */
     @Override
     public void actionPerformed(ActionEvent e) {
-         if (e.getSource() == autorVista.btnListar) {
+         if (e.getSource() == autorVista.listar_autor_btn) {
             limpiarTabla();
             listar(autorVista.tabla);
             nuevo();
         }
-        if (e.getSource() == autorVista.btnNuevo) {
+        if (e.getSource() == autorVista.limpiar_autor_btn) {
             nuevo();
         }
-        if (e.getSource() == autorVista.btnAgregar) {
+        if (e.getSource() == autorVista.agregar_autor_btn) {
             agregar();
             listar(autorVista.tabla);
             nuevo();
         }
-        if (e.getSource() == autorVista.btnEditar) {
+        if (e.getSource() == autorVista.editar_autor_btn) {
             int fila = autorVista.tabla.getSelectedRow();
             if (fila == -1) {
                 JOptionPane.showMessageDialog(autorVista, "Debe seleccionar una fila");
@@ -71,18 +71,18 @@ public class ControladorAutor implements ActionListener {
                 String nombre = (String) autorVista.tabla.getValueAt(fila, 1);
                 String apellidoPaterno = (String) autorVista.tabla.getValueAt(fila,2);
                 String apellidoMaterno = (String) autorVista.tabla.getValueAt(fila,3);
-                autorVista.txtNombre.setText(nombre);
-                autorVista.txtApellidoPaterno.setText(apellidoPaterno);
-                autorVista.txtApellidoMaterno.setText(apellidoMaterno);
-                autorVista.txtId.setText(""+id);
+                autorVista.nom_autor_txt.setText(nombre);
+                autorVista.ape_paterno_autor.setText(apellidoPaterno);
+                autorVista.ape_materno_autor.setText(apellidoMaterno);
+                autorVista.id_autor_txt.setText(""+id);
             }
         }
-         if (e.getSource() == autorVista.btnActualizar) {
+         if (e.getSource() == autorVista.actualizar_autor_btn) {
             actualizar();
             listar(autorVista.tabla);
             nuevo();
         }
-        if (e.getSource() == autorVista.btnEliminar) {
+        if (e.getSource() == autorVista.eliminar_autor_btn) {
             eliminar();
             listar(autorVista.tabla);
             nuevo();
@@ -119,9 +119,9 @@ public class ControladorAutor implements ActionListener {
      * los añade usando el metodo agregar de la clase AutorDAO
      */
     public void agregar(){
-        String nombre = autorVista.txtNombre.getText();
-        String apellidoPaterno = autorVista.txtApellidoPaterno.getText();
-        String apellidoMaterno = autorVista.txtApellidoMaterno.getText();
+        String nombre = autorVista.nom_autor_txt.getText();
+        String apellidoPaterno = autorVista.ape_paterno_autor.getText();
+        String apellidoMaterno = autorVista.ape_materno_autor.getText();
         a.setNombre(nombre);
         a.setApellidoPaterno(apellidoPaterno);
         a.setApellidoMaterno(apellidoMaterno);
@@ -140,13 +140,13 @@ public class ControladorAutor implements ActionListener {
      * en los jTextField para poder ser modificados
      */
     public void actualizar(){
-        if (autorVista.txtId.getText().equals("")) {
+        if (autorVista.id_autor_txt.getText().equals("")) {
             JOptionPane.showMessageDialog(autorVista, "No se identifica el id");
         }else{
-            int id = Integer.parseInt(autorVista.txtId.getText());
-            String nombre = autorVista.txtNombre.getText();
-            String apellidoPaterno = autorVista.txtApellidoPaterno.getText();
-            String apellidoMaterno = autorVista.txtApellidoMaterno.getText();
+            int id = Integer.parseInt(autorVista.id_autor_txt.getText());
+            String nombre = autorVista.nom_autor_txt.getText();
+            String apellidoPaterno = autorVista.ape_paterno_autor.getText();
+            String apellidoMaterno = autorVista.ape_materno_autor.getText();
             a.setNombre(nombre);
             a.setId(id);
             a.setApellidoPaterno(apellidoPaterno);
@@ -184,10 +184,10 @@ public class ControladorAutor implements ActionListener {
      * nuevo: metodo que deja en blanco los jTextField
      */
      void nuevo() {
-        autorVista.txtNombre.setText("");
-        autorVista.txtApellidoPaterno.setText("");
-        autorVista.txtApellidoMaterno.setText("");
-        autorVista.txtId.setText("");
+        autorVista.nom_autor_txt.setText("");
+        autorVista.ape_paterno_autor.setText("");
+        autorVista.ape_materno_autor.setText("");
+        autorVista.id_autor_txt.setText("");
         autorVista.requestFocus();
     }
      

@@ -18,52 +18,52 @@ import javax.swing.table.DefaultTableModel;
  */
 public class ControladorIdioma implements ActionListener {
     IdiomaDAO dao = new IdiomaDAO();
-    Idioma i = new Idioma();
-    IdiomaFrame idiomaVista = new IdiomaFrame();
+    Idioma idioma = new Idioma();
+    IdiomaFrame iFrame = new IdiomaFrame();
     DefaultTableModel modelo = new DefaultTableModel();
 
      public ControladorIdioma(IdiomaFrame i){
-        this.idiomaVista = i;
-        this.idiomaVista.btnListar.addActionListener(this);
-        this.idiomaVista.btnAgregar.addActionListener(this);
-        this.idiomaVista.btnEditar.addActionListener(this);
-        this.idiomaVista.btnActualizar.addActionListener(this);
-        this.idiomaVista.btnEliminar.addActionListener(this);
+        this.iFrame = i;
+        this.iFrame.listar_idioma_btn.addActionListener(this);
+        this.iFrame.agregar_idioma_btn.addActionListener(this);
+        this.iFrame.editar_idioma_btn.addActionListener(this);
+        this.iFrame.actualizar_idioma_btn.addActionListener(this);
+        this.iFrame.eliminar_idioma_btn.addActionListener(this);
      }
     
     @Override
     public void actionPerformed(ActionEvent e) {
-         if (e.getSource() == idiomaVista.btnListar) {
+         if (e.getSource() == iFrame.listar_idioma_btn) {
             limpiarTabla();
-            listar(idiomaVista.tabla);
+            listar(iFrame.tabla);
             nuevo();
         }
        
-        if (e.getSource() == idiomaVista.btnAgregar) {
+        if (e.getSource() == iFrame.agregar_idioma_btn) {
             agregar();
-            listar(idiomaVista.tabla);
+            listar(iFrame.tabla);
             nuevo();
         }
-        if (e.getSource() == idiomaVista.btnEditar) {
-            int fila = idiomaVista.tabla.getSelectedRow();
+        if (e.getSource() == iFrame.editar_idioma_btn) {
+            int fila = iFrame.tabla.getSelectedRow();
             if (fila == -1) {
-                JOptionPane.showMessageDialog(idiomaVista, "Debe seleccionar una fila");
+                JOptionPane.showMessageDialog(iFrame, "Debe seleccionar una fila");
            }else{
-                JOptionPane.showMessageDialog(idiomaVista, "Modifica el dato y haz click en Actualizar");
-                String idiomaTxt = (String) idiomaVista.tabla.getValueAt(fila, 1);
-                int id = Integer.parseInt((String) idiomaVista.tabla.getValueAt(fila, 0).toString());
-                idiomaVista.txtIdioma.setText(idiomaTxt);
-                idiomaVista.txtId.setText(""+id);
+                JOptionPane.showMessageDialog(iFrame, "Modifica el dato y haz click en Actualizar");
+                String idiomaTxt = (String) iFrame.tabla.getValueAt(fila, 1);
+                int id = Integer.parseInt((String) iFrame.tabla.getValueAt(fila, 0).toString());
+                iFrame.nom_idioma_txt.setText(idiomaTxt);
+                iFrame.id_idioma_txt.setText(""+id);
             }
         }
-         if (e.getSource() == idiomaVista.btnActualizar) {
+         if (e.getSource() == iFrame.actualizar_idioma_btn) {
             actualizar();
-            listar(idiomaVista.tabla);
+            listar(iFrame.tabla);
             nuevo();
         }
-         if (e.getSource() == idiomaVista.btnEliminar) {  
+         if (e.getSource() == iFrame.eliminar_idioma_btn) {  
             eliminar();
-            listar(idiomaVista.tabla);
+            listar(iFrame.tabla);
             nuevo();
         }
   }
@@ -83,42 +83,42 @@ public class ControladorIdioma implements ActionListener {
         
     }
     public void agregar(){
-        String idiomaTxt = idiomaVista.txtIdioma.getText();
-        i.setNombreIdioma(idiomaTxt);
-        int r = dao.agregar(i);
+        String idiomaTxt = iFrame.nom_idioma_txt.getText();
+        idioma.setNombreIdioma(idiomaTxt);
+        int r = dao.agregar(idioma);
         if (r == 1) {
-            JOptionPane.showMessageDialog(idiomaVista, "Idioma agregado");
+            JOptionPane.showMessageDialog(iFrame, "Idioma agregado");
         }else{
-            JOptionPane.showMessageDialog(idiomaVista, "Error al agregar");
+            JOptionPane.showMessageDialog(iFrame, "Error al agregar");
         }
         limpiarTabla();
     }
     public void actualizar(){
-        if (idiomaVista.txtId.getText().equals("")) {
-            JOptionPane.showMessageDialog(idiomaVista, "No se identifica el id");
+        if (iFrame.id_idioma_txt.getText().equals("")) {
+            JOptionPane.showMessageDialog(iFrame, "No se identifica el id");
         }else{
-            int id = Integer.parseInt(idiomaVista.txtId.getText());
-            String idiomaTxt = idiomaVista.txtIdioma.getText();
-            i.setNombreIdioma(idiomaTxt);
-            i.setIdIdioma(id);
-            int  r = dao.actualizar(i);
+            int id = Integer.parseInt(iFrame.id_idioma_txt.getText());
+            String idiomaTxt = iFrame.nom_idioma_txt.getText();
+            idioma.setNombreIdioma(idiomaTxt);
+            idioma.setIdIdioma(id);
+            int  r = dao.actualizar(idioma);
             if (r == 1) {
-                JOptionPane.showMessageDialog(idiomaVista, "La categoria se ha actualizado");
+                JOptionPane.showMessageDialog(iFrame, "La categoria se ha actualizado");
             }else{
-                JOptionPane.showMessageDialog(idiomaVista, "Error al actualizar");
+                JOptionPane.showMessageDialog(iFrame, "Error al actualizar");
             }
         }
         limpiarTabla();
     }
      public void eliminar(){
-        int fila = idiomaVista.tabla.getSelectedRow();
-        String idioma = (String) idiomaVista.tabla.getValueAt(fila,1);
+        int fila = iFrame.tabla.getSelectedRow();
+        String idioma = (String) iFrame.tabla.getValueAt(fila,1);
         try {
             if (fila == -1) {
-            JOptionPane.showMessageDialog(idiomaVista, "Debe seleccionar una fila");
+            JOptionPane.showMessageDialog(iFrame, "Debe seleccionar una fila");
         }else{
-            JOptionPane.showMessageDialog(idiomaVista, "El Idioma "+idioma+" fue eliminado");
-            int id = Integer.parseInt((String) idiomaVista.tabla.getValueAt(fila, 0).toString());
+            JOptionPane.showMessageDialog(iFrame, "El Idioma "+idioma+" fue eliminado");
+            int id = Integer.parseInt((String) iFrame.tabla.getValueAt(fila, 0).toString());
             dao.eliminar(id); 
         }
         } catch (Exception e) {
@@ -129,12 +129,12 @@ public class ControladorIdioma implements ActionListener {
     }
      
     void nuevo() {
-        idiomaVista.txtIdioma.setText("");
-        idiomaVista.txtId.setText("");
-        idiomaVista.requestFocus();
+        iFrame.nom_idioma_txt.setText("");
+        iFrame.id_idioma_txt.setText("");
+        iFrame.requestFocus();
     }
     void limpiarTabla() {
-        for (int i = 0; i < idiomaVista.tabla.getRowCount(); i++) {
+        for (int i = 0; i < iFrame.tabla.getRowCount(); i++) {
             modelo.removeRow(i);
             i = i - 1;
         }
@@ -142,7 +142,7 @@ public class ControladorIdioma implements ActionListener {
     void centrarCeldas(JTable tabla) {
         DefaultTableCellRenderer tcr = new DefaultTableCellRenderer();
         tcr.setHorizontalAlignment(SwingConstants.CENTER);
-        for (int i = 0; i < idiomaVista.tabla.getColumnCount(); i++) {
+        for (int i = 0; i < iFrame.tabla.getColumnCount(); i++) {
             tabla.getColumnModel().getColumn(i).setCellRenderer(tcr);
         }
     }

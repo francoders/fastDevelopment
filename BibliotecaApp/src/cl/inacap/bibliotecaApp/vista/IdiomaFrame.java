@@ -40,22 +40,22 @@ public class IdiomaFrame extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
-        txtIdioma = new javax.swing.JTextField();
+        nom_idioma_txt = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        txtId = new javax.swing.JTextField();
-        btnAgregar = new javax.swing.JButton();
+        id_idioma_txt = new javax.swing.JTextField();
+        agregar_idioma_btn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabla = new javax.swing.JTable();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
-        btnEliminar = new javax.swing.JButton();
-        btnListar = new javax.swing.JButton();
-        btnEditar = new javax.swing.JButton();
-        btnActualizar = new javax.swing.JButton();
+        eliminar_idioma_btn = new javax.swing.JButton();
+        listar_idioma_btn = new javax.swing.JButton();
+        editar_idioma_btn = new javax.swing.JButton();
+        actualizar_idioma_btn = new javax.swing.JButton();
 
         jButton4.setText("jButton4");
 
@@ -73,14 +73,14 @@ public class IdiomaFrame extends javax.swing.JFrame {
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("Ingresa los idiomas de los libros");
 
-        txtIdioma.setBackground(new java.awt.Color(255, 255, 255));
-        txtIdioma.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 13)); // NOI18N
-        txtIdioma.setForeground(new java.awt.Color(0, 0, 0));
-        txtIdioma.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        txtIdioma.setToolTipText("");
-        txtIdioma.setBorder(null);
-        txtIdioma.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        txtIdioma.setSelectedTextColor(new java.awt.Color(11, 0, 32));
+        nom_idioma_txt.setBackground(new java.awt.Color(255, 255, 255));
+        nom_idioma_txt.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 13)); // NOI18N
+        nom_idioma_txt.setForeground(new java.awt.Color(0, 0, 0));
+        nom_idioma_txt.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        nom_idioma_txt.setToolTipText("");
+        nom_idioma_txt.setBorder(null);
+        nom_idioma_txt.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        nom_idioma_txt.setSelectedTextColor(new java.awt.Color(11, 0, 32));
 
         jLabel11.setBackground(new java.awt.Color(11, 0, 32));
         jLabel11.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
@@ -97,22 +97,22 @@ public class IdiomaFrame extends javax.swing.JFrame {
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("ID");
 
-        txtId.setEditable(false);
-        txtId.setBackground(new java.awt.Color(255, 255, 255));
-        txtId.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
-        txtId.setForeground(new java.awt.Color(255, 255, 255));
-        txtId.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        txtId.setToolTipText("");
-        txtId.setBorder(null);
-        txtId.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        txtId.setSelectedTextColor(new java.awt.Color(11, 0, 32));
+        id_idioma_txt.setEditable(false);
+        id_idioma_txt.setBackground(new java.awt.Color(255, 255, 255));
+        id_idioma_txt.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
+        id_idioma_txt.setForeground(new java.awt.Color(255, 255, 255));
+        id_idioma_txt.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        id_idioma_txt.setToolTipText("");
+        id_idioma_txt.setBorder(null);
+        id_idioma_txt.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        id_idioma_txt.setSelectedTextColor(new java.awt.Color(11, 0, 32));
 
-        btnAgregar.setBackground(new java.awt.Color(255, 255, 255));
-        btnAgregar.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
-        btnAgregar.setText("Agregar");
-        btnAgregar.addActionListener(new java.awt.event.ActionListener() {
+        agregar_idioma_btn.setBackground(new java.awt.Color(255, 255, 255));
+        agregar_idioma_btn.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
+        agregar_idioma_btn.setText("Agregar");
+        agregar_idioma_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAgregarActionPerformed(evt);
+                agregar_idioma_btnActionPerformed(evt);
             }
         });
 
@@ -131,14 +131,14 @@ public class IdiomaFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(agregar_idioma_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(170, 170, 170))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel17)
-                            .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(id_idioma_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel16)
-                            .addComponent(txtIdioma, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(nom_idioma_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(64, 64, 64))))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
@@ -168,13 +168,13 @@ public class IdiomaFrame extends javax.swing.JFrame {
                 .addGap(54, 54, 54)
                 .addComponent(jLabel16)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtIdioma, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(nom_idioma_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31)
                 .addComponent(jLabel17)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(id_idioma_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(58, 58, 58)
-                .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(agregar_idioma_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(167, Short.MAX_VALUE))
         );
 
@@ -210,45 +210,45 @@ public class IdiomaFrame extends javax.swing.JFrame {
         jLabel20.setText("y eliminar los datos si lo deseas");
         jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 70, -1, 30));
 
-        btnEliminar.setBackground(new java.awt.Color(255, 255, 255));
-        btnEliminar.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
-        btnEliminar.setText("Eliminar");
-        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
+        eliminar_idioma_btn.setBackground(new java.awt.Color(255, 255, 255));
+        eliminar_idioma_btn.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
+        eliminar_idioma_btn.setText("Eliminar");
+        eliminar_idioma_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEliminarActionPerformed(evt);
+                eliminar_idioma_btnActionPerformed(evt);
             }
         });
-        jPanel1.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 180, 320, 37));
+        jPanel1.add(eliminar_idioma_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 180, 320, 37));
 
-        btnListar.setBackground(new java.awt.Color(255, 255, 255));
-        btnListar.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
-        btnListar.setText("Listar");
-        btnListar.addActionListener(new java.awt.event.ActionListener() {
+        listar_idioma_btn.setBackground(new java.awt.Color(255, 255, 255));
+        listar_idioma_btn.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
+        listar_idioma_btn.setText("Listar");
+        listar_idioma_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnListarActionPerformed(evt);
+                listar_idioma_btnActionPerformed(evt);
             }
         });
-        jPanel1.add(btnListar, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 140, 100, 37));
+        jPanel1.add(listar_idioma_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 140, 100, 37));
 
-        btnEditar.setBackground(new java.awt.Color(255, 255, 255));
-        btnEditar.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
-        btnEditar.setText("Editar");
-        btnEditar.addActionListener(new java.awt.event.ActionListener() {
+        editar_idioma_btn.setBackground(new java.awt.Color(255, 255, 255));
+        editar_idioma_btn.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
+        editar_idioma_btn.setText("Editar");
+        editar_idioma_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEditarActionPerformed(evt);
+                editar_idioma_btnActionPerformed(evt);
             }
         });
-        jPanel1.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 140, 100, 37));
+        jPanel1.add(editar_idioma_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 140, 100, 37));
 
-        btnActualizar.setBackground(new java.awt.Color(255, 255, 255));
-        btnActualizar.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
-        btnActualizar.setText("Actualizar");
-        btnActualizar.addActionListener(new java.awt.event.ActionListener() {
+        actualizar_idioma_btn.setBackground(new java.awt.Color(255, 255, 255));
+        actualizar_idioma_btn.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
+        actualizar_idioma_btn.setText("Actualizar");
+        actualizar_idioma_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnActualizarActionPerformed(evt);
+                actualizar_idioma_btnActionPerformed(evt);
             }
         });
-        jPanel1.add(btnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 140, 100, 37));
+        jPanel1.add(actualizar_idioma_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 140, 100, 37));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -264,25 +264,25 @@ public class IdiomaFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
+    private void eliminar_idioma_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminar_idioma_btnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnEliminarActionPerformed
+    }//GEN-LAST:event_eliminar_idioma_btnActionPerformed
 
-    private void btnListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListarActionPerformed
+    private void listar_idioma_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listar_idioma_btnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnListarActionPerformed
+    }//GEN-LAST:event_listar_idioma_btnActionPerformed
 
-    private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
+    private void editar_idioma_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editar_idioma_btnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnEditarActionPerformed
+    }//GEN-LAST:event_editar_idioma_btnActionPerformed
 
-    private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
+    private void actualizar_idioma_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actualizar_idioma_btnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnActualizarActionPerformed
+    }//GEN-LAST:event_actualizar_idioma_btnActionPerformed
 
-    private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
+    private void agregar_idioma_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregar_idioma_btnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnAgregarActionPerformed
+    }//GEN-LAST:event_agregar_idioma_btnActionPerformed
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         GestionDatosFrame gtFrame = new GestionDatosFrame();
@@ -301,11 +301,11 @@ public class IdiomaFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnActualizar;
-    public javax.swing.JButton btnAgregar;
-    public javax.swing.JButton btnEditar;
-    public javax.swing.JButton btnEliminar;
-    public javax.swing.JButton btnListar;
+    public javax.swing.JButton actualizar_idioma_btn;
+    public javax.swing.JButton agregar_idioma_btn;
+    public javax.swing.JButton editar_idioma_btn;
+    public javax.swing.JButton eliminar_idioma_btn;
+    public javax.swing.JTextField id_idioma_txt;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
@@ -318,8 +318,8 @@ public class IdiomaFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     public javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JButton listar_idioma_btn;
+    public javax.swing.JTextField nom_idioma_txt;
     public javax.swing.JTable tabla;
-    public javax.swing.JTextField txtId;
-    public javax.swing.JTextField txtIdioma;
     // End of variables declaration//GEN-END:variables
 }
