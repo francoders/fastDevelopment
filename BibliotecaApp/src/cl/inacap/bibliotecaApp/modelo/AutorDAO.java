@@ -38,8 +38,8 @@ public class AutorDAO {
             rs = ps.executeQuery();
             while (rs.next()) {
                 Autor a = new Autor();
-                a.setNombre(rs.getString(1));
-                a.setId(rs.getInt(2));
+                a.setId(rs.getInt(1));
+                a.setNombre(rs.getString(2));
                 a.setApellidoPaterno(rs.getString(3));
                 a.setApellidoMaterno(rs.getString(4));
                 datos.add(a);

@@ -54,7 +54,6 @@ public class AutorFrame extends javax.swing.JFrame {
         tabla = new javax.swing.JTable();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
         eliminar_autor_btn = new javax.swing.JButton();
         listar_autor_btn = new javax.swing.JButton();
         editar_autor_btn = new javax.swing.JButton();
@@ -226,25 +225,19 @@ public class AutorFrame extends javax.swing.JFrame {
             tabla.getColumnModel().getColumn(0).setPreferredWidth(10);
         }
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 290, 550, 100));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 260, 550, 280));
 
         jLabel18.setBackground(new java.awt.Color(11, 0, 32));
         jLabel18.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(11, 0, 32));
         jLabel18.setText("Tabla de autores");
-        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 30, -1, -1));
+        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 40, -1, -1));
 
         jLabel19.setBackground(new java.awt.Color(102, 102, 102));
         jLabel19.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 12)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(11, 0, 32));
         jLabel19.setText("Selecciona un autor en la tabla, puedes listar, editar, ");
-        jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 70, -1, -1));
-
-        jLabel20.setBackground(new java.awt.Color(102, 102, 102));
-        jLabel20.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 12)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(11, 0, 32));
-        jLabel20.setText("y eliminar los datos si lo deseas");
-        jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 80, -1, 30));
+        jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 90, -1, -1));
 
         eliminar_autor_btn.setBackground(new java.awt.Color(255, 255, 255));
         eliminar_autor_btn.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
@@ -254,7 +247,7 @@ public class AutorFrame extends javax.swing.JFrame {
                 eliminar_autor_btnActionPerformed(evt);
             }
         });
-        jPanel1.add(eliminar_autor_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 200, 370, 37));
+        jPanel1.add(eliminar_autor_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 180, 370, 37));
 
         listar_autor_btn.setBackground(new java.awt.Color(255, 255, 255));
         listar_autor_btn.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
@@ -264,7 +257,7 @@ public class AutorFrame extends javax.swing.JFrame {
                 listar_autor_btnActionPerformed(evt);
             }
         });
-        jPanel1.add(listar_autor_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 150, 120, 37));
+        jPanel1.add(listar_autor_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 130, 120, 37));
 
         editar_autor_btn.setBackground(new java.awt.Color(255, 255, 255));
         editar_autor_btn.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
@@ -274,7 +267,7 @@ public class AutorFrame extends javax.swing.JFrame {
                 editar_autor_btnActionPerformed(evt);
             }
         });
-        jPanel1.add(editar_autor_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 150, 120, 37));
+        jPanel1.add(editar_autor_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 130, 120, 37));
 
         actualizar_autor_btn.setBackground(new java.awt.Color(255, 255, 255));
         actualizar_autor_btn.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
@@ -284,7 +277,7 @@ public class AutorFrame extends javax.swing.JFrame {
                 actualizar_autor_btnActionPerformed(evt);
             }
         });
-        jPanel1.add(actualizar_autor_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 150, 110, 37));
+        jPanel1.add(actualizar_autor_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 130, 110, 37));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -363,7 +356,6 @@ public class AutorFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel20;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
