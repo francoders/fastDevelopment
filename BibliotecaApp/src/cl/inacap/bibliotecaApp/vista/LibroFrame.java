@@ -38,17 +38,11 @@ public class LibroFrame extends javax.swing.JFrame{
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
         btnAgregar = new javax.swing.JButton();
-        jSeparator2 = new javax.swing.JSeparator();
-        jSeparator3 = new javax.swing.JSeparator();
         btnNuevo = new javax.swing.JButton();
         jLabel24 = new javax.swing.JLabel();
         txtIsbn = new javax.swing.JTextField();
-        jSeparator6 = new javax.swing.JSeparator();
         txtNPaginas = new javax.swing.JTextField();
-        jSeparator7 = new javax.swing.JSeparator();
-        jSeparator8 = new javax.swing.JSeparator();
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
@@ -58,11 +52,11 @@ public class LibroFrame extends javax.swing.JFrame{
         cbxEditorial = new javax.swing.JComboBox<>();
         txtPReferencia = new javax.swing.JTextField();
         txtAnio = new javax.swing.JTextField();
-        jSeparator9 = new javax.swing.JSeparator();
         jLabel28 = new javax.swing.JLabel();
         cbxIdioma = new javax.swing.JComboBox<>();
         cbxAutor = new javax.swing.JComboBox<>();
         cbxCategoria = new javax.swing.JComboBox<>();
+        flechaa = new javax.swing.JLabel();
         btnEliminar = new javax.swing.JButton();
         btnActualizar = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
@@ -136,18 +130,18 @@ public class LibroFrame extends javax.swing.JFrame{
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel4.setBackground(new java.awt.Color(11, 0, 32));
+        jPanel4.setBackground(new java.awt.Color(39, 151, 212));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txtNSerie.setBackground(new java.awt.Color(11, 0, 32));
+        txtNSerie.setBackground(new java.awt.Color(255, 255, 255));
         txtNSerie.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 14)); // NOI18N
-        txtNSerie.setForeground(new java.awt.Color(255, 255, 255));
+        txtNSerie.setForeground(new java.awt.Color(0, 0, 0));
         txtNSerie.setBorder(null);
         jPanel4.add(txtNSerie, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 200, 30));
 
-        txtTitulo.setBackground(new java.awt.Color(11, 0, 32));
+        txtTitulo.setBackground(new java.awt.Color(255, 255, 255));
         txtTitulo.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 14)); // NOI18N
-        txtTitulo.setForeground(new java.awt.Color(255, 255, 255));
+        txtTitulo.setForeground(new java.awt.Color(0, 0, 0));
         txtTitulo.setBorder(null);
         jPanel4.add(txtTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 430, 30));
 
@@ -176,16 +170,10 @@ public class LibroFrame extends javax.swing.JFrame{
         jPanel4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, -1, -1));
 
         jLabel11.setBackground(new java.awt.Color(11, 0, 32));
-        jLabel11.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 20)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Libros");
-        jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, -1, -1));
-
-        jLabel13.setBackground(new java.awt.Color(102, 102, 102));
-        jLabel13.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 12)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setText("Ingrese los datos perteneciente al libro");
-        jPanel4.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 60, -1, -1));
+        jLabel11.setText("Registro de Libro");
+        jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 30, 200, -1));
 
         btnAgregar.setText("Agregar");
         btnAgregar.addActionListener(new java.awt.event.ActionListener() {
@@ -193,9 +181,7 @@ public class LibroFrame extends javax.swing.JFrame{
                 btnAgregarActionPerformed(evt);
             }
         });
-        jPanel4.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 620, 120, -1));
-        jPanel4.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 200, 10));
-        jPanel4.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 430, 10));
+        jPanel4.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 620, 120, 40));
 
         btnNuevo.setText("Limpiar textos");
         btnNuevo.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -203,7 +189,7 @@ public class LibroFrame extends javax.swing.JFrame{
                 btnNuevoMouseClicked(evt);
             }
         });
-        jPanel4.add(btnNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 620, 120, -1));
+        jPanel4.add(btnNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 620, 120, 40));
 
         jLabel24.setBackground(new java.awt.Color(102, 102, 102));
         jLabel24.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
@@ -211,26 +197,23 @@ public class LibroFrame extends javax.swing.JFrame{
         jLabel24.setText("N° Serie");
         jPanel4.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, -1, -1));
 
-        txtIsbn.setBackground(new java.awt.Color(11, 0, 32));
+        txtIsbn.setBackground(new java.awt.Color(255, 255, 255));
         txtIsbn.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 14)); // NOI18N
-        txtIsbn.setForeground(new java.awt.Color(255, 255, 255));
+        txtIsbn.setForeground(new java.awt.Color(0, 0, 0));
         txtIsbn.setBorder(null);
         jPanel4.add(txtIsbn, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 130, 190, 30));
-        jPanel4.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 160, 190, 10));
 
-        txtNPaginas.setBackground(new java.awt.Color(11, 0, 32));
+        txtNPaginas.setBackground(new java.awt.Color(255, 255, 255));
         txtNPaginas.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 14)); // NOI18N
-        txtNPaginas.setForeground(new java.awt.Color(255, 255, 255));
+        txtNPaginas.setForeground(new java.awt.Color(0, 0, 0));
         txtNPaginas.setBorder(null);
-        jPanel4.add(txtNPaginas, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, 100, 30));
-        jPanel4.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, 100, 10));
-        jPanel4.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, 100, 10));
+        jPanel4.add(txtNPaginas, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, 120, 30));
 
         jLabel25.setBackground(new java.awt.Color(102, 102, 102));
         jLabel25.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(255, 255, 255));
         jLabel25.setText("Año publicacion");
-        jPanel4.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 260, 190, 20));
+        jPanel4.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 260, 190, 20));
 
         jLabel26.setBackground(new java.awt.Color(102, 102, 102));
         jLabel26.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
@@ -262,7 +245,7 @@ public class LibroFrame extends javax.swing.JFrame{
                 cbxEstadoActionPerformed(evt);
             }
         });
-        jPanel4.add(cbxEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 550, 190, -1));
+        jPanel4.add(cbxEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 550, 190, 30));
 
         cbxEditorial.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbxEditorial.addActionListener(new java.awt.event.ActionListener() {
@@ -270,40 +253,47 @@ public class LibroFrame extends javax.swing.JFrame{
                 cbxEditorialActionPerformed(evt);
             }
         });
-        jPanel4.add(cbxEditorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 470, 430, -1));
+        jPanel4.add(cbxEditorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 462, 430, 30));
 
-        txtPReferencia.setBackground(new java.awt.Color(11, 0, 32));
+        txtPReferencia.setBackground(new java.awt.Color(255, 255, 255));
         txtPReferencia.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 14)); // NOI18N
-        txtPReferencia.setForeground(new java.awt.Color(255, 255, 255));
+        txtPReferencia.setForeground(new java.awt.Color(0, 0, 0));
         txtPReferencia.setBorder(null);
-        jPanel4.add(txtPReferencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 290, 100, 30));
+        jPanel4.add(txtPReferencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 290, 130, 30));
 
-        txtAnio.setBackground(new java.awt.Color(11, 0, 32));
+        txtAnio.setBackground(new java.awt.Color(255, 255, 255));
         txtAnio.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 14)); // NOI18N
-        txtAnio.setForeground(new java.awt.Color(255, 255, 255));
+        txtAnio.setForeground(new java.awt.Color(0, 0, 0));
         txtAnio.setBorder(null);
-        jPanel4.add(txtAnio, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, 100, 30));
-        jPanel4.add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 320, 100, 10));
+        jPanel4.add(txtAnio, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 290, 140, 30));
 
         jLabel28.setBackground(new java.awt.Color(102, 102, 102));
         jLabel28.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
         jLabel28.setForeground(new java.awt.Color(255, 255, 255));
         jLabel28.setText("Precio");
-        jPanel4.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 160, 20));
+        jPanel4.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 260, 90, 20));
 
         cbxIdioma.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel4.add(cbxIdioma, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, 190, -1));
+        jPanel4.add(cbxIdioma, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, 190, 30));
 
         cbxAutor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel4.add(cbxAutor, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 390, 190, -1));
+        jPanel4.add(cbxAutor, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 390, 190, 30));
 
         cbxCategoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel4.add(cbxCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 550, 190, -1));
+        jPanel4.add(cbxCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 550, 190, 30));
+
+        flechaa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/flecha_img.png"))); // NOI18N
+        flechaa.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                flechaaMouseClicked(evt);
+            }
+        });
+        jPanel4.add(flechaa, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 100, 70));
 
         jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 570, 700));
 
         btnEliminar.setText("Eliminar");
-        jPanel3.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 160, 320, 40));
+        jPanel3.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 160, 600, 40));
 
         btnActualizar.setText("Actualizar");
         btnActualizar.addActionListener(new java.awt.event.ActionListener() {
@@ -311,7 +301,7 @@ public class LibroFrame extends javax.swing.JFrame{
                 btnActualizarActionPerformed(evt);
             }
         });
-        jPanel3.add(btnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 110, 100, 40));
+        jPanel3.add(btnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 110, 190, 40));
 
         btnEditar.setText("Editar");
         btnEditar.addActionListener(new java.awt.event.ActionListener() {
@@ -319,7 +309,7 @@ public class LibroFrame extends javax.swing.JFrame{
                 btnEditarActionPerformed(evt);
             }
         });
-        jPanel3.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 110, 100, 40));
+        jPanel3.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 110, 200, 40));
 
         btnListar.setText("Listar");
         btnListar.addActionListener(new java.awt.event.ActionListener() {
@@ -327,7 +317,7 @@ public class LibroFrame extends javax.swing.JFrame{
                 btnListarActionPerformed(evt);
             }
         });
-        jPanel3.add(btnListar, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 110, 100, 40));
+        jPanel3.add(btnListar, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 110, 190, 40));
 
         tabla = new javax.swing.JTable(){
             public boolean isCellEditable(int fila,int col){
@@ -349,7 +339,7 @@ public class LibroFrame extends javax.swing.JFrame{
         tabla.getTableHeader().setReorderingAllowed(false);
         jScrollPane5.setViewportView(tabla);
 
-        jPanel3.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 340, 850, 140));
+        jPanel3.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 250, 890, 330));
 
         jLabel21.setBackground(new java.awt.Color(11, 0, 32));
         jLabel21.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
@@ -375,7 +365,7 @@ public class LibroFrame extends javax.swing.JFrame{
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 1473, Short.MAX_VALUE))
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 1500, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -414,6 +404,12 @@ public class LibroFrame extends javax.swing.JFrame{
         // TODO add your handling code here:
     }//GEN-LAST:event_cbxEditorialActionPerformed
 
+    private void flechaaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_flechaaMouseClicked
+        GestionDatosFrame gtFrame = new GestionDatosFrame();
+        gtFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_flechaaMouseClicked
+
     public static void main(String args[]){
        LibroFrame l = new LibroFrame();
        ControladorLibro con = new ControladorLibro(l);
@@ -433,8 +429,8 @@ public class LibroFrame extends javax.swing.JFrame{
     public javax.swing.JComboBox<String> cbxEditorial;
     public javax.swing.JComboBox<String> cbxEstado;
     public javax.swing.JComboBox<String> cbxIdioma;
+    public javax.swing.JLabel flechaa;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
@@ -456,12 +452,6 @@ public class LibroFrame extends javax.swing.JFrame{
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JSeparator jSeparator6;
-    private javax.swing.JSeparator jSeparator7;
-    private javax.swing.JSeparator jSeparator8;
-    private javax.swing.JSeparator jSeparator9;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;

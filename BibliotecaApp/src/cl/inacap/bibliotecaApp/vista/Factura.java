@@ -25,7 +25,6 @@ public class Factura extends javax.swing.JFrame{
         jLabel18 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
         btnAgregar = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         btnNuevo = new javax.swing.JButton();
@@ -50,6 +49,7 @@ public class Factura extends javax.swing.JFrame{
         jSeparator13 = new javax.swing.JSeparator();
         jSeparator5 = new javax.swing.JSeparator();
         txtFolioFactura = new javax.swing.JTextField();
+        flecha = new javax.swing.JLabel();
         btnDelete = new javax.swing.JButton();
         btnActualizar = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
@@ -116,55 +116,51 @@ public class Factura extends javax.swing.JFrame{
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel4.setBackground(new java.awt.Color(11, 0, 32));
+        jPanel4.setBackground(new java.awt.Color(39, 151, 212));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txtDistribuidor.setBackground(new java.awt.Color(11, 0, 32));
+        txtDistribuidor.setBackground(new java.awt.Color(255, 255, 255));
         txtDistribuidor.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 14)); // NOI18N
-        txtDistribuidor.setForeground(new java.awt.Color(255, 255, 255));
+        txtDistribuidor.setForeground(new java.awt.Color(0, 0, 0));
         txtDistribuidor.setBorder(null);
-        jPanel4.add(txtDistribuidor, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, 320, 30));
+        jPanel4.add(txtDistribuidor, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 460, 320, 30));
 
         jLabel18.setBackground(new java.awt.Color(102, 102, 102));
         jLabel18.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setText("Fecha de compra");
-        jPanel4.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, 160, 20));
+        jPanel4.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, 160, 20));
 
         jLabel20.setBackground(new java.awt.Color(102, 102, 102));
         jLabel20.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(255, 255, 255));
         jLabel20.setText("Distribuidor");
-        jPanel4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, -1, -1));
+        jPanel4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 430, -1, -1));
 
         jLabel11.setBackground(new java.awt.Color(11, 0, 32));
         jLabel11.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Factura");
-        jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 30, -1, -1));
+        jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, -1, -1));
 
-        jLabel13.setBackground(new java.awt.Color(102, 102, 102));
-        jLabel13.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 12)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setText("Ingrese los datos perteneciente al libro");
-        jPanel4.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, -1, -1));
-
+        btnAgregar.setBackground(java.awt.SystemColor.controlHighlight);
         btnAgregar.setText("Agregar");
         btnAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAgregarActionPerformed(evt);
             }
         });
-        jPanel4.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 640, 120, -1));
-        jPanel4.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 470, 320, 10));
+        jPanel4.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 610, 160, 40));
+        jPanel4.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 490, 320, 10));
 
+        btnNuevo.setBackground(java.awt.SystemColor.controlHighlight);
         btnNuevo.setText("Limpiar textos");
         btnNuevo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnNuevoMouseClicked(evt);
             }
         });
-        jPanel4.add(btnNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 640, 120, -1));
+        jPanel4.add(btnNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 610, 120, 40));
 
         btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
         btnBack.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -178,86 +174,99 @@ public class Factura extends javax.swing.JFrame{
         jLabel24.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(255, 255, 255));
         jLabel24.setText("Folio");
-        jPanel4.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, -1, -1));
+        jPanel4.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, -1, -1));
 
-        txtIva.setBackground(new java.awt.Color(11, 0, 32));
+        txtIva.setBackground(new java.awt.Color(255, 255, 255));
         txtIva.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 14)); // NOI18N
-        txtIva.setForeground(new java.awt.Color(255, 255, 255));
+        txtIva.setForeground(new java.awt.Color(0, 0, 0));
         txtIva.setBorder(null);
-        jPanel4.add(txtIva, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, 150, 30));
-        jPanel4.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, 150, 10));
+        jPanel4.add(txtIva, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, 150, 30));
+        jPanel4.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, 150, 10));
 
         jLabel26.setBackground(new java.awt.Color(102, 102, 102));
         jLabel26.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
         jLabel26.setForeground(new java.awt.Color(255, 255, 255));
         jLabel26.setText("Costo IVA");
-        jPanel4.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, -1, -1));
-        jPanel4.add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, 150, 10));
+        jPanel4.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, -1, -1));
+        jPanel4.add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 420, 150, 10));
 
-        txtFechaCompra.setBackground(new java.awt.Color(11, 0, 32));
+        txtFechaCompra.setBackground(new java.awt.Color(255, 255, 255));
         txtFechaCompra.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 14)); // NOI18N
-        txtFechaCompra.setForeground(new java.awt.Color(255, 255, 255));
+        txtFechaCompra.setForeground(new java.awt.Color(0, 0, 0));
         txtFechaCompra.setBorder(null);
-        jPanel4.add(txtFechaCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, 150, 30));
+        jPanel4.add(txtFechaCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, 150, 30));
 
-        txtHoraCompra.setBackground(new java.awt.Color(11, 0, 32));
+        txtHoraCompra.setBackground(new java.awt.Color(255, 255, 255));
         txtHoraCompra.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 14)); // NOI18N
-        txtHoraCompra.setForeground(new java.awt.Color(255, 255, 255));
+        txtHoraCompra.setForeground(new java.awt.Color(0, 0, 0));
         txtHoraCompra.setBorder(null);
-        jPanel4.add(txtHoraCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 370, 150, 30));
-        jPanel4.add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 400, 150, 10));
+        jPanel4.add(txtHoraCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 390, 150, 30));
+        jPanel4.add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 420, 150, 10));
 
         jLabel27.setBackground(new java.awt.Color(102, 102, 102));
         jLabel27.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
         jLabel27.setForeground(new java.awt.Color(255, 255, 255));
         jLabel27.setText("Hora de compra");
-        jPanel4.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 340, -1, -1));
+        jPanel4.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 360, -1, -1));
 
         jLabel29.setBackground(new java.awt.Color(102, 102, 102));
         jLabel29.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
         jLabel29.setForeground(new java.awt.Color(255, 255, 255));
         jLabel29.setText("Metodo de pago");
-        jPanel4.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 500, 170, 20));
+        jPanel4.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 510, 170, 20));
 
-        txtMetodoPago.setBackground(new java.awt.Color(11, 0, 32));
+        txtMetodoPago.setBackground(new java.awt.Color(255, 255, 255));
         txtMetodoPago.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 14)); // NOI18N
-        txtMetodoPago.setForeground(new java.awt.Color(255, 255, 255));
+        txtMetodoPago.setForeground(new java.awt.Color(0, 0, 0));
         txtMetodoPago.setBorder(null);
-        jPanel4.add(txtMetodoPago, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 530, 150, 30));
+        txtMetodoPago.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtMetodoPagoActionPerformed(evt);
+            }
+        });
+        jPanel4.add(txtMetodoPago, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 540, 150, 30));
         jPanel4.add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 560, 150, 10));
 
-        txtPrecioNeto.setBackground(new java.awt.Color(11, 0, 32));
+        txtPrecioNeto.setBackground(new java.awt.Color(255, 255, 255));
         txtPrecioNeto.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 14)); // NOI18N
-        txtPrecioNeto.setForeground(new java.awt.Color(255, 255, 255));
+        txtPrecioNeto.setForeground(new java.awt.Color(0, 0, 0));
         txtPrecioNeto.setBorder(null);
-        jPanel4.add(txtPrecioNeto, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 150, 30));
+        jPanel4.add(txtPrecioNeto, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 150, 30));
 
         jLabel28.setBackground(new java.awt.Color(102, 102, 102));
         jLabel28.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
         jLabel28.setForeground(new java.awt.Color(255, 255, 255));
         jLabel28.setText("Precio neto");
-        jPanel4.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, -1, -1));
+        jPanel4.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, -1, -1));
 
         jLabel17.setBackground(new java.awt.Color(102, 102, 102));
         jLabel17.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("Precio con IVA");
-        jPanel4.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 180, -1, -1));
+        jPanel4.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, -1, -1));
 
-        txtPrecioIva.setBackground(new java.awt.Color(11, 0, 32));
+        txtPrecioIva.setBackground(new java.awt.Color(255, 255, 255));
         txtPrecioIva.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 14)); // NOI18N
-        txtPrecioIva.setForeground(new java.awt.Color(255, 255, 255));
+        txtPrecioIva.setForeground(new java.awt.Color(0, 0, 0));
         txtPrecioIva.setBorder(null);
-        jPanel4.add(txtPrecioIva, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, 150, 30));
-        jPanel4.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 150, 10));
-        jPanel4.add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, 150, 10));
-        jPanel4.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 320, 10));
+        jPanel4.add(txtPrecioIva, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 230, 150, 30));
+        jPanel4.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 150, 10));
+        jPanel4.add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 260, 150, 10));
+        jPanel4.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 320, 10));
 
-        txtFolioFactura.setBackground(new java.awt.Color(11, 0, 32));
+        txtFolioFactura.setBackground(new java.awt.Color(255, 255, 255));
         txtFolioFactura.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 14)); // NOI18N
-        txtFolioFactura.setForeground(new java.awt.Color(255, 255, 255));
+        txtFolioFactura.setForeground(new java.awt.Color(0, 0, 0));
         txtFolioFactura.setBorder(null);
-        jPanel4.add(txtFolioFactura, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 320, 30));
+        jPanel4.add(txtFolioFactura, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 320, 30));
+
+        flecha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/flecha_img.png"))); // NOI18N
+        flecha.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                flechaMouseClicked(evt);
+            }
+        });
+        jPanel4.add(flecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 100, 80));
 
         jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 730));
 
@@ -320,7 +329,7 @@ public class Factura extends javax.swing.JFrame{
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 1243, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -359,6 +368,16 @@ public class Factura extends javax.swing.JFrame{
         };
     }//GEN-LAST:event_btnAgregarActionPerformed
 
+    private void txtMetodoPagoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMetodoPagoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtMetodoPagoActionPerformed
+
+    private void flechaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_flechaMouseClicked
+        GestionDatosFrame gtFrame = new GestionDatosFrame();
+        gtFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_flechaMouseClicked
+
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -375,8 +394,8 @@ public class Factura extends javax.swing.JFrame{
     public javax.swing.JButton btnEditar;
     public javax.swing.JButton btnListar;
     public javax.swing.JButton btnNuevo;
+    public javax.swing.JLabel flecha;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel20;

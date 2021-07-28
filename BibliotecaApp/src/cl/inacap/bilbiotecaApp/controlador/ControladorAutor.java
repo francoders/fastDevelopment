@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package cl.inacap.bilbiotecaApp.controlador;
 
 import cl.inacap.bibliotecaApp.modelo.Autor;
 import cl.inacap.bibliotecaApp.modelo.AutorDAO;
-import cl.inacap.bibliotecaApp.vista.AutorVista;
+import cl.inacap.bibliotecaApp.vista.AutorFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
@@ -21,25 +16,22 @@ import javax.swing.table.DefaultTableModel;
  * Clase ControladorAutor: contiene los metodos para crear, modificar, eliminar y actualizar un autor,
  * este tiene relacion con la parte grafica de la aplicacion, es el que valida el ingreso de los datos y 
  * los muestra en pantalla.
- * @author Cristobal Cortés
- * @since 02/06/2020
- * @version 1.0
  */
 public class ControladorAutor implements ActionListener {
     
     AutorDAO dao = new AutorDAO();
     Autor a = new Autor();
-    AutorVista autorVista = new AutorVista();
+    AutorFrame autorVista = new AutorFrame();
     DefaultTableModel modelo = new DefaultTableModel();
     
     /**
      * ControladoAutor: metodo publico que recibe la vista de los autores, mediante un escuchador activa los botones 
      * btnListar, btnAgregar, btnNuevo, btnEditar, btnActualizar y btnEliminar
-     * @param a tipo AutorVista
+     * @param a tipo AutorFrame
      * 
      */
     
-    public ControladorAutor(AutorVista a){
+    public ControladorAutor(AutorFrame a){
         this.autorVista = a;
         this.autorVista.btnListar.addActionListener(this);
         this.autorVista.btnAgregar.addActionListener(this);

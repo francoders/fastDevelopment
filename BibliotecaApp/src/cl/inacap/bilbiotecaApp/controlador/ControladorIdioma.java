@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package cl.inacap.bilbiotecaApp.controlador;
 
 import cl.inacap.bibliotecaApp.modelo.Idioma;
 import cl.inacap.bibliotecaApp.modelo.IdiomaDAO;
-import cl.inacap.bibliotecaApp.vista.IdiomaVista;
+import cl.inacap.bibliotecaApp.vista.IdiomaFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
@@ -19,15 +14,15 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Cristobal
+ * @author Corvalan
  */
 public class ControladorIdioma implements ActionListener {
     IdiomaDAO dao = new IdiomaDAO();
     Idioma i = new Idioma();
-    IdiomaVista idiomaVista = new IdiomaVista();
+    IdiomaFrame idiomaVista = new IdiomaFrame();
     DefaultTableModel modelo = new DefaultTableModel();
 
-     public ControladorIdioma(IdiomaVista i){
+     public ControladorIdioma(IdiomaFrame i){
         this.idiomaVista = i;
         this.idiomaVista.btnListar.addActionListener(this);
         this.idiomaVista.btnAgregar.addActionListener(this);

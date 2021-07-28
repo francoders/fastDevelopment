@@ -36,8 +36,8 @@ public class PrincipalFrame extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         panelIngresoDatos = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        panelIngresoVentas = new javax.swing.JPanel();
+        gestionDatoPanel = new javax.swing.JLabel();
+        ventaLibroPanel = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -65,10 +65,10 @@ public class PrincipalFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel18.setBackground(new java.awt.Color(11, 0, 32));
-        jLabel18.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(11, 0, 32));
-        jLabel18.setText("Gestión de Datos");
+        gestionDatoPanel.setBackground(new java.awt.Color(11, 0, 32));
+        gestionDatoPanel.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
+        gestionDatoPanel.setForeground(new java.awt.Color(11, 0, 32));
+        gestionDatoPanel.setText("Gestión de Datos");
 
         javax.swing.GroupLayout panelIngresoDatosLayout = new javax.swing.GroupLayout(panelIngresoDatos);
         panelIngresoDatos.setLayout(panelIngresoDatosLayout);
@@ -81,7 +81,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
                         .addComponent(jLabel5))
                     .addGroup(panelIngresoDatosLayout.createSequentialGroup()
                         .addGap(30, 30, 30)
-                        .addComponent(jLabel18)))
+                        .addComponent(gestionDatoPanel)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelIngresoDatosLayout.setVerticalGroup(
@@ -90,17 +90,17 @@ public class PrincipalFrame extends javax.swing.JFrame {
                 .addGap(25, 25, 25)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel18)
+                .addComponent(gestionDatoPanel)
                 .addContainerGap(33, Short.MAX_VALUE))
         );
 
         jPanel1.add(panelIngresoDatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 270, 100));
 
-        panelIngresoVentas.setBackground(java.awt.SystemColor.controlHighlight);
-        panelIngresoVentas.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        panelIngresoVentas.addMouseListener(new java.awt.event.MouseAdapter() {
+        ventaLibroPanel.setBackground(java.awt.SystemColor.controlHighlight);
+        ventaLibroPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        ventaLibroPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                panelIngresoVentasMouseClicked(evt);
+                ventaLibroPanelMouseClicked(evt);
             }
         });
 
@@ -109,23 +109,23 @@ public class PrincipalFrame extends javax.swing.JFrame {
         jLabel20.setForeground(new java.awt.Color(11, 0, 32));
         jLabel20.setText("Ingreso de Ventas");
 
-        javax.swing.GroupLayout panelIngresoVentasLayout = new javax.swing.GroupLayout(panelIngresoVentas);
-        panelIngresoVentas.setLayout(panelIngresoVentasLayout);
-        panelIngresoVentasLayout.setHorizontalGroup(
-            panelIngresoVentasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelIngresoVentasLayout.createSequentialGroup()
-                .addGroup(panelIngresoVentasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelIngresoVentasLayout.createSequentialGroup()
+        javax.swing.GroupLayout ventaLibroPanelLayout = new javax.swing.GroupLayout(ventaLibroPanel);
+        ventaLibroPanel.setLayout(ventaLibroPanelLayout);
+        ventaLibroPanelLayout.setHorizontalGroup(
+            ventaLibroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ventaLibroPanelLayout.createSequentialGroup()
+                .addGroup(ventaLibroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ventaLibroPanelLayout.createSequentialGroup()
                         .addGap(288, 288, 288)
                         .addComponent(jLabel7))
-                    .addGroup(panelIngresoVentasLayout.createSequentialGroup()
+                    .addGroup(ventaLibroPanelLayout.createSequentialGroup()
                         .addGap(31, 31, 31)
                         .addComponent(jLabel20)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        panelIngresoVentasLayout.setVerticalGroup(
-            panelIngresoVentasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelIngresoVentasLayout.createSequentialGroup()
+        ventaLibroPanelLayout.setVerticalGroup(
+            ventaLibroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ventaLibroPanelLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -133,7 +133,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
                 .addContainerGap(33, Short.MAX_VALUE))
         );
 
-        jPanel1.add(panelIngresoVentas, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 390, 270, 100));
+        jPanel1.add(ventaLibroPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 390, 270, 100));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo_libro.png"))); // NOI18N
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 170, 440, 550));
@@ -226,18 +226,18 @@ public class PrincipalFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void panelIngresoDatosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelIngresoDatosMouseClicked
-       IngresoDatos datos = new IngresoDatos();
+       GestionDatosFrame datos = new GestionDatosFrame();
        datos.setVisible(true);
        this.dispose();
        
     }//GEN-LAST:event_panelIngresoDatosMouseClicked
 
-    private void panelIngresoVentasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelIngresoVentasMouseClicked
+    private void ventaLibroPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ventaLibroPanelMouseClicked
        IngresoVentas ventas = new IngresoVentas(); 
        ventas.setVisible(true);
        this.dispose();
        
-    }//GEN-LAST:event_panelIngresoVentasMouseClicked
+    }//GEN-LAST:event_ventaLibroPanelMouseClicked
 
     /**
      * @param args the command line arguments
@@ -277,8 +277,8 @@ public class PrincipalFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel gestionDatoPanel;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
@@ -292,6 +292,6 @@ public class PrincipalFrame extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JPanel panelIngresoDatos;
-    private javax.swing.JPanel panelIngresoVentas;
+    private javax.swing.JPanel ventaLibroPanel;
     // End of variables declaration//GEN-END:variables
 }

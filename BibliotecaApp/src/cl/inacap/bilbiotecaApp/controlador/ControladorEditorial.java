@@ -1,10 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package cl.inacap.bilbiotecaApp.controlador;
-
 
 import cl.inacap.bibliotecaApp.modelo.Editorial;
 import cl.inacap.bibliotecaApp.modelo.EditorialDAO;
@@ -20,7 +14,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Cristobal
+ * @author Corvalan
  */
 public class ControladorEditorial implements ActionListener {
     EditorialDAO dao = new EditorialDAO();

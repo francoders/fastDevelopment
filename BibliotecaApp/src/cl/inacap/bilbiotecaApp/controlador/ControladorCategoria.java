@@ -1,14 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package cl.inacap.bilbiotecaApp.controlador;
 
 import cl.inacap.bibliotecaApp.modelo.Categoria;
 import cl.inacap.bibliotecaApp.modelo.CategoriaDAO;
 
-import cl.inacap.bibliotecaApp.vista.CategoriaVista;
+import cl.inacap.bibliotecaApp.vista.CategoriaFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
@@ -22,24 +17,21 @@ import javax.swing.table.DefaultTableModel;
  * Clase ControladorAutor: contiene los metodos para crear, modificar, eliminar y actualizar una categoria,
  * este tiene relacion con la parte grafica de la aplicacion, es el que valida el ingreso de los datos y 
  * los muestra en pantalla.
- * @author Cristobal Cortés
- * @since 08/06/2020
- * @version 1.0
  */
 public class ControladorCategoria implements ActionListener {
     CategoriaDAO dao = new CategoriaDAO();
     Categoria c = new Categoria();
-    CategoriaVista categoriaVista = new CategoriaVista();
+    CategoriaFrame categoriaVista = new CategoriaFrame();
     DefaultTableModel modelo = new DefaultTableModel();
     
      /**
      * ControladorCategoria: metodo publico que recibe la vista de las categorias, mediante un escuchador activa los botones 
      * btnListar, btnAgregar, btnNuevo, btnEditar, btnActualizar y btnEliminar
-     * @param c tipo CategoriaVista
+     * @param c tipo CategoriaFrame
      * 
      */
     
-    public ControladorCategoria(CategoriaVista c){
+    public ControladorCategoria(CategoriaFrame c){
         this.categoriaVista = c;
         this.categoriaVista.btnListar.addActionListener(this);
         this.categoriaVista.btnAgregar.addActionListener(this);

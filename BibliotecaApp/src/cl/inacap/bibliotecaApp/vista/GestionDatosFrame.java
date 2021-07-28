@@ -12,14 +12,14 @@ import cl.inacap.bilbiotecaApp.controlador.ControladorIdioma;
 
 /**
  *
- * @author Cristobal
+ * @author Corvalan
  */
-public class IngresoDatos extends javax.swing.JFrame {
+public class GestionDatosFrame extends javax.swing.JFrame {
 
     /**
      * Creates new form PrincipalFrame
      */
-    public IngresoDatos() {
+    public GestionDatosFrame() {
         initComponents();
         this.setLocationRelativeTo(null);
         
@@ -56,16 +56,22 @@ public class IngresoDatos extends javax.swing.JFrame {
         panelCategoria = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
+        panelDistribuidor1 = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        panelDistribuidor2 = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
 
         jToggleButton1.setText("jToggleButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(11, 0, 32));
+        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(39, 151, 212));
 
         jLabel1.setFont(new java.awt.Font("Microsoft JhengHei", 0, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(11, 0, 32));
@@ -77,7 +83,7 @@ public class IngresoDatos extends javax.swing.JFrame {
 
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/back.png"))); // NOI18N
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/flecha_img.png"))); // NOI18N
         btnBack.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnBackMouseClicked(evt);
@@ -89,33 +95,40 @@ public class IngresoDatos extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnBack)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jSeparator1)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(596, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(82, 82, 82)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(btnBack)
+                        .addGap(282, 282, 282)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 484, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1))))
+                .addContainerGap(335, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(61, 61, 61)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(btnBack))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(23, 23, 23)
+                        .addComponent(btnBack)
+                        .addGap(73, 73, 73))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)))
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(106, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, 190));
 
-        panelLibro.setBackground(new java.awt.Color(255, 255, 255));
+        panelLibro.setBackground(java.awt.SystemColor.controlHighlight);
         panelLibro.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         panelLibro.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -138,7 +151,7 @@ public class IngresoDatos extends javax.swing.JFrame {
                         .addGap(288, 288, 288)
                         .addComponent(jLabel5))
                     .addGroup(panelLibroLayout.createSequentialGroup()
-                        .addGap(37, 37, 37)
+                        .addGap(58, 58, 58)
                         .addComponent(jLabel18)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -147,14 +160,14 @@ public class IngresoDatos extends javax.swing.JFrame {
             .addGroup(panelLibroLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(jLabel5)
-                .addGap(26, 26, 26)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel18)
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
-        jPanel1.add(panelLibro, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 310, 160, -1));
+        jPanel1.add(panelLibro, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 210, 120));
 
-        panelIdioma.setBackground(new java.awt.Color(255, 255, 255));
+        panelIdioma.setBackground(java.awt.SystemColor.controlHighlight);
         panelIdioma.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         panelIdioma.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -177,7 +190,7 @@ public class IngresoDatos extends javax.swing.JFrame {
                         .addGap(288, 288, 288)
                         .addComponent(jLabel6))
                     .addGroup(panelIdiomaLayout.createSequentialGroup()
-                        .addGap(37, 37, 37)
+                        .addGap(55, 55, 55)
                         .addComponent(jLabel19)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -186,14 +199,14 @@ public class IngresoDatos extends javax.swing.JFrame {
             .addGroup(panelIdiomaLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(jLabel6)
-                .addGap(26, 26, 26)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel19)
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
-        jPanel1.add(panelIdioma, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 310, 160, -1));
+        jPanel1.add(panelIdioma, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 420, 210, 120));
 
-        panelDistribuidor.setBackground(new java.awt.Color(255, 255, 255));
+        panelDistribuidor.setBackground(java.awt.SystemColor.controlHighlight);
         panelDistribuidor.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         panelDistribuidor.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -211,28 +224,25 @@ public class IngresoDatos extends javax.swing.JFrame {
         panelDistribuidorLayout.setHorizontalGroup(
             panelDistribuidorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelDistribuidorLayout.createSequentialGroup()
-                .addGroup(panelDistribuidorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelDistribuidorLayout.createSequentialGroup()
-                        .addGap(288, 288, 288)
-                        .addComponent(jLabel9))
-                    .addGroup(panelDistribuidorLayout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addComponent(jLabel22)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(67, 67, 67)
+                .addComponent(jLabel22)
+                .addGap(49, 49, 49)
+                .addComponent(jLabel9)
+                .addContainerGap(8, Short.MAX_VALUE))
         );
         panelDistribuidorLayout.setVerticalGroup(
             panelDistribuidorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelDistribuidorLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addComponent(jLabel9)
-                .addGap(26, 26, 26)
-                .addComponent(jLabel22)
-                .addContainerGap(62, Short.MAX_VALUE))
+                .addGroup(panelDistribuidorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel22)
+                    .addComponent(jLabel9))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
-        jPanel1.add(panelDistribuidor, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 460, 240, -1));
+        jPanel1.add(panelDistribuidor, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 480, 300, 90));
 
-        panelAutor.setBackground(new java.awt.Color(255, 255, 255));
+        panelAutor.setBackground(java.awt.SystemColor.controlHighlight);
         panelAutor.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         panelAutor.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -255,7 +265,7 @@ public class IngresoDatos extends javax.swing.JFrame {
                         .addGap(288, 288, 288)
                         .addComponent(jLabel11))
                     .addGroup(panelAutorLayout.createSequentialGroup()
-                        .addGap(37, 37, 37)
+                        .addGap(60, 60, 60)
                         .addComponent(jLabel24)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -264,14 +274,14 @@ public class IngresoDatos extends javax.swing.JFrame {
             .addGroup(panelAutorLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(jLabel11)
-                .addGap(26, 26, 26)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel24)
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
-        jPanel1.add(panelAutor, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 310, 160, -1));
+        jPanel1.add(panelAutor, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 420, 210, 120));
 
-        panelCategoria.setBackground(new java.awt.Color(255, 255, 255));
+        panelCategoria.setBackground(java.awt.SystemColor.controlHighlight);
         panelCategoria.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         panelCategoria.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -294,7 +304,7 @@ public class IngresoDatos extends javax.swing.JFrame {
                         .addGap(288, 288, 288)
                         .addComponent(jLabel10))
                     .addGroup(panelCategoriaLayout.createSequentialGroup()
-                        .addGap(37, 37, 37)
+                        .addGap(33, 33, 33)
                         .addComponent(jLabel23)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -305,12 +315,84 @@ public class IngresoDatos extends javax.swing.JFrame {
                 .addComponent(jLabel10)
                 .addGap(26, 26, 26)
                 .addComponent(jLabel23)
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
 
-        jPanel1.add(panelCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 460, 240, 150));
+        jPanel1.add(panelCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 260, 210, 120));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 660));
+        panelDistribuidor1.setBackground(java.awt.SystemColor.controlHighlight);
+        panelDistribuidor1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        panelDistribuidor1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                panelDistribuidor1MouseClicked(evt);
+            }
+        });
+
+        jLabel25.setBackground(new java.awt.Color(11, 0, 32));
+        jLabel25.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(11, 0, 32));
+        jLabel25.setText("Trabajador");
+
+        javax.swing.GroupLayout panelDistribuidor1Layout = new javax.swing.GroupLayout(panelDistribuidor1);
+        panelDistribuidor1.setLayout(panelDistribuidor1Layout);
+        panelDistribuidor1Layout.setHorizontalGroup(
+            panelDistribuidor1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelDistribuidor1Layout.createSequentialGroup()
+                .addGap(89, 89, 89)
+                .addComponent(jLabel25)
+                .addGap(27, 27, 27)
+                .addComponent(jLabel12)
+                .addContainerGap(55, Short.MAX_VALUE))
+        );
+        panelDistribuidor1Layout.setVerticalGroup(
+            panelDistribuidor1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelDistribuidor1Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(panelDistribuidor1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel25)
+                    .addComponent(jLabel12))
+                .addContainerGap(33, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(panelDistribuidor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 360, 300, -1));
+
+        panelDistribuidor2.setBackground(java.awt.SystemColor.controlHighlight);
+        panelDistribuidor2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        panelDistribuidor2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                panelDistribuidor2MouseClicked(evt);
+            }
+        });
+
+        jLabel26.setBackground(new java.awt.Color(11, 0, 32));
+        jLabel26.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(11, 0, 32));
+        jLabel26.setText("Cliente");
+
+        javax.swing.GroupLayout panelDistribuidor2Layout = new javax.swing.GroupLayout(panelDistribuidor2);
+        panelDistribuidor2.setLayout(panelDistribuidor2Layout);
+        panelDistribuidor2Layout.setHorizontalGroup(
+            panelDistribuidor2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelDistribuidor2Layout.createSequentialGroup()
+                .addGap(104, 104, 104)
+                .addComponent(jLabel26)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel13)
+                .addContainerGap(98, Short.MAX_VALUE))
+        );
+        panelDistribuidor2Layout.setVerticalGroup(
+            panelDistribuidor2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelDistribuidor2Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(panelDistribuidor2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel26)
+                    .addComponent(jLabel13))
+                .addContainerGap(29, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(panelDistribuidor2, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 250, 300, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, 640));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -323,7 +405,7 @@ public class IngresoDatos extends javax.swing.JFrame {
     }//GEN-LAST:event_panelLibroMouseClicked
 
     private void panelIdiomaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelIdiomaMouseClicked
-        IdiomaVista i = new IdiomaVista();
+        IdiomaFrame i = new IdiomaFrame();
         ControladorIdioma con = new ControladorIdioma(i);
         i.setVisible(true);
         this.dispose();
@@ -332,7 +414,7 @@ public class IngresoDatos extends javax.swing.JFrame {
 
     private void panelDistribuidorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelDistribuidorMouseClicked
        
-       DistribuidorVista v =new DistribuidorVista();
+       DistribuidorFrame v =new DistribuidorFrame();
        ControladorDistribuidor con = new ControladorDistribuidor(v);
        v.setVisible(true);
        v.setLocationRelativeTo(null);
@@ -340,7 +422,7 @@ public class IngresoDatos extends javax.swing.JFrame {
     }//GEN-LAST:event_panelDistribuidorMouseClicked
 
     private void panelAutorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelAutorMouseClicked
-        AutorVista a = new AutorVista();
+        AutorFrame a = new AutorFrame();
         ControladorAutor con = new ControladorAutor(a);
         a.setVisible(true);
         this.dispose();
@@ -348,7 +430,7 @@ public class IngresoDatos extends javax.swing.JFrame {
 
     private void panelCategoriaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelCategoriaMouseClicked
        
-        CategoriaVista c = new CategoriaVista();
+        CategoriaFrame c = new CategoriaFrame();
         ControladorCategoria con = new ControladorCategoria(c);
         c.setVisible(true);
         this.dispose();
@@ -360,6 +442,14 @@ public class IngresoDatos extends javax.swing.JFrame {
         this.dispose();
         // TODO add your handling code here:
     }//GEN-LAST:event_btnBackMouseClicked
+
+    private void panelDistribuidor1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelDistribuidor1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panelDistribuidor1MouseClicked
+
+    private void panelDistribuidor2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelDistribuidor2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panelDistribuidor2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -378,14 +468,18 @@ public class IngresoDatos extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(IngresoDatos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GestionDatosFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(IngresoDatos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GestionDatosFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(IngresoDatos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GestionDatosFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(IngresoDatos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GestionDatosFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -394,7 +488,7 @@ public class IngresoDatos extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new IngresoDatos().setVisible(true);
+                new GestionDatosFrame().setVisible(true);
             }
         });
     }
@@ -404,12 +498,16 @@ public class IngresoDatos extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel9;
@@ -420,6 +518,8 @@ public class IngresoDatos extends javax.swing.JFrame {
     private javax.swing.JPanel panelAutor;
     private javax.swing.JPanel panelCategoria;
     private javax.swing.JPanel panelDistribuidor;
+    private javax.swing.JPanel panelDistribuidor1;
+    private javax.swing.JPanel panelDistribuidor2;
     private javax.swing.JPanel panelIdioma;
     private javax.swing.JPanel panelLibro;
     // End of variables declaration//GEN-END:variables
