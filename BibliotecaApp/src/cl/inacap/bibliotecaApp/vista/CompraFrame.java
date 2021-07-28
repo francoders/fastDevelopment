@@ -41,6 +41,7 @@ public class CompraFrame extends javax.swing.JFrame {
         txtNSerie = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
+        flecha = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel18 = new javax.swing.JLabel();
@@ -127,6 +128,14 @@ public class CompraFrame extends javax.swing.JFrame {
         jLabel21.setForeground(new java.awt.Color(255, 255, 255));
         jLabel21.setText("Rut del distribuidor");
         jPanel2.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, -1, -1));
+
+        flecha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/flecha_img.png"))); // NOI18N
+        flecha.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                flechaMouseClicked(evt);
+            }
+        });
+        jPanel2.add(flecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 90, 80));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 470, 590));
 
@@ -236,6 +245,12 @@ public class CompraFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton9ActionPerformed
 
+    private void flechaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_flechaMouseClicked
+        IngresoVentas ventas = new IngresoVentas();
+        ventas.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_flechaMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -275,6 +290,7 @@ public class CompraFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAgregar;
     private javax.swing.JLabel btnBack;
+    public javax.swing.JLabel flecha;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
