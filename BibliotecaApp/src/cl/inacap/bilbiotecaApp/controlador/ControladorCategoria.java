@@ -42,8 +42,9 @@ public class ControladorCategoria implements ActionListener {
     }
 
     /**
-     * actionPerformed: metodo publico que proporciona las funciones a cada boton 
-     * cuando son clickeados por el usuario
+     * actionPerformed: metodo publico que proporciona las funciones a cada
+     * boton cuando son clickeados por el usuario
+     *
      * @param e tipo ActionEvent
      */
     @Override
@@ -52,7 +53,7 @@ public class ControladorCategoria implements ActionListener {
             limpiarTabla();
             listar(categoriaVista.tabla);
             nuevo();
-            
+
         }
         if (e.getSource() == categoriaVista.btnAgregar) {
             agregar();
@@ -63,15 +64,15 @@ public class ControladorCategoria implements ActionListener {
             int fila = categoriaVista.tabla.getSelectedRow();
             if (fila == -1) {
                 JOptionPane.showMessageDialog(categoriaVista, "Debe seleccionar una fila");
-           }else{
+            } else {
                 JOptionPane.showMessageDialog(categoriaVista, "Modifica el dato y haz click en Actualizar");
                 String categoriaTxt = (String) categoriaVista.tabla.getValueAt(fila, 0);
                 int id = Integer.parseInt((String) categoriaVista.tabla.getValueAt(fila, 1).toString());
                 categoriaVista.txtCategoria.setText(categoriaTxt);
-                categoriaVista.txtId.setText(""+id);
+                categoriaVista.txtId.setText("" + id);
             }
         }
-        if (e.getSource() == categoriaVista.btnEliminar) {  
+        if (e.getSource() == categoriaVista.btnEliminar) {
             eliminar();
             listar(categoriaVista.tabla);
             nuevo();
@@ -84,34 +85,40 @@ public class ControladorCategoria implements ActionListener {
             listar(categoriaVista.tabla);
             nuevo();
         }
-       
+
     }
+
     /**
      * nuevo: metodo que deja en blanco los jTextField
      */
-     void nuevo() {
+    void nuevo() {
         categoriaVista.txtCategoria.setText("");
         categoriaVista.txtId.setText("");
         categoriaVista.requestFocus();
     }
-     
-     /**
-     * agregar: metodo publico que obtiene los valores ingresados por el usuario y 
-     * los añade usando el metodo agregar de la clase CategoriaDAO
+
+    /**
+     * agregar: metodo publico que obtiene los valores ingresados por el usuario
+     * y los añade usando el metodo agregar de la clase CategoriaDAO
      */
-    public void agregar(){
+    public void agregar() {
         String categoriaTxt = categoriaVista.txtCategoria.getText();
         c.setNombreCategoria(categoriaTxt);
-        int r = dao.agregar(c);
-        if (r == 1) {
-            JOptionPane.showMessageDialog(categoriaVista, "Categoria agregada");
-        }else{
-            JOptionPane.showMessageDialog(categoriaVista, "Error al agregar");
+        if (categoriaTxt.equals("")) {
+            JOptionPane.showMessageDialog(categoriaVista, "Ingrese una Categoria!");
+        } else {
+
+            int r = dao.agregar(c);
+            if (r == 1) {
+                JOptionPane.showMessageDialog(categoriaVista, "Categoria agregada");
+            } else {
+                JOptionPane.showMessageDialog(categoriaVista, "Error al agregar");
+            }
+            limpiarTabla();
         }
-        limpiarTabla();
     }
-    
-     /**
+
+    /**
      * actualizar: metodo publico que al seleccionar una categoria, muestra los valores nuevamente
      * en los jTextField para poder ser modificados
      */

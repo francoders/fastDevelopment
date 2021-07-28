@@ -190,7 +190,7 @@ public class CategoriaFrame extends javax.swing.JFrame {
 
             },
             new String [] {
-                "ID", "Categoria"
+                "Categoria", "ID"
             }
         ) {
             boolean[] canEdit = new boolean [] {

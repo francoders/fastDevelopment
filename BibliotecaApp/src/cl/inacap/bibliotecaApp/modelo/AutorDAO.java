@@ -6,12 +6,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Clase AutorDAO: contiene los metodos para crear, modificar, eliminar y
- * actualizar un autor mediante sentencias DML a la base de datos bibliotecadb
- * en la tabla autor
- *
- */
+// Clase AutorDAO: contiene los metodos para crear, modificar, eliminar y actualizar un autor
 public class AutorDAO {
 
     PreparedStatement ps;
@@ -84,7 +79,7 @@ public class AutorDAO {
      * existente mediante una sentencia sql donde se modificara desde el id
      * seleccionado
      *
-     * @param au de tipo Autor
+     * - au de tipo Autor
      * @return la respuesta del PrepareStatement
      */
     public int actualizar(Autor au) {
@@ -114,7 +109,7 @@ public class AutorDAO {
      * eliminar: metodo public int que recibe el id del autor seleccionado y lo
      * elimina mediante una sentencia SQL DELETE
      *
-     * @param id de tipo int
+     * id de tipo int
      * @return la respuesta del PrepareStatement
      */
     public int eliminar(int id) {

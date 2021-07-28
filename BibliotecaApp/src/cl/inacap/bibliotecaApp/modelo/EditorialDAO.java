@@ -26,12 +26,12 @@ public class EditorialDAO {
      */
     public int agregar(Editorial edi){
         int r=0;
-        String sql ="insert into editorial(Nombre_editorial,Id_editorial) values(?,?)";
+        String sql ="insert into editorial(Id_editorial, Nombre_editorial) values(?,?)";
         try{
             con = conectar.getConnection();
             ps = con.prepareStatement(sql);
-            ps.setString(1, edi.getNombreEditorial());
-            ps.setInt(2, edi.getIdEditorial());
+            ps.setInt(1, edi.getIdEditorial());
+            ps.setString(2, edi.getNombreEditorial());
             r = ps.executeUpdate();
             if (r==1) {
                 return 1;
@@ -60,8 +60,8 @@ public class EditorialDAO {
             rs = ps.executeQuery();
             while(rs.next()){
                 Editorial e = new Editorial();
-                e.setNombreEditorial(rs.getString(1));
-                e.setIdEditorial(rs.getInt(2));
+                e.setIdEditorial(rs.getInt(1));
+                e.setNombreEditorial(rs.getString(2));
                 datos.add(e);
             }
         } catch (Exception e) {
@@ -83,9 +83,9 @@ public class EditorialDAO {
         String sql = "update editorial set Nombre_editorial=? where Id_editorial=?";
         try {
             ps = con.prepareStatement(sql);
-            ps.setString(1, edi.getNombreEditorial());
-            ps.setInt(2, edi.getIdEditorial());
-            r=ps.executeUpdate();
+            ps.setInt(1, edi.getIdEditorial());
+            ps.setString(2, edi.getNombreEditorial());
+            r = ps.executeUpdate();
             if (r==1) {
                 return 1;
             }else{
@@ -98,13 +98,10 @@ public class EditorialDAO {
     }
     
       /**
-     * eliminar: metodo public int que recibe el id de la editorial seleccionada y lo elimina mediante
-     * una sentencia SQL DELETE 
-     * @param idEditorial de tipo int
-     * @return la respuesta del PrepareStatement
+     * eliminar: metodo public int que recibe el id de la editorial seleccionada y lo elimina mediante una sentencia SQL DELETE
      */
     public int eliminar(int idEditorial){
-        int r =0;
+        int r = 0;
         String sql = "delete from editorial where Id_editorial="+idEditorial;
         try {
             con = conectar.getConnection();

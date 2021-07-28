@@ -13,12 +13,12 @@ import javax.swing.JOptionPane;
  *
  * @author Cristobal
  */
-public class EditorialVista extends javax.swing.JFrame {
+public class EditorialFrame extends javax.swing.JFrame {
 
     /**
      * Creates new form Libro
      */
-    public EditorialVista() {
+    public EditorialFrame() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -160,7 +160,6 @@ public class EditorialVista extends javax.swing.JFrame {
                         .addComponent(jLabel13)
                         .addGap(45, 45, 45))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(102, 102, 102)
                         .addComponent(jLabel11)
                         .addGap(122, 122, 122)))
                 .addContainerGap(70, Short.MAX_VALUE))
@@ -328,7 +327,7 @@ public class EditorialVista extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-       EditorialVista e = new EditorialVista();
+       EditorialFrame e = new EditorialFrame();
        ControladorEditorial con = new ControladorEditorial(e);
        e.setVisible(true);
        e.setLocationRelativeTo(null);

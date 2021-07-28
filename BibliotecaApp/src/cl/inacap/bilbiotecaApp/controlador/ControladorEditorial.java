@@ -2,7 +2,7 @@ package cl.inacap.bilbiotecaApp.controlador;
 
 import cl.inacap.bibliotecaApp.modelo.Editorial;
 import cl.inacap.bibliotecaApp.modelo.EditorialDAO;
-import cl.inacap.bibliotecaApp.vista.EditorialVista;
+import cl.inacap.bibliotecaApp.vista.EditorialFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
@@ -19,10 +19,10 @@ import javax.swing.table.DefaultTableModel;
 public class ControladorEditorial implements ActionListener {
     EditorialDAO dao = new EditorialDAO();
     Editorial e = new Editorial();
-    EditorialVista editorialVista = new EditorialVista();
+    EditorialFrame editorialVista = new EditorialFrame();
     DefaultTableModel modelo = new DefaultTableModel();
     
-    public ControladorEditorial(EditorialVista e){
+    public ControladorEditorial(EditorialFrame e){
         this.editorialVista = e;
         this.editorialVista.btnListar.addActionListener(this);
         this.editorialVista.btnAgregar.addActionListener(this);
