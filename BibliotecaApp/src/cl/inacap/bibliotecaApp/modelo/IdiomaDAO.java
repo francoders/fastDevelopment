@@ -34,8 +34,9 @@ public class IdiomaDAO {
             rs = ps.executeQuery();
             while (rs.next()) {                
                 Idioma i = new Idioma();
-                i.setNombreIdioma(rs.getString(2));
                 i.setIdIdioma(rs.getInt(1));
+                i.setNombreIdioma(rs.getString(2));
+                i.setCodigoIdioma(rs.getString(3));
                 datos.add(i);
             }
         } catch (Exception e) {
@@ -51,16 +52,17 @@ public class IdiomaDAO {
      */
      public int agregar(Idioma idi){
         int r = 0;
-        String sql = "insert into idioma(Nombre_idioma, Id_idioma) values(?,?)";
-        try {
-            con = conectar.getConnection();
-            ps = con.prepareStatement(sql);
-            ps.setString(1, idi.getNombreIdioma());
-            ps.setInt(2, idi.getIdIdioma());
-            r = ps.executeUpdate();
-            if (r == 1) {
-                return 1;
-            }else{
+        String sql = "insert into idioma(Id_idioma, nombre_idioma, codigo_idioma) values(?,?,?)";
+         try {
+             con = conectar.getConnection();
+             ps = con.prepareStatement(sql);
+             ps.setInt(1, idi.getIdIdioma());
+             ps.setString(2, idi.getNombreIdioma());
+             ps.setString(3, idi.getCodigoIdioma());
+             r = ps.executeUpdate();
+             if (r == 1) {
+                 return 1;
+             } else {
                 return 2;
             }
         } catch (Exception e) {
@@ -78,15 +80,16 @@ public class IdiomaDAO {
         int r =0;
         con = conectar.getConnection();
         PreparedStatement ps = null;
-        String sql = "update idioma set Nombre_idioma=? where Id_idioma=?";
+        String sql = "update idioma set nombre_idioma=?, codigo_idioma=? where Id_idioma=?";
         try {
             ps = con.prepareStatement(sql);
-            ps.setString(1, idi.getNombreIdioma());
-            ps.setInt(2, idi.getIdIdioma());
-            r=ps.executeUpdate();
-            if (r==1) {
+            ps.setInt(1, idi.getIdIdioma());
+            ps.setString(2, idi.getNombreIdioma());
+            ps.setString(3, idi.getCodigoIdioma());
+            r = ps.executeUpdate();
+            if (r == 1) {
                 return 1;
-            }else{
+            } else {
                 return 0;
             }
         } catch (Exception e) {

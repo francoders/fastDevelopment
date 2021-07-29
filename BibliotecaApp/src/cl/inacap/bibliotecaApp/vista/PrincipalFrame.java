@@ -46,8 +46,13 @@ public class PrincipalFrame extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        txt_password = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        txt_rut = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        entrar_btn = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -72,7 +77,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
         });
 
         gestionDatoPanel.setBackground(new java.awt.Color(11, 0, 32));
-        gestionDatoPanel.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
+        gestionDatoPanel.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 10)); // NOI18N
         gestionDatoPanel.setForeground(new java.awt.Color(11, 0, 32));
         gestionDatoPanel.setText("Gestión de Datos");
 
@@ -86,21 +91,21 @@ public class PrincipalFrame extends javax.swing.JFrame {
                         .addGap(288, 288, 288)
                         .addComponent(jLabel5))
                     .addGroup(panelIngresoDatosLayout.createSequentialGroup()
-                        .addGap(30, 30, 30)
+                        .addGap(14, 14, 14)
                         .addComponent(gestionDatoPanel)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelIngresoDatosLayout.setVerticalGroup(
             panelIngresoDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelIngresoDatosLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(gestionDatoPanel)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addGap(11, 11, 11)
+                .addGroup(panelIngresoDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(gestionDatoPanel)
+                    .addComponent(jLabel5))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1.add(panelIngresoDatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 270, 100));
+        jPanel1.add(panelIngresoDatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 460, 130, 40));
 
         ventaLibroPanel.setBackground(java.awt.SystemColor.controlHighlight);
         ventaLibroPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -111,7 +116,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
         });
 
         jLabel20.setBackground(new java.awt.Color(11, 0, 32));
-        jLabel20.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
+        jLabel20.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 10)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(11, 0, 32));
         jLabel20.setText("Ingreso de Ventas");
 
@@ -125,60 +130,62 @@ public class PrincipalFrame extends javax.swing.JFrame {
                         .addGap(288, 288, 288)
                         .addComponent(jLabel7))
                     .addGroup(ventaLibroPanelLayout.createSequentialGroup()
-                        .addGap(31, 31, 31)
+                        .addGap(15, 15, 15)
                         .addComponent(jLabel20)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         ventaLibroPanelLayout.setVerticalGroup(
             ventaLibroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ventaLibroPanelLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel20)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addGap(11, 11, 11)
+                .addGroup(ventaLibroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel20)
+                    .addComponent(jLabel7))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1.add(ventaLibroPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 390, 270, 100));
+        jPanel1.add(ventaLibroPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 510, 130, 40));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo_libro.png"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 170, 440, 550));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 90, 450, 570));
 
-        jPanel3.setBackground(new java.awt.Color(39, 151, 212));
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel9.setText("Contraseña");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 140, 50));
 
-        jLabel6.setFont(new java.awt.Font("Microsoft JhengHei", 1, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(11, 0, 32));
-        jLabel6.setText("Seleccione lo que desea hacer");
-        jLabel6.setToolTipText("");
+        txt_password.setBackground(java.awt.SystemColor.controlLtHighlight);
+        jPanel1.add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 280, 250, 40));
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 770, Short.MAX_VALUE)
-            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel3Layout.createSequentialGroup()
-                    .addGap(219, 219, 219)
-                    .addComponent(jLabel6)
-                    .addContainerGap(205, Short.MAX_VALUE)))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel3Layout.createSequentialGroup()
-                    .addGap(24, 24, 24)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(24, Short.MAX_VALUE)))
-        );
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel10.setText("Usuario - RUT");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 160, 140, 40));
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 770, -1));
+        txt_rut.setBackground(java.awt.SystemColor.controlLtHighlight);
+        jPanel1.add(txt_rut, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, 250, 40));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 0, 810, 620));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton1.setText("Registrarse");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 350, 110, 40));
+
+        entrar_btn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        entrar_btn.setText("Iniciar Sesion");
+        jPanel1.add(entrar_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 350, 110, 40));
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo_inicio.png"))); // NOI18N
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 0, 590, 610));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 0, 880, 580));
 
         jPanel2.setBackground(new java.awt.Color(39, 151, 212));
 
-        jLabel1.setFont(new java.awt.Font("Microsoft JhengHei", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Microsoft JhengHei", 1, 20)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(11, 0, 32));
         jLabel1.setText("Biblioteca Fast Development");
         jLabel1.setToolTipText("");
@@ -198,20 +205,20 @@ public class PrincipalFrame extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(146, 146, 146))
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(90, 90, 90))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(41, 41, 41)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(57, 57, 57)
                         .addComponent(jLabel1))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(86, 86, 86)
+                        .addContainerGap()
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(46, 46, 46)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -220,14 +227,14 @@ public class PrincipalFrame extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(76, 76, 76)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 140, Short.MAX_VALUE)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(115, Short.MAX_VALUE))
+                .addGap(33, 33, 33))
         );
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 620));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 370, 580));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -245,6 +252,12 @@ public class PrincipalFrame extends javax.swing.JFrame {
        this.dispose();
        
     }//GEN-LAST:event_ventaLibroPanelMouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        RegistroTrabajadorFrame registroTrabajador = new RegistroTrabajadorFrame();
+        registroTrabajador.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -284,21 +297,26 @@ public class PrincipalFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton entrar_btn;
     private javax.swing.JLabel gestionDatoPanel;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JPanel panelIngresoDatos;
+    public javax.swing.JTextField txt_password;
+    public javax.swing.JTextField txt_rut;
     private javax.swing.JPanel ventaLibroPanel;
     // End of variables declaration//GEN-END:variables
 }

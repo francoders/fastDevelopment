@@ -26,24 +26,24 @@ public class EditorialDAO {
      */
     public int agregar(Editorial edi){
         int r=0;
-        String sql ="insert into editorial(Id_editorial, Nombre_editorial) values(?,?)";
+        String sql ="insert into editorial(Nombre_editorial, Id_editorial) values(?,?)";
         try{
             con = conectar.getConnection();
             ps = con.prepareStatement(sql);
-            ps.setInt(1, edi.getIdEditorial());
-            ps.setString(2, edi.getNombreEditorial());
+            ps.setString(1, edi.getNombreEditorial());
+            ps.setInt(2, edi.getIdEditorial());
             r = ps.executeUpdate();
-            if (r==1) {
+            if (r == 1) {
                 return 1;
-            }else{
+            } else {
                 return 0;
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             System.out.println(e);
         }
-         return r;
+        return r;
     }
-    
+
      /**
      * 
      * listar: metodo publico que se conecta en la base de datos
@@ -58,10 +58,10 @@ public class EditorialDAO {
             con = conectar.getConnection();
             ps = con.prepareStatement("select * from editorial");
             rs = ps.executeQuery();
-            while(rs.next()){
+            while (rs.next()) {
                 Editorial e = new Editorial();
-                e.setIdEditorial(rs.getInt(1));
-                e.setNombreEditorial(rs.getString(2));
+                e.setNombreEditorial(rs.getString(1));
+                e.setIdEditorial(rs.getInt(2));
                 datos.add(e);
             }
         } catch (Exception e) {
@@ -83,8 +83,8 @@ public class EditorialDAO {
         String sql = "update editorial set Nombre_editorial=? where Id_editorial=?";
         try {
             ps = con.prepareStatement(sql);
-            ps.setInt(1, edi.getIdEditorial());
-            ps.setString(2, edi.getNombreEditorial());
+            ps.setString(1, edi.getNombreEditorial());
+            ps.setInt(2, edi.getIdEditorial());
             r = ps.executeUpdate();
             if (r==1) {
                 return 1;

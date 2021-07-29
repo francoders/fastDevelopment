@@ -30,6 +30,7 @@ public class ControladorIdioma implements ActionListener {
         this.iFrame.editar_idioma_btn.addActionListener(this);
         this.iFrame.actualizar_idioma_btn.addActionListener(this);
         this.iFrame.eliminar_idioma_btn.addActionListener(this);
+        this.iFrame.cod_idioma_txt.addActionListener(this);
     }
 
     @Override
@@ -51,10 +52,12 @@ public class ControladorIdioma implements ActionListener {
                 JOptionPane.showMessageDialog(iFrame, "Debe seleccionar una fila");
             } else {
                 JOptionPane.showMessageDialog(iFrame, "Modifica el dato y haz click en Actualizar");
-                String idiomaTxt = (String) iFrame.tabla.getValueAt(fila, 1);
                 int id = Integer.parseInt((String) iFrame.tabla.getValueAt(fila, 0).toString());
+                String idiomaTxt = (String) iFrame.tabla.getValueAt(fila, 1);
+                String codigoTxt = (String) iFrame.tabla.getValueAt(fila, 2);
                 iFrame.nom_idioma_txt.setText(idiomaTxt);
                 iFrame.id_idioma_txt.setText("" + id);
+                iFrame.cod_idioma_txt.setText(codigoTxt);
             }
         }
         if (e.getSource() == iFrame.actualizar_idioma_btn) {
@@ -78,6 +81,7 @@ public class ControladorIdioma implements ActionListener {
         for (int i = 0; i < lista.size(); i++) {
             objeto[0] = lista.get(i).getIdIdioma();
             objeto[1] = lista.get(i).getNombreIdioma();
+            objeto[2] = lista.get(i).getCodigoIdioma();
             modelo.addRow(objeto);
         }
         tabla.setRowHeight(35);
@@ -88,16 +92,19 @@ public class ControladorIdioma implements ActionListener {
     public void agregar() {
         String idiomaTxt = iFrame.nom_idioma_txt.getText();
         idioma.setNombreIdioma(idiomaTxt);
-        
-        //VALIDACION de campo vacio
-        if (idiomaTxt.equals("")) {
+        String codigoTxt = iFrame.cod_idioma_txt.getText();
+        idioma.setCodigoIdioma(codigoTxt);
 
+        //VALIDACION de campo vacio
+        if (idiomaTxt.equalsIgnoreCase("")|| codigoTxt.equalsIgnoreCase("")) {
+                JOptionPane.showMessageDialog(iFrame, "Rellene todos los campos");
+                limpiarTabla();
         } else {
             int r = dao.agregar(idioma);
             if (r == 1) {
-                JOptionPane.showMessageDialog(iFrame, "Idioma agregado");
+                JOptionPane.showMessageDialog(iFrame, "Idioma Agregado");
             } else {
-                JOptionPane.showMessageDialog(iFrame, "Error al agregar");
+                JOptionPane.showMessageDialog(iFrame, "Error al Ingresar Idioma");
             }
             limpiarTabla();
         }
@@ -105,17 +112,19 @@ public class ControladorIdioma implements ActionListener {
 
     public void actualizar() {
         if (iFrame.id_idioma_txt.getText().equals("")) {
-            JOptionPane.showMessageDialog(iFrame, "No se identifica el id");
+            JOptionPane.showMessageDialog(iFrame, "El ID no existe");
         } else {
             int id = Integer.parseInt(iFrame.id_idioma_txt.getText());
             String idiomaTxt = iFrame.nom_idioma_txt.getText();
-            idioma.setNombreIdioma(idiomaTxt);
+            String codidoTxt = iFrame.cod_idioma_txt.getText();
             idioma.setIdIdioma(id);
+            idioma.setNombreIdioma(idiomaTxt);
+            idioma.setCodigoIdioma(codidoTxt);
             int r = dao.actualizar(idioma);
             if (r == 1) {
-                JOptionPane.showMessageDialog(iFrame, "La categoria se ha actualizado");
+                JOptionPane.showMessageDialog(iFrame, "El idioma Seleccionado se a actualizado");
             } else {
-                JOptionPane.showMessageDialog(iFrame, "Error al actualizar");
+                JOptionPane.showMessageDialog(iFrame, "Error al Actualizar");
             }
         }
         limpiarTabla();
@@ -128,7 +137,7 @@ public class ControladorIdioma implements ActionListener {
             if (fila == -1) {
                 JOptionPane.showMessageDialog(iFrame, "Debe seleccionar una fila");
             } else {
-                JOptionPane.showMessageDialog(iFrame, "El Idioma " + idioma + " fue eliminado");
+                JOptionPane.showMessageDialog(iFrame, "El Idioma " + idioma + " fue Eliminado");
                 int id = Integer.parseInt((String) iFrame.tabla.getValueAt(fila, 0).toString());
                 dao.eliminar(id);
             }
@@ -140,8 +149,9 @@ public class ControladorIdioma implements ActionListener {
     }
 
     void nuevo() {
-        iFrame.nom_idioma_txt.setText("");
         iFrame.id_idioma_txt.setText("");
+        iFrame.nom_idioma_txt.setText("");
+        iFrame.cod_idioma_txt.setText("");
         iFrame.requestFocus();
     }
 

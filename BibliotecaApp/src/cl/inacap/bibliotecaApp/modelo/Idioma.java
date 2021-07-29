@@ -5,42 +5,36 @@ package cl.inacap.bibliotecaApp.modelo;
  * 
  */
 public class Idioma {
-    private String nombreIdioma;
+    
     private int idIdioma;
+    private String nombreIdioma;
+    private String codigoIdioma;
 
-    /**
-     * 
-     * @return el valor del nombre del idioma 
-     */
-    public String getNombreIdioma() {
-        return nombreIdioma;
-    }
-
-    /**
-     * 
-     * @param nombreIdioma defiene el nombre de idioma que tendra el libro
-     */
-    public void setNombreIdioma(String nombreIdioma) {
-        this.nombreIdioma = nombreIdioma;
-    }
-
-    /**
-     * 
-     * @return el id unico del idioma
-     */
     public int getIdIdioma() {
         return idIdioma;
     }
 
-    /**
-     * 
-     * @param idIdioma define el id del idioma
-     */
     public void setIdIdioma(int idIdioma) {
         this.idIdioma = idIdioma;
     }
 
+    public String getNombreIdioma() {
+        return nombreIdioma;
+    }
 
+    public void setNombreIdioma(String nombreIdioma) {
+        this.nombreIdioma = nombreIdioma;
+    }
+
+    public String getCodigoIdioma() {
+        return codigoIdioma;
+    }
+
+    public void setCodigoIdioma(String codigoIdioma) {
+        this.codigoIdioma = codigoIdioma;
+    }
+
+ 
 
 }
 

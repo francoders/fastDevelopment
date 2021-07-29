@@ -39,18 +39,18 @@ public class IdiomaFrame extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        nom_idioma_txt = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         id_idioma_txt = new javax.swing.JTextField();
         agregar_idioma_btn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        dddd = new javax.swing.JLabel();
+        cod_idioma_txt = new javax.swing.JTextField();
+        nom_idioma_txt = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabla = new javax.swing.JTable();
         jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
         eliminar_idioma_btn = new javax.swing.JButton();
         listar_idioma_btn = new javax.swing.JButton();
         editar_idioma_btn = new javax.swing.JButton();
@@ -67,15 +67,6 @@ public class IdiomaFrame extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(39, 151, 212));
         jPanel2.setForeground(new java.awt.Color(51, 0, 51));
 
-        nom_idioma_txt.setBackground(new java.awt.Color(255, 255, 255));
-        nom_idioma_txt.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 13)); // NOI18N
-        nom_idioma_txt.setForeground(new java.awt.Color(0, 0, 0));
-        nom_idioma_txt.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        nom_idioma_txt.setToolTipText("");
-        nom_idioma_txt.setBorder(null);
-        nom_idioma_txt.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        nom_idioma_txt.setSelectedTextColor(new java.awt.Color(11, 0, 32));
-
         jLabel11.setBackground(new java.awt.Color(11, 0, 32));
         jLabel11.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
@@ -84,7 +75,7 @@ public class IdiomaFrame extends javax.swing.JFrame {
         jLabel16.setBackground(new java.awt.Color(102, 102, 102));
         jLabel16.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel16.setText("Idioma");
+        jLabel16.setText("Nombre Idioma");
 
         jLabel17.setBackground(new java.awt.Color(102, 102, 102));
         jLabel17.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
@@ -104,7 +95,7 @@ public class IdiomaFrame extends javax.swing.JFrame {
 
         agregar_idioma_btn.setBackground(new java.awt.Color(255, 255, 255));
         agregar_idioma_btn.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
-        agregar_idioma_btn.setText("Agregar");
+        agregar_idioma_btn.setText("Agregar Idioma");
         agregar_idioma_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 agregar_idioma_btnActionPerformed(evt);
@@ -118,27 +109,46 @@ public class IdiomaFrame extends javax.swing.JFrame {
             }
         });
 
+        dddd.setBackground(new java.awt.Color(102, 102, 102));
+        dddd.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
+        dddd.setForeground(new java.awt.Color(255, 255, 255));
+        dddd.setText("Codigo Idioma");
+
+        cod_idioma_txt.setBackground(java.awt.SystemColor.controlLtHighlight);
+        cod_idioma_txt.setForeground(new java.awt.Color(0, 0, 0));
+        cod_idioma_txt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cod_idioma_txtActionPerformed(evt);
+            }
+        });
+
+        nom_idioma_txt.setBackground(java.awt.SystemColor.controlLtHighlight);
+        nom_idioma_txt.setForeground(new java.awt.Color(0, 0, 0));
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel17)
-                    .addComponent(id_idioma_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel16)
-                    .addComponent(nom_idioma_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(64, 64, 64))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
                 .addComponent(jLabel11)
                 .addGap(178, 178, 178))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(cod_idioma_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(dddd)
+                        .addComponent(id_idioma_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel16)
+                        .addComponent(jLabel17)
+                        .addComponent(nom_idioma_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(132, 132, 132))
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(159, 159, 159)
-                .addComponent(agregar_idioma_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(125, 125, 125)
+                .addComponent(agregar_idioma_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -155,14 +165,18 @@ public class IdiomaFrame extends javax.swing.JFrame {
                         .addGap(45, 45, 45)))
                 .addComponent(jLabel16)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(nom_idioma_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
+                .addComponent(nom_idioma_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(dddd)
+                .addGap(11, 11, 11)
+                .addComponent(cod_idioma_txt, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel17)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(id_idioma_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
+                .addGap(41, 41, 41)
                 .addComponent(agregar_idioma_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(187, Short.MAX_VALUE))
+                .addGap(116, 116, 116))
         );
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 470, 590));
@@ -172,30 +186,18 @@ public class IdiomaFrame extends javax.swing.JFrame {
 
             },
             new String [] {
-                "ID", "Idioma"
+                "ID", "Idioma", "Codigo"
             }
         ));
         jScrollPane1.setViewportView(tabla);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 240, 510, 230));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 240, 520, 230));
 
         jLabel18.setBackground(new java.awt.Color(11, 0, 32));
         jLabel18.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(11, 0, 32));
         jLabel18.setText("Tabla de idiomas");
-        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 20, -1, -1));
-
-        jLabel19.setBackground(new java.awt.Color(102, 102, 102));
-        jLabel19.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 12)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(11, 0, 32));
-        jLabel19.setText("Selecciona un idioma en la tabla, puedes listar, editar, ");
-        jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 60, -1, -1));
-
-        jLabel20.setBackground(new java.awt.Color(102, 102, 102));
-        jLabel20.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 12)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(11, 0, 32));
-        jLabel20.setText("y eliminar los datos si lo deseas");
-        jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 70, -1, 30));
+        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 80, -1, -1));
 
         eliminar_idioma_btn.setBackground(new java.awt.Color(255, 255, 255));
         eliminar_idioma_btn.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
@@ -205,7 +207,7 @@ public class IdiomaFrame extends javax.swing.JFrame {
                 eliminar_idioma_btnActionPerformed(evt);
             }
         });
-        jPanel1.add(eliminar_idioma_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 180, 320, 37));
+        jPanel1.add(eliminar_idioma_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 180, 360, 37));
 
         listar_idioma_btn.setBackground(new java.awt.Color(255, 255, 255));
         listar_idioma_btn.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
@@ -215,7 +217,7 @@ public class IdiomaFrame extends javax.swing.JFrame {
                 listar_idioma_btnActionPerformed(evt);
             }
         });
-        jPanel1.add(listar_idioma_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 140, 100, 37));
+        jPanel1.add(listar_idioma_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 130, 110, 37));
 
         editar_idioma_btn.setBackground(new java.awt.Color(255, 255, 255));
         editar_idioma_btn.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
@@ -225,7 +227,7 @@ public class IdiomaFrame extends javax.swing.JFrame {
                 editar_idioma_btnActionPerformed(evt);
             }
         });
-        jPanel1.add(editar_idioma_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 140, 100, 37));
+        jPanel1.add(editar_idioma_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 130, 120, 37));
 
         actualizar_idioma_btn.setBackground(new java.awt.Color(255, 255, 255));
         actualizar_idioma_btn.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
@@ -235,7 +237,7 @@ public class IdiomaFrame extends javax.swing.JFrame {
                 actualizar_idioma_btnActionPerformed(evt);
             }
         });
-        jPanel1.add(actualizar_idioma_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 140, 100, 37));
+        jPanel1.add(actualizar_idioma_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 130, 110, 37));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -277,6 +279,10 @@ public class IdiomaFrame extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jLabel1MouseClicked
 
+    private void cod_idioma_txtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cod_idioma_txtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cod_idioma_txtActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -290,6 +296,8 @@ public class IdiomaFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton actualizar_idioma_btn;
     public javax.swing.JButton agregar_idioma_btn;
+    public javax.swing.JTextField cod_idioma_txt;
+    private javax.swing.JLabel dddd;
     public javax.swing.JButton editar_idioma_btn;
     public javax.swing.JButton eliminar_idioma_btn;
     public javax.swing.JTextField id_idioma_txt;
@@ -299,8 +307,6 @@ public class IdiomaFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel20;
     private javax.swing.JPanel jPanel1;
     public javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;

@@ -86,17 +86,26 @@ public class ControladorEditorial implements ActionListener {
         tabla.setRowMargin(10);
 
     }
+    
     public void agregar(){
         String editorialTxt = editorialVista.txtEditorial.getText();
         e.setNombreEditorial(editorialTxt);
-        int r = dao.agregar(e);
-        if (r == 1) {
-            JOptionPane.showMessageDialog(editorialVista, "Editorial agregada");
-        }else{
-            JOptionPane.showMessageDialog(editorialVista, "Error al agregar");
+        
+        //Validacion campo vacio
+        if (editorialTxt.equalsIgnoreCase("")) {
+            JOptionPane.showMessageDialog(editorialVista, "Rellene todos los campos!");
+            limpiarTabla();
+        } else {
+            int r = dao.agregar(e);
+            if (r == 1) {
+                JOptionPane.showMessageDialog(editorialVista, "Editorial agregada");
+            } else {
+                JOptionPane.showMessageDialog(editorialVista, "Error al agregar");
+            }
+            limpiarTabla();
         }
-        limpiarTabla();
     }
+    
     public void actualizar(){
         if (editorialVista.txtId.getText().equals("")) {
             JOptionPane.showMessageDialog(editorialVista, "No se identifica el id");
