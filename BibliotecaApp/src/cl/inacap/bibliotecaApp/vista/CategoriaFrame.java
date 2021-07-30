@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package cl.inacap.bibliotecaApp.vista;
 
 import cl.inacap.bilbiotecaApp.controlador.ControladorCategoria;
@@ -280,7 +275,6 @@ public class CategoriaFrame extends javax.swing.JFrame {
        CategoriaFrame c = new CategoriaFrame();
        ControladorCategoria con = new ControladorCategoria(c);
        c.setVisible(true);
-       c.setLocationRelativeTo(null);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

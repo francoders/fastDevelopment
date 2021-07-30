@@ -8,7 +8,7 @@ import java.sql.DriverManager;
  */
 public class Conexion {
 
-    String url = "jdbc:mysql://localhost:3306/bibliotecadb";
+    String url = "jdbc:mysql://localhost:3306/mydb";
     String user = "root", pass = "";
     Connection con;
 

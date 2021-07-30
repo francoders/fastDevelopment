@@ -91,29 +91,33 @@ public class ControladorIdioma implements ActionListener {
     }
 
     public void agregar() {
-        int idTxt = Integer.parseInt(iFrame.id_idioma_txt.getText());
-        idioma.setIdIdioma(idTxt);
-        String idiomaTxt = iFrame.nom_idioma_txt.getText();
-        idioma.setNombreIdioma(idiomaTxt);
-        String codigoTxt = iFrame.cod_idioma_txt.getText();
-        idioma.setCodigoIdioma(codigoTxt);
-    
-        //VALIDACION de campo vacio 
-        if (idiomaTxt.equalsIgnoreCase("") || codigoTxt.equalsIgnoreCase("") || iFrame.id_idioma_txt.equals("")  ) {
-            JOptionPane.showMessageDialog(iFrame, "Rellene todos los campos");
-            limpiarTabla();
-        } else {
 
-            if (!idiomaTxt.equalsIgnoreCase("")|| codigoTxt.equalsIgnoreCase("")){
-                int r = dao.agregar(idioma);
-                if (r == 1) {
-                    JOptionPane.showMessageDialog(iFrame, "Idioma Agregado");
-                } else {
-                    JOptionPane.showMessageDialog(iFrame, "Error al Ingresar Idioma");
-                }
+        try {
+            int idTxt = Integer.parseInt(iFrame.id_idioma_txt.getText());
+            idioma.setIdIdioma(idTxt);
+            String idiomaTxt = iFrame.nom_idioma_txt.getText();
+            idioma.setNombreIdioma(idiomaTxt);
+            String codigoTxt = iFrame.cod_idioma_txt.getText();
+            idioma.setCodigoIdioma(codigoTxt);
+            
+            //VALIDACION de campo vacio 
+            if (idiomaTxt.equalsIgnoreCase("") || codigoTxt.equalsIgnoreCase("")){
+                JOptionPane.showMessageDialog(iFrame, "Rellene todos los campos");
                 limpiarTabla();
-            }
+            } else {
 
+                if (!idiomaTxt.equalsIgnoreCase("") || codigoTxt.equalsIgnoreCase("")) {
+                    int r = dao.agregar(idioma);
+                    if (r == 1) {
+                        JOptionPane.showMessageDialog(iFrame, "Idioma Agregado");
+                    } else {
+                        JOptionPane.showMessageDialog(iFrame, "Error al Ingresar Idioma");
+                    }
+                    limpiarTabla();
+                }
+            }
+        } catch (Exception ex) {
+            System.err.println(ex);
         }
     }
 

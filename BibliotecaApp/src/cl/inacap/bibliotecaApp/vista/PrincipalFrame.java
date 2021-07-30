@@ -165,6 +165,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
         txt_rut.setBackground(java.awt.SystemColor.controlLtHighlight);
         jPanel1.add(txt_rut, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, 250, 40));
 
+        jButton1.setBackground(java.awt.SystemColor.controlLtHighlight);
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton1.setText("Registrarse");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -174,6 +175,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 350, 110, 40));
 
+        entrar_btn.setBackground(java.awt.SystemColor.controlLtHighlight);
         entrar_btn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         entrar_btn.setText("Iniciar Sesion");
         jPanel1.add(entrar_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 350, 110, 40));

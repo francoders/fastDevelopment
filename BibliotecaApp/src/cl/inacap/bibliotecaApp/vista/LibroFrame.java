@@ -424,7 +424,6 @@ public class LibroFrame extends javax.swing.JFrame{
        LibroFrame l = new LibroFrame();
        ControladorLibro con = new ControladorLibro(l);
        l.setVisible(true);
-       l.setLocationRelativeTo(null);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
