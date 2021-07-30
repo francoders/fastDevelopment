@@ -5,8 +5,6 @@
  */
 package cl.inacap.bibliotecaApp.vista;
 
-import cl.inacap.bilbiotecaApp.controlador.ControladorCategoria;
-import cl.inacap.bilbiotecaApp.controlador.ControladorDistribuidor;
 import java.awt.Image;
 import java.awt.Toolkit;
 

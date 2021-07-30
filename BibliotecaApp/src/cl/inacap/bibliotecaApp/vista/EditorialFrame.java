@@ -6,6 +6,8 @@
 package cl.inacap.bibliotecaApp.vista;
 
 import cl.inacap.bilbiotecaApp.controlador.ControladorEditorial;
+import java.awt.Image;
+import java.awt.Toolkit;
 import javax.swing.JOptionPane;
 
 /**
@@ -19,7 +21,15 @@ public class EditorialFrame extends javax.swing.JFrame {
      */
     public EditorialFrame() {
         initComponents();
+        setIconImage(getIconImage());
         this.setLocationRelativeTo(null);
+    }
+
+    // ICONO JFRAME PRINCIPAL
+    @Override
+    public Image getIconImage() {
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/icono_img.png"));
+        return retValue;
     }
 
     /**
@@ -53,6 +63,7 @@ public class EditorialFrame extends javax.swing.JFrame {
         jButton4.setText("jButton4");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Editoriales - Fast Development");
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
