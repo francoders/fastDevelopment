@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Clase AutorDAO: contiene los metodos para crear, modificar, eliminar y actualizar un autor
  * mediante sentencias DML a la base de datos bibliotecadb en la tabla autor
- * @author Cristobal Cortés
+ * @author Juan Francisco Corvalan
  * @since 29/07/2021
  * @version 1.0
  * 
