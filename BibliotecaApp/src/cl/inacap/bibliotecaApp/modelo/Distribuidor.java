@@ -1,53 +1,59 @@
 package cl.inacap.bibliotecaApp.modelo;
 
 public class Distribuidor {
-    private int rutDistribuidor;
+
+    private int idDist;
+    private String rutDistribuidor;
     private String nombreEmpresa;
     private String direccion;
     private int telefono;
     private int anioVenta;
 
-    
     // Constructor recibe los valores del distribuidor
-     
-    public Distribuidor(int rutDistribuidor, String nombreEmpresa, String direccion, int telefono, int anioVenta) {
+    public Distribuidor(int idDist, String rutDistribuidor, String nombreEmpresa, String direccion, int telefono, int anioVenta) {
+        this.idDist = idDist;
         this.rutDistribuidor = rutDistribuidor;
         this.nombreEmpresa = nombreEmpresa;
         this.direccion = direccion;
         this.telefono = telefono;
         this.anioVenta = anioVenta;
     }
-    
-     public Distribuidor() {
-        
+
+    public Distribuidor() {
+
+    }
+
+    public int getIdDist() {
+        return idDist;
+    }
+
+    public void setIdDist(int idDist) {
+        this.idDist = idDist;
     }
     
-    /**
-     * 
-     * @return valor del rut de la empresa que identifica al distribuidor
-     */
-    public int getRutDistribuidor() {
+    
+    public String getRutDistribuidor() {
         return rutDistribuidor;
     }
 
     /**
-     * 
-     * @param rutDistribuidor define el rut del distribuidor 
+     *
+     * @param rutDistribuidor define el rut del distribuidor
      */
-    public void setRutDistribuidor(int rutDistribuidor) {
+    public void setRutDistribuidor(String rutDistribuidor) {
         this.rutDistribuidor = rutDistribuidor;
     }
 
     /**
-     * 
-     * @return el valor del atributo nombreEmpresa 
+     *
+     * @return el valor del atributo nombreEmpresa
      */
     public String getNombreEmpresa() {
         return nombreEmpresa;
     }
 
     /**
-     * 
+     *
      * @param nombreEmpresa define el nombre de la empresa distribuidora
      */
     public void setNombreEmpresa(String nombreEmpresa) {
@@ -55,15 +61,15 @@ public class Distribuidor {
     }
 
     /**
-     * 
+     *
      * @return el valor de la direccion del distribuidor
      */
     public String getDireccion() {
         return direccion;
     }
-    
+
     /**
-     * 
+     *
      * @param direccion define la direccion del distribuidor
      */
     public void setDireccion(String direccion) {
@@ -71,7 +77,7 @@ public class Distribuidor {
     }
 
     /**
-     * 
+     *
      * @return el valor del telefono del distribuidor
      */
     public int getTelefono() {
@@ -79,15 +85,15 @@ public class Distribuidor {
     }
 
     /**
-     * 
+     *
      * @param telefono define el telefono del distribuidor
      */
     public void setTelefono(int telefono) {
         this.telefono = telefono;
     }
-    
+
     /**
-     * 
+     *
      * @return el valor del año de venta del distribuidor
      */
     public int getAnioVenta() {
@@ -95,11 +101,11 @@ public class Distribuidor {
     }
 
     /**
-     * 
+     *
      * @param anioVenta define el año de ventas del distribuidor
      */
     public void setAnioVenta(int anioVenta) {
         this.anioVenta = anioVenta;
     }
-    
+
 }

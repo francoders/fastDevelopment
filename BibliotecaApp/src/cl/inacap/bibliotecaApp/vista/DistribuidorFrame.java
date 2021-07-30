@@ -24,7 +24,7 @@ public class DistribuidorFrame extends javax.swing.JFrame{
         nom_distribuidor_txt = new javax.swing.JTextField();
         direccion_distribuidor_txt = new javax.swing.JTextField();
         fono_distribuidor_txt = new javax.swing.JTextField();
-        anio_distribuidor_txt = new javax.swing.JTextField();
+        id_distribuidor_txt = new javax.swing.JTextField();
         rut_distribuidor_txt = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
@@ -35,6 +35,8 @@ public class DistribuidorFrame extends javax.swing.JFrame{
         agregar_distribuidor_btn = new javax.swing.JButton();
         limpiar_distribuidor_btn = new javax.swing.JButton();
         flecha = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        anio_distribuidor_txt = new javax.swing.JTextField();
         btnDelete = new javax.swing.JButton();
         btnActualizar = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
@@ -128,11 +130,11 @@ public class DistribuidorFrame extends javax.swing.JFrame{
         fono_distribuidor_txt.setBorder(null);
         jPanel4.add(fono_distribuidor_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, 320, 30));
 
-        anio_distribuidor_txt.setBackground(new java.awt.Color(255, 255, 255));
-        anio_distribuidor_txt.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 14)); // NOI18N
-        anio_distribuidor_txt.setForeground(new java.awt.Color(0, 0, 0));
-        anio_distribuidor_txt.setBorder(null);
-        jPanel4.add(anio_distribuidor_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, 320, 30));
+        id_distribuidor_txt.setBackground(new java.awt.Color(255, 255, 255));
+        id_distribuidor_txt.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 14)); // NOI18N
+        id_distribuidor_txt.setForeground(new java.awt.Color(0, 0, 0));
+        id_distribuidor_txt.setBorder(null);
+        jPanel4.add(id_distribuidor_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 440, 100, 30));
 
         rut_distribuidor_txt.setBackground(new java.awt.Color(255, 255, 255));
         rut_distribuidor_txt.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 14)); // NOI18N
@@ -167,8 +169,8 @@ public class DistribuidorFrame extends javax.swing.JFrame{
         jLabel20.setBackground(new java.awt.Color(102, 102, 102));
         jLabel20.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel20.setText("Año de venta");
-        jPanel4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, -1, -1));
+        jLabel20.setText("ID");
+        jPanel4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 410, -1, -1));
 
         jLabel11.setBackground(new java.awt.Color(11, 0, 32));
         jLabel11.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
@@ -201,6 +203,18 @@ public class DistribuidorFrame extends javax.swing.JFrame{
             }
         });
         jPanel4.add(flecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 80, 70));
+
+        jLabel22.setBackground(new java.awt.Color(102, 102, 102));
+        jLabel22.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel22.setText("Año de venta");
+        jPanel4.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, -1, -1));
+
+        anio_distribuidor_txt.setBackground(new java.awt.Color(255, 255, 255));
+        anio_distribuidor_txt.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 14)); // NOI18N
+        anio_distribuidor_txt.setForeground(new java.awt.Color(0, 0, 0));
+        anio_distribuidor_txt.setBorder(null);
+        jPanel4.add(anio_distribuidor_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, 190, 30));
 
         jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 590));
 
@@ -246,7 +260,7 @@ public class DistribuidorFrame extends javax.swing.JFrame{
 
             },
             new String [] {
-                "NOMBRE", "DIRECCION", "TELEFONO", "RUT", "AÑO DE VENTA"
+                "ID", "RUT", "NOMBRE", "TELEFONO", "AÑO DE VENTA", "DIRECCION"
             }
         ));
         tabla.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -261,13 +275,13 @@ public class DistribuidorFrame extends javax.swing.JFrame{
         jLabel21.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(11, 0, 32));
         jLabel21.setText("Tabla de distribuidores");
-        jPanel3.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 40, -1, -1));
+        jPanel3.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 50, -1, -1));
 
         jLabel23.setBackground(new java.awt.Color(102, 102, 102));
         jLabel23.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 12)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(11, 0, 32));
         jLabel23.setText("Selecciona un distribuidor en la tabla, puedes listar, editar, ");
-        jPanel3.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 80, -1, -1));
+        jPanel3.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 90, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -332,6 +346,7 @@ public class DistribuidorFrame extends javax.swing.JFrame{
     public javax.swing.JTextField direccion_distribuidor_txt;
     public javax.swing.JLabel flecha;
     public javax.swing.JTextField fono_distribuidor_txt;
+    public javax.swing.JTextField id_distribuidor_txt;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
@@ -339,6 +354,7 @@ public class DistribuidorFrame extends javax.swing.JFrame{
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     public javax.swing.JPanel jPanel3;
     public javax.swing.JPanel jPanel4;

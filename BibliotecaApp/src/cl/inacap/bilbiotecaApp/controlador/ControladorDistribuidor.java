@@ -39,7 +39,10 @@ public class ControladorDistribuidor implements ActionListener {
         this.distribuidorVista.btnDelete.addActionListener(this);
         this.distribuidorVista.btnActualizar.addActionListener(this);
         this.distribuidorVista.limpiar_distribuidor_btn.addActionListener(this);
+        this.distribuidorVista.id_distribuidor_txt.addActionListener(this);
+        this.distribuidorVista.anio_distribuidor_txt.addActionListener(this);
     }
+    
     
     /**
      * actionPerformed: metodo publico que proporciona las funciones a cada boton 
@@ -63,12 +66,14 @@ public class ControladorDistribuidor implements ActionListener {
             if (fila == -1) {
                 JOptionPane.showMessageDialog(distribuidorVista, "Debe seleccionar una fila");
             } else {
-                
-                String nombre = (String) distribuidorVista.tabla.getValueAt(fila, 0);
-                String direccion = (String) distribuidorVista.tabla.getValueAt(fila, 1);
-                int tel = Integer.parseInt((String) distribuidorVista.tabla.getValueAt(fila, 2).toString());
-                int rut = Integer.parseInt((String) distribuidorVista.tabla.getValueAt(fila, 3).toString());
+                int id = Integer.parseInt((String) distribuidorVista.tabla.getValueAt(fila, 0).toString());
+                String rut = distribuidorVista.tabla.getValueAt(fila, 1).toString();
+                String nombre = (String) distribuidorVista.tabla.getValueAt(fila, 2);
+                int tel = Integer.parseInt((String) distribuidorVista.tabla.getValueAt(fila, 3).toString());
                 int anioVenta = Integer.parseInt((String)distribuidorVista.tabla.getValueAt(fila, 4).toString());
+                String direccion = (String) distribuidorVista.tabla.getValueAt(fila, 5);
+
+                distribuidorVista.id_distribuidor_txt.setText("" + id);
                 distribuidorVista.nom_distribuidor_txt.setText(nombre);
                 distribuidorVista.direccion_distribuidor_txt.setText(direccion);
                 distribuidorVista.fono_distribuidor_txt.setText(""+tel);
@@ -81,7 +86,7 @@ public class ControladorDistribuidor implements ActionListener {
             listar(distribuidorVista.tabla);
             nuevo();
 
-        }
+        } 
         if (e.getSource() == distribuidorVista.btnDelete) {
             eliminar();
             listar(distribuidorVista.tabla);
@@ -101,7 +106,8 @@ public class ControladorDistribuidor implements ActionListener {
         distribuidorVista.fono_distribuidor_txt.setText("");
         distribuidorVista.direccion_distribuidor_txt.setText("");
         distribuidorVista.anio_distribuidor_txt.setText("");
-        distribuidorVista.nom_distribuidor_txt.requestFocus();
+        distribuidorVista.id_distribuidor_txt.setText("");
+        distribuidorVista.requestFocus();
     }
     
     /**
@@ -113,9 +119,9 @@ public class ControladorDistribuidor implements ActionListener {
         if (fila == -1) {
             JOptionPane.showMessageDialog(distribuidorVista, "Debe seleccionar una fila");
         } else {
-            int rut = Integer.parseInt((String) distribuidorVista.tabla.getValueAt(fila, 3).toString());
-            dao.eliminar(rut);
-            System.out.println("El rut es" + rut);
+            int id = Integer.parseInt((String) distribuidorVista.tabla.getValueAt(fila, 0).toString());
+            dao.eliminar(id);
+            System.out.println("El ID es" + id);
             JOptionPane.showMessageDialog(distribuidorVista, "El distribuidor ha sido eliminado!!!");
         }
         limpiarTabla();
@@ -126,18 +132,20 @@ public class ControladorDistribuidor implements ActionListener {
      * los añade usando el metodo agregar de la clase DistribuidorDAO
      */
     public void agregar() {
+        int id = Integer.parseInt(distribuidorVista.id_distribuidor_txt.getText());
+        String rut = distribuidorVista.rut_distribuidor_txt.getText().trim();
         String nombre = distribuidorVista.nom_distribuidor_txt.getText().trim();
-        String direccion = distribuidorVista.direccion_distribuidor_txt.getText().trim();
         int tel = Integer.parseInt(distribuidorVista.fono_distribuidor_txt.getText().toString().trim());
-        int rut = Integer.parseInt(distribuidorVista.rut_distribuidor_txt.getText().toString().trim());
         int anioVenta = Integer.parseInt(distribuidorVista.anio_distribuidor_txt.getText().toString().trim());
+        String direccion = distribuidorVista.direccion_distribuidor_txt.getText().trim();
         
-        d.setNombreEmpresa(nombre);
-        d.setDireccion(direccion);
-        d.setTelefono(tel);
+        d.setIdDist(id);
         d.setRutDistribuidor(rut);
+        d.setNombreEmpresa(nombre);
+        d.setTelefono(tel);
         d.setAnioVenta(anioVenta);
-       
+        d.setDireccion(direccion);
+
         int r = dao.agregar(d);
         if (r == 1) {
             JOptionPane.showMessageDialog(distribuidorVista, "Distribuidor agregado");
@@ -152,20 +160,22 @@ public class ControladorDistribuidor implements ActionListener {
      * en los jTextField para poder ser modificados
      */
     public void actualizar() {
-        if (distribuidorVista.rut_distribuidor_txt.getText().equals("")) {
-            JOptionPane.showMessageDialog(distribuidorVista, "No se Identifica el rut debe selecionar la opcion Editar");
+        if (distribuidorVista.id_distribuidor_txt.getText().equals("")) {
+            JOptionPane.showMessageDialog(distribuidorVista, "No se Identifica el ID debe selecionar la opcion Editar");
         } else {
-            int rut = Integer.parseInt(distribuidorVista.rut_distribuidor_txt.getText());
+            int id = Integer.parseInt(distribuidorVista.id_distribuidor_txt.getText());
+            String rut = distribuidorVista.rut_distribuidor_txt.getText();
             String nombre = distribuidorVista.nom_distribuidor_txt.getText();
-            String direccion = distribuidorVista.direccion_distribuidor_txt.getText();
             int tel = Integer.parseInt(distribuidorVista.fono_distribuidor_txt.getText());
             int anioVenta = Integer.parseInt(distribuidorVista.anio_distribuidor_txt.getText());
-            
+            String direccion = distribuidorVista.direccion_distribuidor_txt.getText();
+
+            d.setIdDist(id);
+            d.setRutDistribuidor(rut); 
             d.setNombreEmpresa(nombre);
-            d.setDireccion(direccion);
             d.setTelefono(tel);
-            d.setRutDistribuidor(rut);  
             d.setAnioVenta(anioVenta);
+            d.setDireccion(direccion);
             int r = dao.actualizar(d);
             if (r == 1) {
                 JOptionPane.showMessageDialog(distribuidorVista, "El distribuidor se ha actualizado");
@@ -188,13 +198,14 @@ public class ControladorDistribuidor implements ActionListener {
         modelo = (DefaultTableModel) tabla.getModel();
         tabla.setModel(modelo);
         List<Distribuidor> lista = dao.listar();
-        Object[] objeto = new Object[5];
+        Object[] objeto = new Object[6];
         for (int i = 0; i < lista.size(); i++) {
-            objeto[0] = lista.get(i).getNombreEmpresa();
-            objeto[1] = lista.get(i).getDireccion();
-            objeto[2] = lista.get(i).getTelefono(); 
-            objeto[3] = lista.get(i).getRutDistribuidor();
+            objeto[0] = lista.get(i).getIdDist();
+            objeto[1] = lista.get(i).getRutDistribuidor();
+            objeto[2] = lista.get(i).getNombreEmpresa();
+            objeto[3] = lista.get(i).getTelefono();
             objeto[4] = lista.get(i).getAnioVenta();
+            objeto[5] = lista.get(i).getDireccion(); 
             modelo.addRow(objeto);
         }
         tabla.setRowHeight(35);

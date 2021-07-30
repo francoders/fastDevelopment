@@ -37,11 +37,12 @@ public class DistribuidorDAO {
             rs = ps.executeQuery();
             while (rs.next()) {
                 Distribuidor d = new Distribuidor();
-                d.setNombreEmpresa(rs.getString(1));
-                d.setDireccion(rs.getString(2));
-                d.setTelefono(rs.getInt(3));
-                d.setRutDistribuidor(rs.getInt(4));
+                d.setIdDist(rs.getInt(1));
+                d.setRutDistribuidor(rs.getString(2));
+                d.setNombreEmpresa(rs.getString(3));
+                d.setTelefono(rs.getInt(4));
                 d.setAnioVenta(rs.getInt(5));
+                d.setDireccion(rs.getString(6));
                 datos.add(d);
             }
         } catch (Exception e) {
@@ -59,20 +60,20 @@ public class DistribuidorDAO {
     public int agregar(Distribuidor dis) {  
         int r=0;
         
-        String sql="insert into distribuidor(Nombre_empresa,Direccion_dist,Telefono,Rut_distribuidor,Anio_venta)values(?,?,?,?,?)";
+        String sql="insert into distribuidor(Id_dist, Rut_dist, Nombre_empresa, Telefono_dist, Anio_venta, Direccion_dist)values(?,?,?,?,?,?)";
         try {
             con = conectar.getConnection();
             ps = con.prepareStatement(sql);   
-            ps.setString(1,dis.getNombreEmpresa());
-            ps.setString(2,dis.getDireccion());
-            ps.setInt(3,dis.getTelefono());
-            ps.setInt(4,dis.getRutDistribuidor());
-            ps.setInt(5,dis.getAnioVenta());
-            r=ps.executeUpdate();    
-            if(r==1){
+            ps.setInt(1, dis.getIdDist());
+            ps.setString(2,dis.getRutDistribuidor());
+            ps.setString(3,dis.getNombreEmpresa());
+            ps.setInt(4, dis.getTelefono());
+            ps.setInt(5, dis.getAnioVenta());
+            ps.setString(6, dis.getDireccion());
+            r = ps.executeUpdate();
+            if (r == 1) {
                 return 1;
-            }
-            else{
+            } else {
                 return 0;
             }
         } catch (Exception e) {
@@ -85,20 +86,19 @@ public class DistribuidorDAO {
     // sentencia sql donde se modificara desde el id seleccionado
     // @param dis de tipo Distribuidor
     // @return la respuesta del PrepareStatement
-     
-    public int actualizar(Distribuidor dis) {  
-        int r=0;
-         con = conectar.getConnection();
+       public int actualizar(Distribuidor dis) {
+        int r = 0;
+        con = conectar.getConnection();
         PreparedStatement ps = null;
-        String sql="update distribuidor set Nombre_empresa=?,Direccion_dist=?,Telefono=?,Anio_venta=? where Rut_distribuidor=?";        
+        String sql = "update distribuidor set Rut_dist=?, Nombre_empresa=?, Telefono_dist=?, Anio_venta=?, Direccion_dist=? where Id_dist=?";
         try {
-            
-            ps = con.prepareStatement(sql);            
-            ps.setString(1,dis.getNombreEmpresa());
-            ps.setString(2,dis.getDireccion());
+            ps = con.prepareStatement(sql);
+            ps.setString(1, dis.getRutDistribuidor());
+            ps.setString(2,dis.getNombreEmpresa());
             ps.setInt(3,dis.getTelefono());
             ps.setInt(4,dis.getAnioVenta());
-            ps.setInt(5,dis.getRutDistribuidor());
+            ps.setString(5,dis.getDireccion());
+            ps.setInt(6, dis.getIdDist());
             r=ps.executeUpdate();    
             if(r==1){
                 return 1;
@@ -117,9 +117,9 @@ public class DistribuidorDAO {
      // @return la respuesta del PrepareStatement
      // @param rutDistribuidor tipo int
      
-    public int eliminar(int rutDistribuidor){
+    public int eliminar(int idDist){
         int r=0;
-        String sql="delete from distribuidor where Rut_distribuidor="+rutDistribuidor;
+        String sql="delete from distribuidor where Id_dist="+idDist;
         try {
             con=conectar.getConnection();
             ps=con.prepareStatement(sql);
