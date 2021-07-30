@@ -59,7 +59,6 @@ public class ControladorAutor implements ActionListener {
         if (e.getSource() == autorVista.agregar_autor_btn) {
             agregar();
             listar(autorVista.tabla);
-            nuevo();
         }
         if (e.getSource() == autorVista.editar_autor_btn) {
             int fila = autorVista.tabla.getSelectedRow();
@@ -118,29 +117,40 @@ public class ControladorAutor implements ActionListener {
      * agregar: metodo publico que obtiene los valores ingresados por el usuario y 
      * los añade usando el metodo agregar de la clase AutorDAO
      */
-    public void agregar(){
-        String nombre = autorVista.nom_autor_txt.getText();
-        String apellidoPaterno = autorVista.ape_paterno_autor.getText();
-        String apellidoMaterno = autorVista.ape_materno_autor.getText();
-        a.setNombre(nombre);
-        a.setApellidoPaterno(apellidoPaterno);
-        a.setApellidoMaterno(apellidoMaterno);
+    public void agregar() {
 
-        //Validacion de campo vacio de las 3 cajas
-        if (nombre.equals("") || apellidoPaterno.equals("") || apellidoMaterno.equals("")) {
-            JOptionPane.showMessageDialog(autorVista, "Hay campos vacios, Rellenelos todos");
-            limpiarTabla();
-        } else {
-            int r = dao.agregar(a);
-            if (r == 1) {
-                JOptionPane.showMessageDialog(autorVista, "Autor agregado");
+        try {
+
+            if (autorVista.nom_autor_txt.getText().equals("")) {
+                javax.swing.JOptionPane.showMessageDialog(autorVista, "Debe rellenar el campo Nombre");
+                limpiarTabla();
+            } else if (autorVista.ape_paterno_autor.getText().equals("")) {
+                javax.swing.JOptionPane.showMessageDialog(autorVista, "Debe rellenar el campo Apellido Paterno");
+                limpiarTabla();
+            } else if (autorVista.ape_materno_autor.getText().equals("")) {
+                javax.swing.JOptionPane.showMessageDialog(autorVista, "Debe rellenar el campo Apellido Materno");
+                limpiarTabla();
             } else {
-                JOptionPane.showMessageDialog(autorVista, "Error al agregar!");
+                String nombre = autorVista.nom_autor_txt.getText();
+                String apellidoPaterno = autorVista.ape_paterno_autor.getText();
+                String apellidoMaterno = autorVista.ape_materno_autor.getText();
+                a.setNombre(nombre);
+                a.setApellidoPaterno(apellidoPaterno);
+                a.setApellidoMaterno(apellidoMaterno);
+
+                int r = dao.agregar(a);
+                if (r == 1) {
+                    JOptionPane.showMessageDialog(autorVista, "Autor agregado");
+                } else {
+                    JOptionPane.showMessageDialog(autorVista, "Error al agregar!");
+                }
+                limpiarTabla();
+                nuevo();
             }
-            limpiarTabla();
+        } catch (Exception ex) {
+            System.err.println(ex);
         }
     }
-
 
     /**
      * actualizar: metodo publico que al seleccionar un autor, muestra los valores nuevamente

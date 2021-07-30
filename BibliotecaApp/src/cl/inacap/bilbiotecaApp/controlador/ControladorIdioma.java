@@ -2,7 +2,6 @@ package cl.inacap.bilbiotecaApp.controlador;
 
 import cl.inacap.bibliotecaApp.modelo.Idioma;
 import cl.inacap.bibliotecaApp.modelo.IdiomaDAO;
-import cl.inacap.bibliotecaApp.vista.GestionDatosFrame;
 import cl.inacap.bibliotecaApp.vista.IdiomaFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -45,7 +44,6 @@ public class ControladorIdioma implements ActionListener {
         if (e.getSource() == iFrame.agregar_idioma_btn) {
             agregar();
             listar(iFrame.tabla);
-            nuevo();
         }
         if (e.getSource() == iFrame.editar_idioma_btn) {
             int fila = iFrame.tabla.getSelectedRow();
@@ -93,28 +91,32 @@ public class ControladorIdioma implements ActionListener {
     public void agregar() {
 
         try {
-            int idTxt = Integer.parseInt(iFrame.id_idioma_txt.getText());
-            idioma.setIdIdioma(idTxt);
-            String idiomaTxt = iFrame.nom_idioma_txt.getText();
-            idioma.setNombreIdioma(idiomaTxt);
-            String codigoTxt = iFrame.cod_idioma_txt.getText();
-            idioma.setCodigoIdioma(codigoTxt);
-            
-            //VALIDACION de campo vacio 
-            if (idiomaTxt.equalsIgnoreCase("") || codigoTxt.equalsIgnoreCase("")){
-                JOptionPane.showMessageDialog(iFrame, "Rellene todos los campos");
+
+            if (iFrame.nom_idioma_txt.getText().equals("")) {
+                javax.swing.JOptionPane.showMessageDialog(iFrame, "Debe rellenar el campo nombre");
+                limpiarTabla();
+            } else if (iFrame.cod_idioma_txt.getText().equals("")) {
+                javax.swing.JOptionPane.showMessageDialog(iFrame, "Debe rellenar el campo codigo");
+                limpiarTabla();
+            } else if (iFrame.id_idioma_txt.getText().equals("")) {
+                javax.swing.JOptionPane.showMessageDialog(iFrame, "Debe rellenar el campo ID");
                 limpiarTabla();
             } else {
 
-                if (!idiomaTxt.equalsIgnoreCase("") || codigoTxt.equalsIgnoreCase("")) {
-                    int r = dao.agregar(idioma);
-                    if (r == 1) {
-                        JOptionPane.showMessageDialog(iFrame, "Idioma Agregado");
-                    } else {
-                        JOptionPane.showMessageDialog(iFrame, "Error al Ingresar Idioma");
-                    }
-                    limpiarTabla();
+                int idTxt = Integer.parseInt(iFrame.id_idioma_txt.getText());
+                idioma.setIdIdioma(idTxt);
+                String idiomaTxt = iFrame.nom_idioma_txt.getText();
+                idioma.setNombreIdioma(idiomaTxt);
+                String codigoTxt = iFrame.cod_idioma_txt.getText();
+                idioma.setCodigoIdioma(codigoTxt);
+                int r = dao.agregar(idioma);
+                if (r == 1) {
+                    JOptionPane.showMessageDialog(iFrame, "Idioma Agregado");
+                } else {
+                    JOptionPane.showMessageDialog(iFrame, "Error, ID ya utilizado");
                 }
+                limpiarTabla();
+                
             }
         } catch (Exception ex) {
             System.err.println(ex);

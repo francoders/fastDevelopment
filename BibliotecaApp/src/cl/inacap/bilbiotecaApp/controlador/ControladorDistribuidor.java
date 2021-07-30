@@ -7,6 +7,9 @@ import cl.inacap.bibliotecaApp.vista.DistribuidorFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.SwingConstants;
@@ -17,15 +20,15 @@ import javax.swing.table.DefaultTableModel;
  * Clase ControladorDistribuidor: contiene los metodos para crear, modificar, eliminar y actualizar un distribuidor,
  * este tiene relacion con la parte grafica de la aplicacion, es el que valida el ingreso de los datos y los muestra en pantalla.
  */
-public class ControladorDistribuidor implements ActionListener {
+public class ControladorDistribuidor implements ActionListener{
 
     DistribuidorDAO dao = new DistribuidorDAO();
     Distribuidor d = new Distribuidor();
     DistribuidorFrame distribuidorVista = new DistribuidorFrame();
     DefaultTableModel modelo = new DefaultTableModel();
+    Scanner Leer = new Scanner(System.in);
 
-    
-     /**
+    /**
      * ControladorDistribuiodor: metodo publico que recibe la vista de los distribuidores, mediante un escuchador activa los botones 
      * btnListar, btnAgregar, btnNuevo, btnEditar, btnActualizar y btnEliminar
      * @param d tipo DistribuidorFrame
@@ -51,6 +54,9 @@ public class ControladorDistribuidor implements ActionListener {
      */
     @Override
     public void actionPerformed(ActionEvent e) {
+        
+        
+        
         if (e.getSource() == distribuidorVista.btnListar) {
             limpiarTabla();
             listar(distribuidorVista.tabla);
@@ -59,7 +65,6 @@ public class ControladorDistribuidor implements ActionListener {
         if (e.getSource() == distribuidorVista.agregar_distribuidor_btn) {
             agregar();
             listar(distribuidorVista.tabla);
-            nuevo();
         }
         if (e.getSource() == distribuidorVista.btnEditar) {
             int fila = distribuidorVista.tabla.getSelectedRow();
@@ -121,7 +126,7 @@ public class ControladorDistribuidor implements ActionListener {
         } else {
             int id = Integer.parseInt((String) distribuidorVista.tabla.getValueAt(fila, 0).toString());
             dao.eliminar(id);
-            System.out.println("El ID es" + id);
+            System.out.println("El ID es " + id);
             JOptionPane.showMessageDialog(distribuidorVista, "El distribuidor ha sido eliminado!!!");
         }
         limpiarTabla();
@@ -132,27 +137,57 @@ public class ControladorDistribuidor implements ActionListener {
      * los añade usando el metodo agregar de la clase DistribuidorDAO
      */
     public void agregar() {
-        int id = Integer.parseInt(distribuidorVista.id_distribuidor_txt.getText());
-        String rut = distribuidorVista.rut_distribuidor_txt.getText().trim();
-        String nombre = distribuidorVista.nom_distribuidor_txt.getText().trim();
-        int tel = Integer.parseInt(distribuidorVista.fono_distribuidor_txt.getText().toString().trim());
-        int anioVenta = Integer.parseInt(distribuidorVista.anio_distribuidor_txt.getText().toString().trim());
-        String direccion = distribuidorVista.direccion_distribuidor_txt.getText().trim();
-        
-        d.setIdDist(id);
-        d.setRutDistribuidor(rut);
-        d.setNombreEmpresa(nombre);
-        d.setTelefono(tel);
-        d.setAnioVenta(anioVenta);
-        d.setDireccion(direccion);
+ 
+        try {
 
-        int r = dao.agregar(d);
-        if (r == 1) {
-            JOptionPane.showMessageDialog(distribuidorVista, "Distribuidor agregado");
-        } else {
-            JOptionPane.showMessageDialog(distribuidorVista, "Error al agregar");
+            if (distribuidorVista.id_distribuidor_txt.getText().equals("")) {
+                javax.swing.JOptionPane.showMessageDialog(distribuidorVista, "Debe rellenar el campo ID");
+                limpiarTabla();
+            } else if (distribuidorVista.rut_distribuidor_txt.getText().isEmpty()) {
+                javax.swing.JOptionPane.showMessageDialog(distribuidorVista, "Debe rellenar el campo Rut");
+                limpiarTabla();
+            } else if (distribuidorVista.anio_distribuidor_txt.getText().isEmpty()) {
+                javax.swing.JOptionPane.showMessageDialog(distribuidorVista, "Debe rellenar el campo Año");
+                limpiarTabla();
+            } else if (distribuidorVista.direccion_distribuidor_txt.getText().isEmpty()) {
+                javax.swing.JOptionPane.showMessageDialog(distribuidorVista, "Debe rellenar el campo Direccion");
+                limpiarTabla();
+            } else if (distribuidorVista.nom_distribuidor_txt.getText().isEmpty()) {
+                javax.swing.JOptionPane.showMessageDialog(distribuidorVista, "Debe rellenar el campo Nombre");
+                limpiarTabla();
+            } else if (distribuidorVista.fono_distribuidor_txt.getText().isEmpty()) {
+                javax.swing.JOptionPane.showMessageDialog(distribuidorVista, "Debe rellenar el campo Telefono");
+                limpiarTabla();
+            } else {
+                
+                int id = Integer.parseInt(distribuidorVista.id_distribuidor_txt.getText());
+                String rut = distribuidorVista.rut_distribuidor_txt.getText().trim();
+                String nombre = distribuidorVista.nom_distribuidor_txt.getText().trim();
+                int tel = Integer.parseInt(distribuidorVista.fono_distribuidor_txt.getText().toString().trim());
+                int anioVenta = Integer.parseInt(distribuidorVista.anio_distribuidor_txt.getText().toString().trim());
+                String direccion = distribuidorVista.direccion_distribuidor_txt.getText().trim();
+                d.setIdDist(id);
+                d.setRutDistribuidor(rut);
+                d.setNombreEmpresa(nombre);
+                d.setTelefono(tel);
+                d.setAnioVenta(anioVenta);
+                d.setDireccion(direccion);
+
+                int r = dao.agregar(d);
+                if (r == 1) {
+                    JOptionPane.showMessageDialog(distribuidorVista, "Distribuidor agregado");
+                } else {
+                    JOptionPane.showMessageDialog(distribuidorVista, "Error al agregar");
+                }
+                limpiarTabla();
+                nuevo();
+            }
+
+        } catch (Exception ex) {
+            System.err.println(ex);
+            limpiarTabla();
         }
-        limpiarTabla();
+
     }
 
     /**
@@ -235,4 +270,21 @@ public class ControladorDistribuidor implements ActionListener {
             i = i - 1;
         }
     }
+
+    	public static Boolean validaRut ( String rut ) {
+		          Pattern pattern = Pattern.compile("^[0-9]+-[0-9kK]{1}$");
+		          Matcher matcher = pattern.matcher(rut);
+		if ( matcher.matches() == false ) return false;
+		String[] stringRut = rut.split("-");
+		return stringRut[1].toLowerCase().equals(ControladorDistribuidor.dv(stringRut[0]));
+	}
+
+        	public static String dv ( String rut ) {
+		Integer M=0,S=1,T=Integer.parseInt(rut);
+		for (;T!=0;T=(int) Math.floor(T/=10))
+			S=(S+T%10*(9-M++%6))%11;
+		return ( S > 0 ) ? String.valueOf(S-1) : "k";		
+	}
+    
+
 }

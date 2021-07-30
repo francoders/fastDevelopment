@@ -108,4 +108,43 @@ public class Distribuidor {
         this.anioVenta = anioVenta;
     }
 
+    
+    //Validacion Rut
+    public boolean Validacion_Rut(){
+        
+        Boolean lDevuelve = false;
+        int Ult = this.rutDistribuidor.length(); // |1 |8 |2 |1 |6 |5 |7 |1 |- |9 | = 10? = 9
+        int Largo = this.rutDistribuidor.length() - 3;
+        int Constante = 2;
+        int Suma = 0;
+        int Digito = 0;
+
+        for (int i = Largo; i >= 0; i--) {
+
+            Suma = Suma + Integer.parseInt(this.rutDistribuidor.substring(i, i + 1)) * Constante;
+            Constante = Constante + 1;
+            if (Constante == 8) {
+                Constante = 2;
+            }
+        }
+        String Ultimo = this.rutDistribuidor.substring(Ult - 1).toUpperCase();
+        Digito = 11 - (Suma % 11);
+        if (Digito == 10 && Ultimo.equals("K")) {
+            lDevuelve = true;
+        } else {
+            if (Digito == 11 && Ultimo.equals("0")) {
+                lDevuelve = true;
+            } else {
+
+                if (Digito == Integer.parseInt(Ultimo)) {
+
+                    lDevuelve = true;
+
+                }
+            }
+        }
+        return lDevuelve;
+    }
+
+    
 }

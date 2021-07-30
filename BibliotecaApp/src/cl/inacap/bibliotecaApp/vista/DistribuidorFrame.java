@@ -44,7 +44,6 @@ public class DistribuidorFrame extends javax.swing.JFrame{
         jScrollPane5 = new javax.swing.JScrollPane();
         tabla = new javax.swing.JTable();
         jLabel21 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -176,7 +175,7 @@ public class DistribuidorFrame extends javax.swing.JFrame{
         jLabel11.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Distribuidor");
-        jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, -1, -1));
+        jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 50, -1, -1));
 
         agregar_distribuidor_btn.setBackground(java.awt.SystemColor.controlHighlight);
         agregar_distribuidor_btn.setText("Agregar");
@@ -269,19 +268,13 @@ public class DistribuidorFrame extends javax.swing.JFrame{
         tabla.getTableHeader().setReorderingAllowed(false);
         jScrollPane5.setViewportView(tabla);
 
-        jPanel3.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 320, 560, 213));
+        jPanel3.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 260, 610, 280));
 
         jLabel21.setBackground(new java.awt.Color(11, 0, 32));
         jLabel21.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(11, 0, 32));
         jLabel21.setText("Tabla de distribuidores");
-        jPanel3.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 50, -1, -1));
-
-        jLabel23.setBackground(new java.awt.Color(102, 102, 102));
-        jLabel23.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 12)); // NOI18N
-        jLabel23.setForeground(new java.awt.Color(11, 0, 32));
-        jLabel23.setText("Selecciona un distribuidor en la tabla, puedes listar, editar, ");
-        jPanel3.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 90, -1, -1));
+        jPanel3.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 80, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -302,7 +295,6 @@ public class DistribuidorFrame extends javax.swing.JFrame{
     }//GEN-LAST:event_btnListarActionPerformed
 
     private void agregar_distribuidor_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregar_distribuidor_btnActionPerformed
-
 
     }//GEN-LAST:event_agregar_distribuidor_btnActionPerformed
 
@@ -334,6 +326,7 @@ public class DistribuidorFrame extends javax.swing.JFrame{
         ControladorDistribuidor con = new ControladorDistribuidor(v);
         v.setVisible(true);
         v.setLocationRelativeTo(null);
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -355,7 +348,6 @@ public class DistribuidorFrame extends javax.swing.JFrame{
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
     public javax.swing.JPanel jPanel3;
     public javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;

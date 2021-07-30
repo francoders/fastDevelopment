@@ -5,7 +5,8 @@ package cl.inacap.bibliotecaApp.modelo;
  * @author Corvalan
  */
 public class Libro {
- private int nSerie;
+
+    private int nSerie;
     private String titulo;
     private int isbn;
     private int autores;
@@ -15,6 +16,24 @@ public class Libro {
     private int numeroDePag;
     private int añoDePublicacion;
     private int estado;
+
+    private int precioReferencia;
+    private int stock;
+
+    public Libro() {
+        this.nSerie = nSerie;
+        this.titulo = titulo;
+        this.isbn = isbn;
+        this.autores = autores;
+        this.idiomas = idiomas;
+        this.categorias = categorias;
+        this.editorial = editorial;
+        this.numeroDePag = numeroDePag;
+        this.añoDePublicacion = añoDePublicacion;
+        this.estado = estado;
+        this.precioReferencia = precioReferencia;
+        this.stock = stock;
+    }
 
     public int getNSerie() {
         return nSerie;
@@ -111,22 +130,4 @@ public class Libro {
     public void setStock(int stock) {
         this.stock = stock;
     }
-    private int precioReferencia;
-    private int stock;
-
-    public Libro() {
-        this.nSerie = nSerie;
-        this.titulo = titulo;
-        this.isbn = isbn;
-        this.autores = autores;
-        this.idiomas = idiomas;
-        this.categorias = categorias;
-        this.editorial = editorial;
-        this.numeroDePag = numeroDePag;
-        this.añoDePublicacion = añoDePublicacion;
-        this.estado = estado;
-        this.precioReferencia = precioReferencia;
-        this.stock= stock;
-    }
 }
-   
