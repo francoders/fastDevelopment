@@ -241,13 +241,13 @@ public class LibroFrame extends javax.swing.JFrame{
         jLabel29.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
         jLabel29.setForeground(new java.awt.Color(255, 255, 255));
         jLabel29.setText("Categoria");
-        jPanel4.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 510, 100, 20));
+        jPanel4.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 520, 100, 20));
 
         jLabel30.setBackground(new java.awt.Color(102, 102, 102));
         jLabel30.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
         jLabel30.setForeground(new java.awt.Color(255, 255, 255));
         jLabel30.setText("Estado");
-        jPanel4.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 510, 100, -1));
+        jPanel4.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 520, 100, -1));
 
         cbxEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbxEstado.addActionListener(new java.awt.event.ActionListener() {
@@ -255,7 +255,7 @@ public class LibroFrame extends javax.swing.JFrame{
                 cbxEstadoActionPerformed(evt);
             }
         });
-        jPanel4.add(cbxEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 550, 190, 30));
+        jPanel4.add(cbxEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 550, 190, 40));
 
         cbxEditorial.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbxEditorial.addActionListener(new java.awt.event.ActionListener() {
@@ -263,7 +263,7 @@ public class LibroFrame extends javax.swing.JFrame{
                 cbxEditorialActionPerformed(evt);
             }
         });
-        jPanel4.add(cbxEditorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 462, 430, 30));
+        jPanel4.add(cbxEditorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 470, 430, 40));
 
         txtPReferencia.setBackground(new java.awt.Color(255, 255, 255));
         txtPReferencia.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 14)); // NOI18N
@@ -284,13 +284,13 @@ public class LibroFrame extends javax.swing.JFrame{
         jPanel4.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 260, 90, 20));
 
         cbxIdioma.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel4.add(cbxIdioma, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, 190, 30));
+        jPanel4.add(cbxIdioma, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, 190, 40));
 
         cbxAutor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel4.add(cbxAutor, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 390, 190, 30));
+        jPanel4.add(cbxAutor, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 390, 190, 40));
 
         cbxCategoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel4.add(cbxCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 550, 190, 30));
+        jPanel4.add(cbxCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 550, 190, 40));
 
         flechaa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/flecha_img.png"))); // NOI18N
         flechaa.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -302,9 +302,13 @@ public class LibroFrame extends javax.swing.JFrame{
 
         jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 570, 700));
 
+        btnEliminar.setBackground(java.awt.SystemColor.controlLtHighlight);
+        btnEliminar.setForeground(new java.awt.Color(0, 0, 0));
         btnEliminar.setText("Eliminar");
         jPanel3.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 160, 600, 40));
 
+        btnActualizar.setBackground(java.awt.SystemColor.controlLtHighlight);
+        btnActualizar.setForeground(new java.awt.Color(0, 0, 0));
         btnActualizar.setText("Actualizar");
         btnActualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -313,6 +317,8 @@ public class LibroFrame extends javax.swing.JFrame{
         });
         jPanel3.add(btnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 110, 190, 40));
 
+        btnEditar.setBackground(java.awt.SystemColor.controlLtHighlight);
+        btnEditar.setForeground(new java.awt.Color(0, 0, 0));
         btnEditar.setText("Editar");
         btnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -321,6 +327,8 @@ public class LibroFrame extends javax.swing.JFrame{
         });
         jPanel3.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 110, 200, 40));
 
+        btnListar.setBackground(java.awt.SystemColor.controlLtHighlight);
+        btnListar.setForeground(new java.awt.Color(0, 0, 0));
         btnListar.setText("Listar");
         btnListar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -373,9 +381,7 @@ public class LibroFrame extends javax.swing.JFrame{
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 1500, Short.MAX_VALUE))
+            .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1506, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

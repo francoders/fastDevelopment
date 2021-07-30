@@ -184,12 +184,12 @@ public class ControladorIdioma implements ActionListener {
         }
     }
 
-    void valorRepetido(){
-                for (int i = 0; i < iFrame.tabla.getRowCount(); i++) {
+    void valorRepetido() {
+        for (int i = 0; i < iFrame.tabla.getRowCount(); i++) {
             if (iFrame.tabla.getValueAt(i, 1).equals(idioma.getNombreIdioma())) {
-                JOptionPane.showMessageDialog(iFrame, "Seleccione un Idioma");
+                JOptionPane.showMessageDialog(iFrame, "SIdioma Repetido");
             }
         }
     }
-    
+
 }
