@@ -91,7 +91,6 @@ public class ControladorIdioma implements ActionListener {
     public void agregar() {
 
         try {
-
             if (iFrame.nom_idioma_txt.getText().equals("")) {
                 javax.swing.JOptionPane.showMessageDialog(iFrame, "Debe rellenar el campo nombre");
                 limpiarTabla();

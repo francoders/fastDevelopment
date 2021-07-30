@@ -21,11 +21,6 @@ public class DistribuidorFrame extends javax.swing.JFrame{
         jTable4 = new javax.swing.JTable();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
-        nom_distribuidor_txt = new javax.swing.JTextField();
-        direccion_distribuidor_txt = new javax.swing.JTextField();
-        fono_distribuidor_txt = new javax.swing.JTextField();
-        id_distribuidor_txt = new javax.swing.JTextField();
-        rut_distribuidor_txt = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
@@ -36,7 +31,12 @@ public class DistribuidorFrame extends javax.swing.JFrame{
         limpiar_distribuidor_btn = new javax.swing.JButton();
         flecha = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
+        nom_distribuidor_txt = new javax.swing.JTextField();
+        direccion_distribuidor_txt = new javax.swing.JTextField();
+        fono_distribuidor_txt = new javax.swing.JTextField();
+        rut_distribuidor_txt = new javax.swing.JTextField();
         anio_distribuidor_txt = new javax.swing.JTextField();
+        id_distribuidor_txt = new javax.swing.JTextField();
         btnDelete = new javax.swing.JButton();
         btnActualizar = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
@@ -98,48 +98,13 @@ public class DistribuidorFrame extends javax.swing.JFrame{
         jScrollPane4.setViewportView(jTable4);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("CRUD - JAVA - PATRON DE DISEÑO MVC");
+        setTitle("Distribuidor");
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel4.setBackground(new java.awt.Color(39, 151, 212));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        nom_distribuidor_txt.setBackground(new java.awt.Color(255, 255, 255));
-        nom_distribuidor_txt.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 14)); // NOI18N
-        nom_distribuidor_txt.setForeground(new java.awt.Color(0, 0, 0));
-        nom_distribuidor_txt.setBorder(null);
-        nom_distribuidor_txt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nom_distribuidor_txtActionPerformed(evt);
-            }
-        });
-        jPanel4.add(nom_distribuidor_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 320, 30));
-
-        direccion_distribuidor_txt.setBackground(new java.awt.Color(255, 255, 255));
-        direccion_distribuidor_txt.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 14)); // NOI18N
-        direccion_distribuidor_txt.setForeground(new java.awt.Color(0, 0, 0));
-        direccion_distribuidor_txt.setBorder(null);
-        jPanel4.add(direccion_distribuidor_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 320, 30));
-
-        fono_distribuidor_txt.setBackground(new java.awt.Color(255, 255, 255));
-        fono_distribuidor_txt.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 14)); // NOI18N
-        fono_distribuidor_txt.setForeground(new java.awt.Color(0, 0, 0));
-        fono_distribuidor_txt.setBorder(null);
-        jPanel4.add(fono_distribuidor_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, 320, 30));
-
-        id_distribuidor_txt.setBackground(new java.awt.Color(255, 255, 255));
-        id_distribuidor_txt.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 14)); // NOI18N
-        id_distribuidor_txt.setForeground(new java.awt.Color(0, 0, 0));
-        id_distribuidor_txt.setBorder(null);
-        jPanel4.add(id_distribuidor_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 440, 100, 30));
-
-        rut_distribuidor_txt.setBackground(new java.awt.Color(255, 255, 255));
-        rut_distribuidor_txt.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 14)); // NOI18N
-        rut_distribuidor_txt.setForeground(new java.awt.Color(0, 0, 0));
-        rut_distribuidor_txt.setBorder(null);
-        jPanel4.add(rut_distribuidor_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, 320, 30));
 
         jLabel16.setBackground(new java.awt.Color(102, 102, 102));
         jLabel16.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
@@ -169,7 +134,7 @@ public class DistribuidorFrame extends javax.swing.JFrame{
         jLabel20.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(255, 255, 255));
         jLabel20.setText("ID");
-        jPanel4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 410, -1, -1));
+        jPanel4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 420, -1, -1));
 
         jLabel11.setBackground(new java.awt.Color(11, 0, 32));
         jLabel11.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
@@ -184,7 +149,7 @@ public class DistribuidorFrame extends javax.swing.JFrame{
                 agregar_distribuidor_btnActionPerformed(evt);
             }
         });
-        jPanel4.add(agregar_distribuidor_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 490, 140, 40));
+        jPanel4.add(agregar_distribuidor_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 510, 140, 50));
 
         limpiar_distribuidor_btn.setBackground(java.awt.SystemColor.controlHighlight);
         limpiar_distribuidor_btn.setText("Limpiar textos");
@@ -193,7 +158,7 @@ public class DistribuidorFrame extends javax.swing.JFrame{
                 limpiar_distribuidor_btnMouseClicked(evt);
             }
         });
-        jPanel4.add(limpiar_distribuidor_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 490, 140, 40));
+        jPanel4.add(limpiar_distribuidor_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 510, 140, 50));
 
         flecha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/flecha_img.png"))); // NOI18N
         flecha.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -207,15 +172,35 @@ public class DistribuidorFrame extends javax.swing.JFrame{
         jLabel22.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(255, 255, 255));
         jLabel22.setText("Año de venta");
-        jPanel4.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, -1, -1));
+        jPanel4.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 420, -1, -1));
 
-        anio_distribuidor_txt.setBackground(new java.awt.Color(255, 255, 255));
-        anio_distribuidor_txt.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 14)); // NOI18N
+        nom_distribuidor_txt.setBackground(java.awt.SystemColor.controlLtHighlight);
+        nom_distribuidor_txt.setForeground(new java.awt.Color(0, 0, 0));
+        nom_distribuidor_txt.setToolTipText("");
+        jPanel4.add(nom_distribuidor_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 320, 40));
+
+        direccion_distribuidor_txt.setBackground(java.awt.SystemColor.controlLtHighlight);
+        direccion_distribuidor_txt.setForeground(java.awt.SystemColor.activeCaptionText);
+        direccion_distribuidor_txt.setToolTipText("");
+        jPanel4.add(direccion_distribuidor_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 320, 40));
+
+        fono_distribuidor_txt.setBackground(java.awt.SystemColor.controlLtHighlight);
+        fono_distribuidor_txt.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel4.add(fono_distribuidor_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, 320, 40));
+
+        rut_distribuidor_txt.setBackground(java.awt.SystemColor.controlLtHighlight);
+        rut_distribuidor_txt.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel4.add(rut_distribuidor_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, 320, 40));
+
+        anio_distribuidor_txt.setBackground(java.awt.SystemColor.controlLtHighlight);
         anio_distribuidor_txt.setForeground(new java.awt.Color(0, 0, 0));
-        anio_distribuidor_txt.setBorder(null);
-        jPanel4.add(anio_distribuidor_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, 190, 30));
+        jPanel4.add(anio_distribuidor_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 450, 140, 40));
 
-        jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 590));
+        id_distribuidor_txt.setBackground(java.awt.SystemColor.controlLtHighlight);
+        id_distribuidor_txt.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel4.add(id_distribuidor_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 450, 140, 40));
+
+        jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 610));
 
         btnDelete.setBackground(java.awt.SystemColor.controlHighlight);
         btnDelete.setText("Eliminar");
@@ -284,7 +269,7 @@ public class DistribuidorFrame extends javax.swing.JFrame{
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 602, Short.MAX_VALUE)
         );
 
         pack();
@@ -310,10 +295,6 @@ public class DistribuidorFrame extends javax.swing.JFrame{
 
         // TODO add your handling code here:
     }//GEN-LAST:event_limpiar_distribuidor_btnMouseClicked
-
-    private void nom_distribuidor_txtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nom_distribuidor_txtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nom_distribuidor_txtActionPerformed
 
     private void flechaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_flechaMouseClicked
         GestionDatosFrame gtFrame = new GestionDatosFrame();
