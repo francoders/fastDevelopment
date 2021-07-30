@@ -102,8 +102,11 @@ public class ControladorCategoria implements ActionListener {
     public void agregar() {
         String categoriaTxt = categoriaVista.txtCategoria.getText();
         c.setNombreCategoria(categoriaTxt);
+        
+        //Validacion Campo Vacio
         if (categoriaTxt.equals("")) {
             JOptionPane.showMessageDialog(categoriaVista, "Ingrese una Categoria!");
+            limpiarTabla();
         } else {
 
             int r = dao.agregar(c);

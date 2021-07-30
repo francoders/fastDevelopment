@@ -68,7 +68,7 @@ public class RegistroTrabajadorFrame extends javax.swing.JFrame {
         jPanel1.add(txt_rut, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 250, 250, 30));
 
         txt_password.setBackground(java.awt.SystemColor.controlLtHighlight);
-        jPanel1.add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 340, 250, 30));
+        jPanel1.add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 330, 250, 30));
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 0, 0));

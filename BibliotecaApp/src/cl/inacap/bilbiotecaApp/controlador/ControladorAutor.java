@@ -129,6 +129,7 @@ public class ControladorAutor implements ActionListener {
         //Validacion de campo vacio de las 3 cajas
         if (nombre.equals("") || apellidoPaterno.equals("") || apellidoMaterno.equals("")) {
             JOptionPane.showMessageDialog(autorVista, "Hay campos vacios, Rellenelos todos");
+            limpiarTabla();
         } else {
             int r = dao.agregar(a);
             if (r == 1) {
@@ -153,13 +154,13 @@ public class ControladorAutor implements ActionListener {
             String nombre = autorVista.nom_autor_txt.getText();
             String apellidoPaterno = autorVista.ape_paterno_autor.getText();
             String apellidoMaterno = autorVista.ape_materno_autor.getText();
-            a.setNombre(nombre);
             a.setId(id);
+            a.setNombre(nombre);
             a.setApellidoPaterno(apellidoPaterno);
             a.setApellidoMaterno(apellidoMaterno);
             int r = dao.actualizar(a);
             if (r == 1) {
-                JOptionPane.showMessageDialog(autorVista, "El autor se ha actualizado");
+                JOptionPane.showMessageDialog(autorVista, "El Autor se ha actualizado");
             }else{
                 JOptionPane.showMessageDialog(autorVista, "Error al actualizar");
             }
@@ -189,14 +190,14 @@ public class ControladorAutor implements ActionListener {
     /**
      * nuevo: metodo que deja en blanco los jTextField
      */
-     void nuevo() {
+    void nuevo() {
+        autorVista.id_autor_txt.setText("");
         autorVista.nom_autor_txt.setText("");
         autorVista.ape_paterno_autor.setText("");
         autorVista.ape_materno_autor.setText("");
-        autorVista.id_autor_txt.setText("");
         autorVista.requestFocus();
     }
-     
+
     /**
      * limpiarTabla: metodo que deja en blanco la tabla de autores
      */

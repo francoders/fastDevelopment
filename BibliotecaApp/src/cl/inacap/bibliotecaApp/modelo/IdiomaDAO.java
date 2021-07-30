@@ -83,9 +83,9 @@ public class IdiomaDAO {
         String sql = "update idioma set nombre_idioma=?, codigo_idioma=? where Id_idioma=?";
         try {
             ps = con.prepareStatement(sql);
-            ps.setInt(1, idi.getIdIdioma());
-            ps.setString(2, idi.getNombreIdioma());
-            ps.setString(3, idi.getCodigoIdioma());
+            ps.setString(1, idi.getNombreIdioma());
+            ps.setString(2, idi.getCodigoIdioma());
+            ps.setInt(3, idi.getIdIdioma());
             r = ps.executeUpdate();
             if (r == 1) {
                 return 1;

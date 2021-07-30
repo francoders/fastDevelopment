@@ -54,12 +54,12 @@ public class AutorDAO {
      */
     public int agregar(Autor au) {
         int r = 0;
-        String sql = "insert into autor(Nombre_autor, Id_autor, Apellido_paterno, Apellido_materno) values(?,?,?,?)";
+        String sql = "insert into autor(Id_autor, Nombre_autor, Apellido_paterno, Apellido_materno) values(?,?,?,?)";
         try {
             con = conectar.getConnection();
             ps = con.prepareStatement(sql);
-            ps.setString(1, au.getNombre());
-            ps.setInt(2, au.getId());
+            ps.setInt(1, au.getId());
+            ps.setString(2, au.getNombre());
             ps.setString(3, au.getApellidoPaterno());
             ps.setString(4, au.getApellidoMaterno());
             r = ps.executeUpdate();

@@ -82,10 +82,9 @@ public class IdiomaFrame extends javax.swing.JFrame {
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("ID");
 
-        id_idioma_txt.setEditable(false);
         id_idioma_txt.setBackground(new java.awt.Color(255, 255, 255));
         id_idioma_txt.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
-        id_idioma_txt.setForeground(new java.awt.Color(255, 255, 255));
+        id_idioma_txt.setForeground(new java.awt.Color(0, 0, 0));
         id_idioma_txt.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         id_idioma_txt.setToolTipText("");
         id_idioma_txt.setBorder(null);

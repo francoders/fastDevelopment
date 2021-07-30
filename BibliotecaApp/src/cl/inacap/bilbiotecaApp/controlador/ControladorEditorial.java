@@ -135,7 +135,7 @@ public class ControladorEditorial implements ActionListener {
             dao.eliminar(id); 
         }
         } catch (Exception e) {
-            System.out.println(e);            
+            System.out.println(e);    
         }
         
         limpiarTabla();

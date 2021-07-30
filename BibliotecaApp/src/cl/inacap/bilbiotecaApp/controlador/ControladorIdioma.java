@@ -2,6 +2,7 @@ package cl.inacap.bilbiotecaApp.controlador;
 
 import cl.inacap.bibliotecaApp.modelo.Idioma;
 import cl.inacap.bibliotecaApp.modelo.IdiomaDAO;
+import cl.inacap.bibliotecaApp.vista.GestionDatosFrame;
 import cl.inacap.bibliotecaApp.vista.IdiomaFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -77,7 +78,7 @@ public class ControladorIdioma implements ActionListener {
         modelo = (DefaultTableModel) tabla.getModel();
         tabla.setModel(modelo);
         List<Idioma> lista = dao.listar();
-        Object[] objeto = new Object[4];
+        Object[] objeto = new Object[3];
         for (int i = 0; i < lista.size(); i++) {
             objeto[0] = lista.get(i).getIdIdioma();
             objeto[1] = lista.get(i).getNombreIdioma();
@@ -90,34 +91,42 @@ public class ControladorIdioma implements ActionListener {
     }
 
     public void agregar() {
+        int idTxt = Integer.parseInt(iFrame.id_idioma_txt.getText());
+        idioma.setIdIdioma(idTxt);
         String idiomaTxt = iFrame.nom_idioma_txt.getText();
         idioma.setNombreIdioma(idiomaTxt);
         String codigoTxt = iFrame.cod_idioma_txt.getText();
         idioma.setCodigoIdioma(codigoTxt);
-
-        //VALIDACION de campo vacio
-        if (idiomaTxt.equalsIgnoreCase("")|| codigoTxt.equalsIgnoreCase("")) {
-                JOptionPane.showMessageDialog(iFrame, "Rellene todos los campos");
-                limpiarTabla();
-        } else {
-            int r = dao.agregar(idioma);
-            if (r == 1) {
-                JOptionPane.showMessageDialog(iFrame, "Idioma Agregado");
-            } else {
-                JOptionPane.showMessageDialog(iFrame, "Error al Ingresar Idioma");
-            }
+    
+        //VALIDACION de campo vacio 
+        if (idiomaTxt.equalsIgnoreCase("") || codigoTxt.equalsIgnoreCase("") || iFrame.id_idioma_txt.equals("")  ) {
+            JOptionPane.showMessageDialog(iFrame, "Rellene todos los campos");
             limpiarTabla();
+        } else {
+
+            if (!idiomaTxt.equalsIgnoreCase("")|| codigoTxt.equalsIgnoreCase("")){
+                int r = dao.agregar(idioma);
+                if (r == 1) {
+                    JOptionPane.showMessageDialog(iFrame, "Idioma Agregado");
+                } else {
+                    JOptionPane.showMessageDialog(iFrame, "Error al Ingresar Idioma");
+                }
+                limpiarTabla();
+            }
+
         }
     }
 
+    
     public void actualizar() {
+        
         if (iFrame.id_idioma_txt.getText().equals("")) {
             JOptionPane.showMessageDialog(iFrame, "El ID no existe");
         } else {
-            int id = Integer.parseInt(iFrame.id_idioma_txt.getText());
+            int idTxt = Integer.parseInt(iFrame.id_idioma_txt.getText());
             String idiomaTxt = iFrame.nom_idioma_txt.getText();
             String codidoTxt = iFrame.cod_idioma_txt.getText();
-            idioma.setIdIdioma(id);
+            idioma.setIdIdioma(idTxt);
             idioma.setNombreIdioma(idiomaTxt);
             idioma.setCodigoIdioma(codidoTxt);
             int r = dao.actualizar(idioma);
@@ -170,4 +179,12 @@ public class ControladorIdioma implements ActionListener {
         }
     }
 
+    void valorRepetido(){
+                for (int i = 0; i < iFrame.tabla.getRowCount(); i++) {
+            if (iFrame.tabla.getValueAt(i, 1).equals(idioma.getNombreIdioma())) {
+                JOptionPane.showMessageDialog(iFrame, "Seleccione un Idioma");
+            }
+        }
+    }
+    
 }

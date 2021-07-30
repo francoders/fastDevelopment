@@ -9,8 +9,6 @@ package cl.inacap.bibliotecaApp.modelo;
  *
  * @author Corvalan
  */
-public class Trabajador {
-    
-//pendiente
+public class UsuarioDAO {
     
 }

@@ -36,22 +36,21 @@ public class AutorFrame extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        nom_autor_txt = new javax.swing.JTextField();
-        ape_paterno_autor = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        ape_materno_autor = new javax.swing.JTextField();
         agregar_autor_btn = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         limpiar_autor_btn = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
-        id_autor_txt = new javax.swing.JTextField();
         flecha = new javax.swing.JLabel();
+        nom_autor_txt = new javax.swing.JTextField();
+        ape_paterno_autor = new javax.swing.JTextField();
+        ape_materno_autor = new javax.swing.JTextField();
+        id_autor_txt = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabla = new javax.swing.JTable();
         jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
         eliminar_autor_btn = new javax.swing.JButton();
         listar_autor_btn = new javax.swing.JButton();
         editar_autor_btn = new javax.swing.JButton();
@@ -66,24 +65,6 @@ public class AutorFrame extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(39, 151, 212));
         jPanel2.setForeground(new java.awt.Color(51, 0, 51));
 
-        nom_autor_txt.setBackground(new java.awt.Color(255, 255, 255));
-        nom_autor_txt.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
-        nom_autor_txt.setForeground(new java.awt.Color(0, 0, 0));
-        nom_autor_txt.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        nom_autor_txt.setToolTipText("");
-        nom_autor_txt.setBorder(null);
-        nom_autor_txt.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        nom_autor_txt.setSelectedTextColor(new java.awt.Color(11, 0, 32));
-
-        ape_paterno_autor.setBackground(new java.awt.Color(255, 255, 255));
-        ape_paterno_autor.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
-        ape_paterno_autor.setForeground(new java.awt.Color(0, 0, 0));
-        ape_paterno_autor.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        ape_paterno_autor.setToolTipText("");
-        ape_paterno_autor.setBorder(null);
-        ape_paterno_autor.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        ape_paterno_autor.setSelectedTextColor(new java.awt.Color(11, 0, 32));
-
         jLabel14.setBackground(new java.awt.Color(102, 102, 102));
         jLabel14.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
@@ -94,18 +75,9 @@ public class AutorFrame extends javax.swing.JFrame {
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("Apellido Materno");
 
-        ape_materno_autor.setBackground(new java.awt.Color(255, 255, 255));
-        ape_materno_autor.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
-        ape_materno_autor.setForeground(new java.awt.Color(0, 0, 0));
-        ape_materno_autor.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        ape_materno_autor.setToolTipText("");
-        ape_materno_autor.setBorder(null);
-        ape_materno_autor.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        ape_materno_autor.setSelectedTextColor(new java.awt.Color(11, 0, 32));
-
         agregar_autor_btn.setBackground(new java.awt.Color(255, 255, 255));
         agregar_autor_btn.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
-        agregar_autor_btn.setText("Agregar");
+        agregar_autor_btn.setText("Agregar Autor");
         agregar_autor_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 agregar_autor_btnActionPerformed(evt);
@@ -115,7 +87,7 @@ public class AutorFrame extends javax.swing.JFrame {
         jLabel11.setBackground(new java.awt.Color(11, 0, 32));
         jLabel11.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Ingresar Autor");
+        jLabel11.setText("Registro Autor");
 
         jLabel16.setBackground(new java.awt.Color(102, 102, 102));
         jLabel16.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
@@ -136,9 +108,6 @@ public class AutorFrame extends javax.swing.JFrame {
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("ID");
 
-        id_autor_txt.setBackground(new java.awt.Color(255, 255, 255));
-        id_autor_txt.setForeground(new java.awt.Color(0, 0, 0));
-
         flecha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/flecha_img.png"))); // NOI18N
         flecha.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -146,66 +115,88 @@ public class AutorFrame extends javax.swing.JFrame {
             }
         });
 
+        nom_autor_txt.setBackground(java.awt.SystemColor.controlLtHighlight);
+        nom_autor_txt.setForeground(new java.awt.Color(0, 0, 0));
+
+        ape_paterno_autor.setBackground(java.awt.SystemColor.controlLtHighlight);
+
+        ape_materno_autor.setBackground(java.awt.SystemColor.controlLtHighlight);
+        ape_materno_autor.setForeground(new java.awt.Color(0, 0, 0));
+
+        id_autor_txt.setEditable(false);
+        id_autor_txt.setBackground(java.awt.SystemColor.controlLtHighlight);
+        id_autor_txt.setForeground(new java.awt.Color(0, 0, 0));
+        id_autor_txt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(flecha, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel16)
-                            .addComponent(ape_paterno_autor, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel14)
-                            .addComponent(nom_autor_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(jPanel2Layout.createSequentialGroup()
-                                    .addComponent(agregar_autor_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(limpiar_autor_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(ape_materno_autor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.LEADING)))
-                        .addGap(81, 81, 81))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(139, 139, 139))
                     .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel17)
-                            .addComponent(id_autor_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(116, 116, 116))))
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                            .addComponent(agregar_autor_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(258, 258, 258))
+                                        .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.LEADING))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel16)
+                                            .addComponent(jLabel14))
+                                        .addGap(81, 81, 81)))
+                                .addGroup(jPanel2Layout.createSequentialGroup()
+                                    .addComponent(jLabel17)
+                                    .addGap(215, 215, 215)))
+                            .addComponent(id_autor_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(nom_autor_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(limpiar_autor_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(ape_materno_autor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE)
+                                    .addComponent(ape_paterno_autor, javax.swing.GroupLayout.Alignment.LEADING)))))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(87, 87, 87)
+                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(11, 11, 11)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel11)
-                    .addComponent(flecha))
-                .addGap(51, 51, 51)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(11, 11, 11)
+                        .addComponent(flecha))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(56, 56, 56)
+                        .addComponent(jLabel11)))
+                .addGap(38, 38, 38)
                 .addComponent(jLabel16)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(nom_autor_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
+                .addComponent(nom_autor_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel14)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ape_paterno_autor, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
+                .addComponent(ape_paterno_autor, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel15)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ape_materno_autor, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
+                .addComponent(ape_materno_autor, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel17)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(id_autor_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(id_autor_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(agregar_autor_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(limpiar_autor_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(46, 46, 46))
+                .addContainerGap(59, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 600));
@@ -229,13 +220,7 @@ public class AutorFrame extends javax.swing.JFrame {
         jLabel18.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(11, 0, 32));
         jLabel18.setText("Tabla de autores");
-        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 40, -1, -1));
-
-        jLabel19.setBackground(new java.awt.Color(102, 102, 102));
-        jLabel19.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 12)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(11, 0, 32));
-        jLabel19.setText("Selecciona un autor en la tabla, puedes listar, editar, ");
-        jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 90, -1, -1));
+        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(741, 70, 200, -1));
 
         eliminar_autor_btn.setBackground(new java.awt.Color(255, 255, 255));
         eliminar_autor_btn.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
@@ -353,7 +338,6 @@ public class AutorFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;

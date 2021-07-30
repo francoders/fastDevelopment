@@ -37,17 +37,15 @@ public class EditorialFrame extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         btnNuevo = new javax.swing.JButton();
-        txtId = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
         btnAgregar = new javax.swing.JButton();
         flecha = new javax.swing.JLabel();
         txtEditorial = new javax.swing.JTextField();
+        txtId = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabla = new javax.swing.JTable();
         jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
         btnEliminar = new javax.swing.JButton();
-        jLabel20 = new javax.swing.JLabel();
         btnActualizar = new javax.swing.JButton();
         btnListar = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
@@ -66,8 +64,8 @@ public class EditorialFrame extends javax.swing.JFrame {
         jLabel11.setBackground(new java.awt.Color(11, 0, 32));
         jLabel11.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Editorial");
-        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, -1, -1));
+        jLabel11.setText("Registro Editorial");
+        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, -1, -1));
 
         jLabel16.setBackground(new java.awt.Color(102, 102, 102));
         jLabel16.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
@@ -85,27 +83,11 @@ public class EditorialFrame extends javax.swing.JFrame {
         });
         jPanel2.add(btnNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 360, 143, 38));
 
-        txtId.setEditable(false);
-        txtId.setBackground(java.awt.SystemColor.controlLtHighlight);
-        txtId.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
-        txtId.setForeground(new java.awt.Color(0, 0, 0));
-        txtId.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        txtId.setToolTipText("");
-        txtId.setBorder(null);
-        txtId.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        txtId.setSelectedTextColor(new java.awt.Color(11, 0, 32));
-        txtId.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtIdActionPerformed(evt);
-            }
-        });
-        jPanel2.add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 250, 81, 30));
-
         jLabel17.setBackground(new java.awt.Color(102, 102, 102));
         jLabel17.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("ID");
-        jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 200, -1, -1));
+        jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 210, -1, -1));
 
         btnAgregar.setBackground(java.awt.SystemColor.controlHighlight);
         btnAgregar.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
@@ -129,6 +111,12 @@ public class EditorialFrame extends javax.swing.JFrame {
         txtEditorial.setForeground(new java.awt.Color(0, 0, 0));
         jPanel2.add(txtEditorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, 207, 30));
 
+        txtId.setEditable(false);
+        txtId.setBackground(java.awt.SystemColor.controlLtHighlight);
+        txtId.setForeground(new java.awt.Color(0, 0, 0));
+        txtId.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jPanel2.add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 250, 80, 30));
+
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 580));
 
         tabla.setModel(new javax.swing.table.DefaultTableModel(
@@ -149,19 +137,13 @@ public class EditorialFrame extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tabla);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 260, 500, 250));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 260, 510, 250));
 
         jLabel18.setBackground(new java.awt.Color(11, 0, 32));
         jLabel18.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(11, 0, 32));
         jLabel18.setText("Tabla de editoriales");
-        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 40, -1, -1));
-
-        jLabel19.setBackground(new java.awt.Color(102, 102, 102));
-        jLabel19.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 12)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(11, 0, 32));
-        jLabel19.setText("Selecciona una categoria en la tabla, puedes listar, editar, ");
-        jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 80, -1, -1));
+        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 80, -1, -1));
 
         btnEliminar.setBackground(new java.awt.Color(255, 255, 255));
         btnEliminar.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
@@ -172,12 +154,6 @@ public class EditorialFrame extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 190, 380, 37));
-
-        jLabel20.setBackground(new java.awt.Color(102, 102, 102));
-        jLabel20.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 12)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(11, 0, 32));
-        jLabel20.setText("y eliminar los datos si lo deseas");
-        jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 90, -1, 30));
 
         btnActualizar.setBackground(new java.awt.Color(255, 255, 255));
         btnActualizar.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
@@ -243,10 +219,6 @@ public class EditorialFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnNuevoActionPerformed
 
-    private void txtIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtIdActionPerformed
-
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnAgregarActionPerformed
@@ -280,8 +252,6 @@ public class EditorialFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel20;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;

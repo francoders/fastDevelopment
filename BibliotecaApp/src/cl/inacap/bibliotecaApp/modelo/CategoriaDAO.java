@@ -88,8 +88,8 @@ public class CategoriaDAO {
         String sql = "update categoria set Nombre_categoria=? where Id_categoria=?";
         try {
             ps = con.prepareStatement(sql);
-                        ps.setInt(1, cate.getIdCategoria());
-            ps.setString(2, cate.getNombreCategoria());
+            ps.setString(1, cate.getNombreCategoria());
+            ps.setInt(2, cate.getIdCategoria());
             r = ps.executeUpdate();
             if (r == 1) {
                 return 1;
