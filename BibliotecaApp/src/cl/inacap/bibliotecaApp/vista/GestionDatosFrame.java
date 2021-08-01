@@ -10,6 +10,7 @@ import cl.inacap.bilbiotecaApp.controlador.ControladorCategoria;
 import cl.inacap.bilbiotecaApp.controlador.ControladorDistribuidor;
 import cl.inacap.bilbiotecaApp.controlador.ControladorEditorial;
 import cl.inacap.bilbiotecaApp.controlador.ControladorIdioma;
+import cl.inacap.bilbiotecaApp.controlador.ControladorTrabajador;
 import java.awt.Image;
 import java.awt.Toolkit;
 
@@ -148,33 +149,34 @@ public class GestionDatosFrame extends javax.swing.JFrame {
         jLabel18.setBackground(new java.awt.Color(11, 0, 32));
         jLabel18.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(11, 0, 32));
-        jLabel18.setText("Libro");
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/libro_img.png"))); // NOI18N
+        jLabel18.setText(" Libro");
 
         javax.swing.GroupLayout panelLibroLayout = new javax.swing.GroupLayout(panelLibro);
         panelLibro.setLayout(panelLibroLayout);
         panelLibroLayout.setHorizontalGroup(
             panelLibroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelLibroLayout.createSequentialGroup()
-                .addGroup(panelLibroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelLibroLayout.createSequentialGroup()
-                        .addGap(288, 288, 288)
-                        .addComponent(jLabel5))
-                    .addGroup(panelLibroLayout.createSequentialGroup()
-                        .addGap(65, 65, 65)
-                        .addComponent(jLabel18)))
+                .addGap(32, 32, 32)
+                .addComponent(jLabel18)
+                .addGap(128, 128, 128)
+                .addComponent(jLabel5)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelLibroLayout.setVerticalGroup(
             panelLibroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelLibroLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel18)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addGroup(panelLibroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelLibroLayout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(jLabel5))
+                    .addGroup(panelLibroLayout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(jLabel18)))
+                .addContainerGap(8, Short.MAX_VALUE))
         );
 
-        jPanel1.add(panelLibro, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, 190, 90));
+        jPanel1.add(panelLibro, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 290, 220, 90));
 
         panelIdioma.setBackground(java.awt.SystemColor.controlHighlight);
         panelIdioma.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -187,33 +189,34 @@ public class GestionDatosFrame extends javax.swing.JFrame {
         jLabel19.setBackground(new java.awt.Color(11, 0, 32));
         jLabel19.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(11, 0, 32));
-        jLabel19.setText("Idioma");
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/idioma_img.png"))); // NOI18N
+        jLabel19.setText(" Idioma");
 
         javax.swing.GroupLayout panelIdiomaLayout = new javax.swing.GroupLayout(panelIdioma);
         panelIdioma.setLayout(panelIdiomaLayout);
         panelIdiomaLayout.setHorizontalGroup(
             panelIdiomaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelIdiomaLayout.createSequentialGroup()
-                .addGroup(panelIdiomaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelIdiomaLayout.createSequentialGroup()
-                        .addGap(288, 288, 288)
-                        .addComponent(jLabel6))
-                    .addGroup(panelIdiomaLayout.createSequentialGroup()
-                        .addGap(49, 49, 49)
-                        .addComponent(jLabel19)))
+                .addGap(23, 23, 23)
+                .addComponent(jLabel19)
+                .addGap(116, 116, 116)
+                .addComponent(jLabel6)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelIdiomaLayout.setVerticalGroup(
             panelIdiomaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelIdiomaLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel19)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addGroup(panelIdiomaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelIdiomaLayout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(jLabel6))
+                    .addGroup(panelIdiomaLayout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addComponent(jLabel19)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1.add(panelIdioma, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 430, 190, 90));
+        jPanel1.add(panelIdioma, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 440, 190, 90));
 
         panelDistribuidor.setBackground(java.awt.SystemColor.controlHighlight);
         panelDistribuidor.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -226,30 +229,34 @@ public class GestionDatosFrame extends javax.swing.JFrame {
         jLabel22.setBackground(new java.awt.Color(11, 0, 32));
         jLabel22.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(11, 0, 32));
-        jLabel22.setText("Distribuidor");
+        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/distribuidor_img.png"))); // NOI18N
+        jLabel22.setText(" Distribuidor");
 
         javax.swing.GroupLayout panelDistribuidorLayout = new javax.swing.GroupLayout(panelDistribuidor);
         panelDistribuidor.setLayout(panelDistribuidorLayout);
         panelDistribuidorLayout.setHorizontalGroup(
             panelDistribuidorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelDistribuidorLayout.createSequentialGroup()
-                .addGap(87, 87, 87)
+                .addGap(44, 44, 44)
                 .addComponent(jLabel22)
-                .addGap(29, 29, 29)
+                .addGap(72, 72, 72)
                 .addComponent(jLabel9)
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelDistribuidorLayout.setVerticalGroup(
             panelDistribuidorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelDistribuidorLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
                 .addGroup(panelDistribuidorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel22)
-                    .addComponent(jLabel9))
-                .addContainerGap(29, Short.MAX_VALUE))
+                    .addGroup(panelDistribuidorLayout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(jLabel9))
+                    .addGroup(panelDistribuidorLayout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(jLabel22)))
+                .addContainerGap(8, Short.MAX_VALUE))
         );
 
-        jPanel1.add(panelDistribuidor, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 480, 300, 90));
+        jPanel1.add(panelDistribuidor, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 480, 340, 90));
 
         panelAutor.setBackground(java.awt.SystemColor.controlHighlight);
         panelAutor.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -262,33 +269,34 @@ public class GestionDatosFrame extends javax.swing.JFrame {
         jLabel24.setBackground(new java.awt.Color(11, 0, 32));
         jLabel24.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(11, 0, 32));
-        jLabel24.setText("Autor");
+        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/autor_img.png"))); // NOI18N
+        jLabel24.setText(" Autor");
 
         javax.swing.GroupLayout panelAutorLayout = new javax.swing.GroupLayout(panelAutor);
         panelAutor.setLayout(panelAutorLayout);
         panelAutorLayout.setHorizontalGroup(
             panelAutorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelAutorLayout.createSequentialGroup()
-                .addGroup(panelAutorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelAutorLayout.createSequentialGroup()
-                        .addGap(288, 288, 288)
-                        .addComponent(jLabel11))
-                    .addGroup(panelAutorLayout.createSequentialGroup()
-                        .addGap(59, 59, 59)
-                        .addComponent(jLabel24)))
+                .addGap(27, 27, 27)
+                .addComponent(jLabel24)
+                .addGap(128, 128, 128)
+                .addComponent(jLabel11)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelAutorLayout.setVerticalGroup(
             panelAutorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelAutorLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jLabel11)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel24)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addGroup(panelAutorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelAutorLayout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(jLabel11))
+                    .addGroup(panelAutorLayout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(jLabel24)))
+                .addContainerGap(7, Short.MAX_VALUE))
         );
 
-        jPanel1.add(panelAutor, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 430, 190, 90));
+        jPanel1.add(panelAutor, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 440, 190, 90));
 
         panelCategoria.setBackground(java.awt.SystemColor.controlHighlight);
         panelCategoria.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -301,20 +309,18 @@ public class GestionDatosFrame extends javax.swing.JFrame {
         jLabel23.setBackground(new java.awt.Color(11, 0, 32));
         jLabel23.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(11, 0, 32));
-        jLabel23.setText("Categoria");
+        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/categoria_img.png"))); // NOI18N
+        jLabel23.setText(" Categoria");
 
         javax.swing.GroupLayout panelCategoriaLayout = new javax.swing.GroupLayout(panelCategoria);
         panelCategoria.setLayout(panelCategoriaLayout);
         panelCategoriaLayout.setHorizontalGroup(
             panelCategoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelCategoriaLayout.createSequentialGroup()
-                .addGroup(panelCategoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelCategoriaLayout.createSequentialGroup()
-                        .addGap(288, 288, 288)
-                        .addComponent(jLabel10))
-                    .addGroup(panelCategoriaLayout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addComponent(jLabel23)))
+                .addGap(14, 14, 14)
+                .addComponent(jLabel23)
+                .addGap(94, 94, 94)
+                .addComponent(jLabel10)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelCategoriaLayout.setVerticalGroup(
@@ -322,12 +328,14 @@ public class GestionDatosFrame extends javax.swing.JFrame {
             .addGroup(panelCategoriaLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(jLabel10)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCategoriaLayout.createSequentialGroup()
+                .addContainerGap(16, Short.MAX_VALUE)
                 .addComponent(jLabel23)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
-        jPanel1.add(panelCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, 190, 90));
+        jPanel1.add(panelCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, 220, 90));
 
         panelTrabajador.setBackground(java.awt.SystemColor.controlHighlight);
         panelTrabajador.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -340,33 +348,33 @@ public class GestionDatosFrame extends javax.swing.JFrame {
         jLabel25.setBackground(new java.awt.Color(11, 0, 32));
         jLabel25.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(11, 0, 32));
-        jLabel25.setText("Trabajador");
+        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/trabajador_img.png"))); // NOI18N
+        jLabel25.setText(" Trabajador");
 
         javax.swing.GroupLayout panelTrabajadorLayout = new javax.swing.GroupLayout(panelTrabajador);
         panelTrabajador.setLayout(panelTrabajadorLayout);
         panelTrabajadorLayout.setHorizontalGroup(
             panelTrabajadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelTrabajadorLayout.createSequentialGroup()
-                .addGroup(panelTrabajadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelTrabajadorLayout.createSequentialGroup()
-                        .addGap(241, 241, 241)
-                        .addComponent(jLabel12))
-                    .addGroup(panelTrabajadorLayout.createSequentialGroup()
-                        .addGap(84, 84, 84)
-                        .addComponent(jLabel25)))
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addGap(241, 241, 241)
+                .addComponent(jLabel12)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelTrabajadorLayout.createSequentialGroup()
+                .addContainerGap(91, Short.MAX_VALUE)
+                .addComponent(jLabel25)
+                .addGap(78, 78, 78))
         );
         panelTrabajadorLayout.setVerticalGroup(
             panelTrabajadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelTrabajadorLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(jLabel12)
-                .addGap(8, 8, 8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel25)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
-        jPanel1.add(panelTrabajador, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 360, 300, -1));
+        jPanel1.add(panelTrabajador, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 360, 340, -1));
 
         panelCliente.setBackground(java.awt.SystemColor.controlHighlight);
         panelCliente.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -379,18 +387,19 @@ public class GestionDatosFrame extends javax.swing.JFrame {
         jLabel26.setBackground(new java.awt.Color(11, 0, 32));
         jLabel26.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
         jLabel26.setForeground(new java.awt.Color(11, 0, 32));
-        jLabel26.setText("Cliente");
+        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cliente_img.png"))); // NOI18N
+        jLabel26.setText(" Cliente");
 
         javax.swing.GroupLayout panelClienteLayout = new javax.swing.GroupLayout(panelCliente);
         panelCliente.setLayout(panelClienteLayout);
         panelClienteLayout.setHorizontalGroup(
             panelClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelClienteLayout.createSequentialGroup()
-                .addGap(104, 104, 104)
+                .addGap(98, 98, 98)
                 .addComponent(jLabel26)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel13)
-                .addContainerGap(98, Short.MAX_VALUE))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
         panelClienteLayout.setVerticalGroup(
             panelClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -402,7 +411,7 @@ public class GestionDatosFrame extends javax.swing.JFrame {
                 .addContainerGap(29, Short.MAX_VALUE))
         );
 
-        jPanel1.add(panelCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 250, 300, -1));
+        jPanel1.add(panelCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 250, 340, -1));
 
         panelEditorial.setBackground(java.awt.SystemColor.controlHighlight);
         panelEditorial.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -415,33 +424,34 @@ public class GestionDatosFrame extends javax.swing.JFrame {
         jLabel27.setBackground(new java.awt.Color(11, 0, 32));
         jLabel27.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
         jLabel27.setForeground(new java.awt.Color(11, 0, 32));
-        jLabel27.setText("Editorial");
+        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/editorial_img.png"))); // NOI18N
+        jLabel27.setText(" Editorial");
 
         javax.swing.GroupLayout panelEditorialLayout = new javax.swing.GroupLayout(panelEditorial);
         panelEditorial.setLayout(panelEditorialLayout);
         panelEditorialLayout.setHorizontalGroup(
             panelEditorialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelEditorialLayout.createSequentialGroup()
-                .addGroup(panelEditorialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelEditorialLayout.createSequentialGroup()
-                        .addGap(288, 288, 288)
-                        .addComponent(jLabel14))
-                    .addGroup(panelEditorialLayout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addComponent(jLabel27)))
+                .addContainerGap()
+                .addComponent(jLabel27)
+                .addGap(118, 118, 118)
+                .addComponent(jLabel14)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelEditorialLayout.setVerticalGroup(
             panelEditorialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelEditorialLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jLabel14)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel27)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addGroup(panelEditorialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelEditorialLayout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(jLabel14))
+                    .addGroup(panelEditorialLayout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(jLabel27)))
+                .addContainerGap(8, Short.MAX_VALUE))
         );
 
-        jPanel1.add(panelEditorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 430, 190, 90));
+        jPanel1.add(panelEditorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 440, 190, 90));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, 640));
 
@@ -480,7 +490,6 @@ public class GestionDatosFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_panelAutorMouseClicked
 
     private void panelCategoriaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelCategoriaMouseClicked
-       
         CategoriaFrame c = new CategoriaFrame();
         ControladorCategoria con = new ControladorCategoria(c);
         c.setVisible(true);
@@ -495,7 +504,10 @@ public class GestionDatosFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnBackMouseClicked
 
     private void panelTrabajadorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelTrabajadorMouseClicked
-        // TODO add your handling code here:
+        TrabajadorFrame tr = new TrabajadorFrame();
+        ControladorTrabajador con = new ControladorTrabajador(tr);
+        tr.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_panelTrabajadorMouseClicked
 
     private void panelClienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelClienteMouseClicked

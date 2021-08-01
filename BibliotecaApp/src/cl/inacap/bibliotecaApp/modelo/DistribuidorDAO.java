@@ -57,7 +57,7 @@ public class DistribuidorDAO {
     // @param dis de tipo Distribuidor
     // @return la respuesta del PrepareStatement
 
-    public int agregar(Distribuidor dis) {  
+    public int agregar(Distribuidor dis) {
         int r=0;
         
         String sql="insert into distribuidor(Id_dist, Rut_dist, Nombre_empresa, Telefono_dist, Anio_venta, Direccion_dist)values(?,?,?,?,?,?)";

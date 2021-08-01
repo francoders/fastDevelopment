@@ -157,7 +157,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel10.setText("Usuario - RUT");
+        jLabel10.setText("Trabajador - Correo");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 160, 140, 40));
 
         txt_rut.setBackground(java.awt.SystemColor.controlLtHighlight);

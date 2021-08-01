@@ -44,6 +44,8 @@ public class RegistroTrabajadorFrame extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        txt_password1 = new javax.swing.JPasswordField();
         registrar_btn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -63,33 +65,41 @@ public class RegistroTrabajadorFrame extends javax.swing.JFrame {
         jPanel1.add(flecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 70, 70));
 
         txt_nombre.setBackground(java.awt.SystemColor.controlLtHighlight);
-        jPanel1.add(txt_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 170, 250, 30));
+        jPanel1.add(txt_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 250, 30));
 
         txt_rut.setBackground(java.awt.SystemColor.controlLtHighlight);
-        jPanel1.add(txt_rut, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 250, 250, 30));
+        jPanel1.add(txt_rut, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 230, 250, 30));
 
         txt_password.setBackground(java.awt.SystemColor.controlLtHighlight);
-        jPanel1.add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 330, 250, 30));
+        jPanel1.add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 370, 250, 30));
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("Registro de Trabajador");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 230, 50));
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 230, 50));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel9.setText("Contraseña");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 280, 140, 50));
+        jLabel9.setText("Confirmar Contraseña");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 330, 190, 50));
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel12.setText("Nombre de Usuario");
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, 140, 50));
+        jLabel12.setText("Nombre de Trabajador");
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, 170, 50));
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel10.setText("Usuario - RUT");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, 140, 50));
+        jLabel10.setText("Correo Electronico");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 140, 50));
+
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel13.setText("Contraseña");
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 260, 140, 50));
+
+        txt_password1.setBackground(java.awt.SystemColor.controlLtHighlight);
+        jPanel1.add(txt_password1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 300, 250, 30));
 
         registrar_btn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         registrar_btn.setText("Registrarse");
@@ -98,7 +108,7 @@ public class RegistroTrabajadorFrame extends javax.swing.JFrame {
                 registrar_btnActionPerformed(evt);
             }
         });
-        jPanel1.add(registrar_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 400, 180, 40));
+        jPanel1.add(registrar_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 440, 180, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo_inicio.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 0, 570, 540));
@@ -171,12 +181,14 @@ public class RegistroTrabajadorFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     public javax.swing.JButton registrar_btn;
     public javax.swing.JTextField txt_nombre;
     public javax.swing.JPasswordField txt_password;
+    public javax.swing.JPasswordField txt_password1;
     public javax.swing.JTextField txt_rut;
     // End of variables declaration//GEN-END:variables
 }
