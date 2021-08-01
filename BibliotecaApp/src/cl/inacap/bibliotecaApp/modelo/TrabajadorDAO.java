@@ -22,7 +22,6 @@ public class TrabajadorDAO {
      * y actualizar un distribuidor mediante sentencias DML a la base de datos
      * bibliotecadb en la tabla distribuidor.
      */
-    
     PreparedStatement ps;
     ResultSet rs;
     Connection con;
@@ -33,7 +32,6 @@ public class TrabajadorDAO {
     // prepara una sentencia sql que selecciona todos los distribuidores en la base de datos,
     // cuando el resultado este listo crea un nuevo distribuidor y los almacena en la lista datos.
     // @return devuelve una lista con todos los distribuidores en la base de datos.
-    
     public List<Trabajador> listar() {
         List<Trabajador> datos = new ArrayList<>();
         try {
@@ -60,14 +58,12 @@ public class TrabajadorDAO {
     }
 
     /**
-     * agregar: metodo publico que inserta los datos de un trabajador en la
-     * base de datos mediante una sentencia sql de insercion
+     * agregar: metodo publico que inserta los datos de un trabajador en la base
+     * de datos mediante una sentencia sql de insercion
      *
      * @param trab de tipo Autor
      * @return la respuesta del PrepareStatement
      */
-    
-    
     public int agregar(Trabajador trab) {
 
         int r = 0;
@@ -97,6 +93,55 @@ public class TrabajadorDAO {
         return r;
     }
 
+    /**
+     * eliminar: metodo public int que recibe el id del autor seleccionado y lo
+     * elimina mediante una sentencia SQL DELETE
+     *
+     * id de tipo int
+     *
+     * @return la respuesta del PrepareStatement
+     */
+    public int eliminar(int id) {
 
-    
+        int r = 0;
+        String sql = "delete from trabajador where Id_trabajador=" + id;
+        try {
+            con = conectar.getConnection();
+            ps = con.prepareStatement(sql);
+            r = ps.executeUpdate();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return r;
+
+    }
+
+    public int actualizar(Trabajador tr) {
+        int r = 0;
+        con = conectar.getConnection();
+        PreparedStatement ps = null;
+        String sql = "update trabajador set Rut_trabajador=?, Nombre_trabajador=?, Ape_paterno_trabajador=?, Ape_materno_trabajador=?, Direccion_trabajador=?, Telefono_trabajador=?, Correo_trabajador=?, Fecha_contrato_t=? where Id_trabajador=?";
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setString(1, tr.getRutTrabajador());
+            ps.setString(2, tr.getNombreTrabajador());
+            ps.setString(3, tr.getApePaternoTr());
+            ps.setString(4, tr.getApeMaternoTr());
+            ps.setString(5, tr.getDireccionTr());
+            ps.setInt(6, tr.getTelefonoTrabajador());
+            ps.setString(7, tr.getCorreoTrabajador());
+            ps.setString(8, tr.getFechaContratoTr());
+            ps.setInt(9, tr.getIdTrabajador());
+            r = ps.executeUpdate();
+            if (r == 1) {
+                return 1;
+            } else {
+                return 0;
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return r;
+    }
+
 }

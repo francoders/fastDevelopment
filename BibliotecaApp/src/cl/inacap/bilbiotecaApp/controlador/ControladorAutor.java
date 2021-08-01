@@ -218,11 +218,12 @@ public class ControladorAutor implements ActionListener {
         }
     }
     
-     /**
-      * centrarCeldas: metodo que recibe la tabla y las centra de manera ordenada
-      * @param tabla de tipo JTable
-      */
-     void centrarCeldas(JTable tabla) {
+    /**
+     * centrarCeldas: metodo que recibe la tabla y las centra de manera ordenada
+     *
+     * @param tabla de tipo JTable
+     */
+    void centrarCeldas(JTable tabla) {
         DefaultTableCellRenderer tcr = new DefaultTableCellRenderer();
         tcr.setHorizontalAlignment(SwingConstants.CENTER);
         for (int i = 0; i < autorVista.tabla.getColumnCount(); i++) {

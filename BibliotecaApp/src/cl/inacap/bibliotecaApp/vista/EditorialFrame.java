@@ -63,7 +63,7 @@ public class EditorialFrame extends javax.swing.JFrame {
         jButton4.setText("jButton4");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Editoriales - Fast Development");
+        setTitle("Biblioteca Fast Development - Editorial");
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -76,39 +76,41 @@ public class EditorialFrame extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Registro Editorial");
-        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, -1, -1));
+        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, -1, -1));
 
         jLabel16.setBackground(new java.awt.Color(102, 102, 102));
         jLabel16.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("Nombre editorial");
-        jPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, -1, -1));
+        jPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, -1, -1));
 
-        btnNuevo.setBackground(java.awt.SystemColor.controlHighlight);
+        btnNuevo.setBackground(java.awt.SystemColor.controlLtHighlight);
         btnNuevo.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
+        btnNuevo.setForeground(new java.awt.Color(0, 0, 0));
         btnNuevo.setText("Limpiar texto");
         btnNuevo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNuevoActionPerformed(evt);
             }
         });
-        jPanel2.add(btnNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 360, 143, 38));
+        jPanel2.add(btnNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 360, 140, 38));
 
         jLabel17.setBackground(new java.awt.Color(102, 102, 102));
         jLabel17.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("ID");
-        jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 210, -1, -1));
+        jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 230, -1, -1));
 
-        btnAgregar.setBackground(java.awt.SystemColor.controlHighlight);
+        btnAgregar.setBackground(java.awt.SystemColor.controlLtHighlight);
         btnAgregar.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
+        btnAgregar.setForeground(new java.awt.Color(0, 0, 0));
         btnAgregar.setText("Agregar Editorial");
         btnAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAgregarActionPerformed(evt);
             }
         });
-        jPanel2.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 360, 160, 38));
+        jPanel2.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 360, 150, 38));
 
         flecha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/flecha_img.png"))); // NOI18N
         flecha.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -120,22 +122,23 @@ public class EditorialFrame extends javax.swing.JFrame {
 
         txtEditorial.setBackground(java.awt.SystemColor.controlLtHighlight);
         txtEditorial.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel2.add(txtEditorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, 207, 30));
+        jPanel2.add(txtEditorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 270, 207, 30));
 
         txtId.setEditable(false);
         txtId.setBackground(java.awt.SystemColor.controlLtHighlight);
         txtId.setForeground(new java.awt.Color(0, 0, 0));
         txtId.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jPanel2.add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 250, 80, 30));
+        jPanel2.add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 270, 70, 30));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 580));
 
+        tabla.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         tabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "ID", "Categoria"
+                "ID", "Editorial"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -146,9 +149,10 @@ public class EditorialFrame extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        tabla.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(tabla);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 260, 510, 250));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 260, 480, 240));
 
         jLabel18.setBackground(new java.awt.Color(11, 0, 32));
         jLabel18.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
@@ -158,6 +162,7 @@ public class EditorialFrame extends javax.swing.JFrame {
 
         btnEliminar.setBackground(new java.awt.Color(255, 255, 255));
         btnEliminar.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
+        btnEliminar.setForeground(new java.awt.Color(0, 0, 0));
         btnEliminar.setText("Eliminar");
         btnEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -168,6 +173,7 @@ public class EditorialFrame extends javax.swing.JFrame {
 
         btnActualizar.setBackground(new java.awt.Color(255, 255, 255));
         btnActualizar.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
+        btnActualizar.setForeground(new java.awt.Color(0, 0, 0));
         btnActualizar.setText("Actualizar");
         btnActualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -178,6 +184,7 @@ public class EditorialFrame extends javax.swing.JFrame {
 
         btnListar.setBackground(new java.awt.Color(255, 255, 255));
         btnListar.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
+        btnListar.setForeground(new java.awt.Color(0, 0, 0));
         btnListar.setText("Listar");
         btnListar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -188,6 +195,7 @@ public class EditorialFrame extends javax.swing.JFrame {
 
         btnEditar.setBackground(new java.awt.Color(255, 255, 255));
         btnEditar.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
+        btnEditar.setForeground(new java.awt.Color(0, 0, 0));
         btnEditar.setText("Editar");
         btnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

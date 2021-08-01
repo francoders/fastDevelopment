@@ -185,6 +185,9 @@ public class ControladorTrabajador implements ActionListener{
 
     }
 
+    /**
+     * limpiarTabla: metodo que deja en blanco la tabla de autores
+     */
     private void limpiarTabla() {
         for (int i = 0; i < trabajadorVista.tabla.getRowCount(); i++) {
             modelo.removeRow(i);
@@ -204,14 +207,67 @@ public class ControladorTrabajador implements ActionListener{
         trabajadorVista.fecha_cont_trabajador_txt.setText("");
     }
 
+    /**
+     * actualizar: metodo publico que al seleccionar un autor, muestra los
+     * valores nuevamente en los jTextField para poder ser modificados
+     */
     private void actualizar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if (trabajadorVista.id_trabajador_txt.getText().equals("")) {
+            JOptionPane.showMessageDialog(trabajadorVista, "No se identifico el ID");
+        } else {
+            int id = Integer.parseInt(trabajadorVista.id_trabajador_txt.getText());
+            String rutTr = trabajadorVista.rut_trabajador_txt.getText();
+            String nombreTr = trabajadorVista.nom_trabajador_txt.getText();
+            String apellidoPaterno = trabajadorVista.apePa_trabajador_txt.getText();
+            String apellidoMaterno = trabajadorVista.apeMa_trabajador_txt.getText();
+            String direccionTr = trabajadorVista.direccion_trabajador_txt.getText();
+            int telefonoTr = Integer.parseInt(trabajadorVista.telefono_trabajador_txt.getText());
+            String correoTr = trabajadorVista.correo_txt.getText();
+            String fechaContratoTr = trabajadorVista.fecha_cont_trabajador_txt.getText();
+            tr.setIdTrabajador(id);
+            tr.setRutTrabajador(rutTr);
+            tr.setNombreTrabajador(nombreTr);
+            tr.setApePaternoTr(apellidoPaterno);
+            tr.setApeMaternoTr(apellidoMaterno);
+            tr.setDireccionTr(direccionTr);
+            tr.setTelefonoTrabajador(telefonoTr);
+            tr.setCorreoTrabajador(correoTr);
+            tr.setFechaContratoTr(fechaContratoTr);
+            int r = dao.actualizar(tr);
+            if (r == 1) {
+                JOptionPane.showMessageDialog(trabajadorVista, "El Trabajador se ha actualizado");
+            } else {
+                JOptionPane.showMessageDialog(trabajadorVista, "Error al actualizar");
+            }
+        }
+        limpiarTabla();
     }
 
+    /**
+     * eliminar: metodo publico que eliminar a los usuarios de la tabla mediante
+     * el id que se encuentra en la fila correspondiente a este
+     */
     private void eliminar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int fila = trabajadorVista.tabla.getSelectedRow();
+        try {
+            if (fila == -1) {
+                JOptionPane.showMessageDialog(trabajadorVista, "Debe seleccionar una fila");
+            } else {
+                JOptionPane.showMessageDialog(trabajadorVista, "Trabajador Eliminado");
+                int id = Integer.parseInt((String) trabajadorVista.tabla.getValueAt(fila, 0).toString());
+                dao.eliminar(id);
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        limpiarTabla();
     }
 
+    /**
+     * centrarCeldas: metodo que recibe la tabla y las centra de manera ordenada
+     *
+     * @param tabla de tipo JTable
+     */
     private void centrarCeldas(JTable tabla) {
         DefaultTableCellRenderer tcr = new DefaultTableCellRenderer();
         tcr.setHorizontalAlignment(SwingConstants.CENTER);

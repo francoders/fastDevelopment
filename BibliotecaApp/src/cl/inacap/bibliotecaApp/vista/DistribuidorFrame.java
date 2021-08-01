@@ -1,12 +1,22 @@
 package cl.inacap.bibliotecaApp.vista;
 import cl.inacap.bilbiotecaApp.controlador.ControladorDistribuidor;
-import javax.swing.JOptionPane;
+import java.awt.Image;
+import java.awt.Toolkit;
 
 public class DistribuidorFrame extends javax.swing.JFrame{
     public DistribuidorFrame() {
         initComponents();
         this.setLocationRelativeTo(null);
+        setIconImage(getIconImage());
     }
+
+    // ICONO JFRAME PRINCIPAL
+    @Override
+    public Image getIconImage() {
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/icono_img.png"));
+        return retValue;
+    }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -98,7 +108,7 @@ public class DistribuidorFrame extends javax.swing.JFrame{
         jScrollPane4.setViewportView(jTable4);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Distribuidor");
+        setTitle("Biblioteca Fast Development - Distribuidor");
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -142,7 +152,8 @@ public class DistribuidorFrame extends javax.swing.JFrame{
         jLabel11.setText("Distribuidor");
         jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 50, -1, -1));
 
-        agregar_distribuidor_btn.setBackground(java.awt.SystemColor.controlHighlight);
+        agregar_distribuidor_btn.setBackground(java.awt.SystemColor.controlLtHighlight);
+        agregar_distribuidor_btn.setForeground(new java.awt.Color(0, 0, 0));
         agregar_distribuidor_btn.setText("Agregar");
         agregar_distribuidor_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -151,7 +162,8 @@ public class DistribuidorFrame extends javax.swing.JFrame{
         });
         jPanel4.add(agregar_distribuidor_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 510, 140, 50));
 
-        limpiar_distribuidor_btn.setBackground(java.awt.SystemColor.controlHighlight);
+        limpiar_distribuidor_btn.setBackground(java.awt.SystemColor.controlLtHighlight);
+        limpiar_distribuidor_btn.setForeground(new java.awt.Color(0, 0, 0));
         limpiar_distribuidor_btn.setText("Limpiar textos");
         limpiar_distribuidor_btn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -202,11 +214,13 @@ public class DistribuidorFrame extends javax.swing.JFrame{
 
         jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 610));
 
-        btnDelete.setBackground(java.awt.SystemColor.controlHighlight);
+        btnDelete.setBackground(java.awt.SystemColor.controlLtHighlight);
+        btnDelete.setForeground(new java.awt.Color(0, 0, 0));
         btnDelete.setText("Eliminar");
         jPanel3.add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 200, 350, 40));
 
-        btnActualizar.setBackground(java.awt.SystemColor.controlHighlight);
+        btnActualizar.setBackground(java.awt.SystemColor.controlLtHighlight);
+        btnActualizar.setForeground(new java.awt.Color(0, 0, 0));
         btnActualizar.setText("Actualizar");
         btnActualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -215,7 +229,8 @@ public class DistribuidorFrame extends javax.swing.JFrame{
         });
         jPanel3.add(btnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 150, 110, 40));
 
-        btnEditar.setBackground(java.awt.SystemColor.controlHighlight);
+        btnEditar.setBackground(java.awt.SystemColor.controlLtHighlight);
+        btnEditar.setForeground(new java.awt.Color(0, 0, 0));
         btnEditar.setText("Editar");
         btnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -224,7 +239,8 @@ public class DistribuidorFrame extends javax.swing.JFrame{
         });
         jPanel3.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 150, 110, 40));
 
-        btnListar.setBackground(java.awt.SystemColor.controlHighlight);
+        btnListar.setBackground(java.awt.SystemColor.controlLtHighlight);
+        btnListar.setForeground(new java.awt.Color(0, 0, 0));
         btnListar.setText("Listar");
         btnListar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -238,13 +254,13 @@ public class DistribuidorFrame extends javax.swing.JFrame{
                 return false;
             }
         };
-        tabla.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        tabla.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         tabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "ID", "RUT", "NOMBRE", "TELEFONO", "AÑO DE VENTA", "DIRECCION"
+                "ID", "RUT", "NOMBRE", "TELEFONO", "AÑO VENTA", "DIRECCION"
             }
         ));
         tabla.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -252,6 +268,14 @@ public class DistribuidorFrame extends javax.swing.JFrame{
         tabla.setRowMargin(4);
         tabla.getTableHeader().setReorderingAllowed(false);
         jScrollPane5.setViewportView(tabla);
+        if (tabla.getColumnModel().getColumnCount() > 0) {
+            tabla.getColumnModel().getColumn(0).setMaxWidth(50);
+            tabla.getColumnModel().getColumn(1).setMaxWidth(220);
+            tabla.getColumnModel().getColumn(2).setMaxWidth(250);
+            tabla.getColumnModel().getColumn(3).setMaxWidth(80);
+            tabla.getColumnModel().getColumn(4).setMaxWidth(70);
+            tabla.getColumnModel().getColumn(5).setMaxWidth(200);
+        }
 
         jPanel3.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 260, 610, 280));
 
