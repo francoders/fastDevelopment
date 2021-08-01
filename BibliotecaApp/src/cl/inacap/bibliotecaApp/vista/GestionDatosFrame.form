@@ -152,7 +152,7 @@
         <Container class="javax.swing.JPanel" name="panelLibro">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="e3" green="e3" id="Control Highlight" palette="2" red="e3" type="palette"/>
+              <Color blue="ff" green="ff" id="Control Lt Highlight" palette="2" red="ff" type="palette"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
@@ -224,7 +224,7 @@
         <Container class="javax.swing.JPanel" name="panelIdioma">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="e3" green="e3" id="Control Highlight" palette="2" red="e3" type="palette"/>
+              <Color blue="ff" green="ff" id="Control Lt Highlight" palette="2" red="ff" type="palette"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
@@ -296,7 +296,7 @@
         <Container class="javax.swing.JPanel" name="panelDistribuidor">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="e3" green="e3" id="Control Highlight" palette="2" red="e3" type="palette"/>
+              <Color blue="ff" green="ff" id="Control Lt Highlight" palette="2" red="ff" type="palette"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
@@ -368,7 +368,7 @@
         <Container class="javax.swing.JPanel" name="panelAutor">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="e3" green="e3" id="Control Highlight" palette="2" red="e3" type="palette"/>
+              <Color blue="ff" green="ff" id="Control Lt Highlight" palette="2" red="ff" type="palette"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
@@ -440,7 +440,7 @@
         <Container class="javax.swing.JPanel" name="panelCategoria">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="e3" green="e3" id="Control Highlight" palette="2" red="e3" type="palette"/>
+              <Color blue="ff" green="ff" id="Control Lt Highlight" palette="2" red="ff" type="palette"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
@@ -509,7 +509,7 @@
         <Container class="javax.swing.JPanel" name="panelTrabajador">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="e3" green="e3" id="Control Highlight" palette="2" red="e3" type="palette"/>
+              <Color blue="ff" green="ff" id="Control Lt Highlight" palette="2" red="ff" type="palette"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
@@ -578,7 +578,7 @@
         <Container class="javax.swing.JPanel" name="panelCliente">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="e3" green="e3" id="Control Highlight" palette="2" red="e3" type="palette"/>
+              <Color blue="ff" green="ff" id="Control Lt Highlight" palette="2" red="ff" type="palette"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
@@ -645,7 +645,7 @@
         <Container class="javax.swing.JPanel" name="panelEditorial">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="e3" green="e3" id="Control Highlight" palette="2" red="e3" type="palette"/>
+              <Color blue="ff" green="ff" id="Control Lt Highlight" palette="2" red="ff" type="palette"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">

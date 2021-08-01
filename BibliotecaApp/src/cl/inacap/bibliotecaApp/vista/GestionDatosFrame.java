@@ -138,7 +138,7 @@ public class GestionDatosFrame extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, 190));
 
-        panelLibro.setBackground(java.awt.SystemColor.controlHighlight);
+        panelLibro.setBackground(java.awt.SystemColor.controlLtHighlight);
         panelLibro.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         panelLibro.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -178,7 +178,7 @@ public class GestionDatosFrame extends javax.swing.JFrame {
 
         jPanel1.add(panelLibro, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 290, 220, 90));
 
-        panelIdioma.setBackground(java.awt.SystemColor.controlHighlight);
+        panelIdioma.setBackground(java.awt.SystemColor.controlLtHighlight);
         panelIdioma.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         panelIdioma.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -218,7 +218,7 @@ public class GestionDatosFrame extends javax.swing.JFrame {
 
         jPanel1.add(panelIdioma, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 440, 190, 90));
 
-        panelDistribuidor.setBackground(java.awt.SystemColor.controlHighlight);
+        panelDistribuidor.setBackground(java.awt.SystemColor.controlLtHighlight);
         panelDistribuidor.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         panelDistribuidor.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -258,7 +258,7 @@ public class GestionDatosFrame extends javax.swing.JFrame {
 
         jPanel1.add(panelDistribuidor, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 480, 340, 90));
 
-        panelAutor.setBackground(java.awt.SystemColor.controlHighlight);
+        panelAutor.setBackground(java.awt.SystemColor.controlLtHighlight);
         panelAutor.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         panelAutor.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -298,7 +298,7 @@ public class GestionDatosFrame extends javax.swing.JFrame {
 
         jPanel1.add(panelAutor, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 440, 190, 90));
 
-        panelCategoria.setBackground(java.awt.SystemColor.controlHighlight);
+        panelCategoria.setBackground(java.awt.SystemColor.controlLtHighlight);
         panelCategoria.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         panelCategoria.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -337,7 +337,7 @@ public class GestionDatosFrame extends javax.swing.JFrame {
 
         jPanel1.add(panelCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, 220, 90));
 
-        panelTrabajador.setBackground(java.awt.SystemColor.controlHighlight);
+        panelTrabajador.setBackground(java.awt.SystemColor.controlLtHighlight);
         panelTrabajador.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         panelTrabajador.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -376,7 +376,7 @@ public class GestionDatosFrame extends javax.swing.JFrame {
 
         jPanel1.add(panelTrabajador, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 360, 340, -1));
 
-        panelCliente.setBackground(java.awt.SystemColor.controlHighlight);
+        panelCliente.setBackground(java.awt.SystemColor.controlLtHighlight);
         panelCliente.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         panelCliente.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -413,7 +413,7 @@ public class GestionDatosFrame extends javax.swing.JFrame {
 
         jPanel1.add(panelCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 250, 340, -1));
 
-        panelEditorial.setBackground(java.awt.SystemColor.controlHighlight);
+        panelEditorial.setBackground(java.awt.SystemColor.controlLtHighlight);
         panelEditorial.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         panelEditorial.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

@@ -62,6 +62,9 @@ public class TrabajadorFrame extends javax.swing.JFrame {
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         fecha_cont_trabajador_txt = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabla = new javax.swing.JTable();
         eliminar_tr_btn = new javax.swing.JButton();
@@ -69,6 +72,7 @@ public class TrabajadorFrame extends javax.swing.JFrame {
         editar_tr_btn = new javax.swing.JButton();
         actualizar_tr_btn = new javax.swing.JButton();
         jLabel24 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Biblioteca Fast Development - Trabajador");
@@ -94,6 +98,7 @@ public class TrabajadorFrame extends javax.swing.JFrame {
 
         agregar_trabajador_btn.setBackground(new java.awt.Color(255, 255, 255));
         agregar_trabajador_btn.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
+        agregar_trabajador_btn.setForeground(new java.awt.Color(0, 0, 0));
         agregar_trabajador_btn.setLabel("Agregar Trabajador");
         agregar_trabajador_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -116,6 +121,7 @@ public class TrabajadorFrame extends javax.swing.JFrame {
 
         limpiar_trabajador_btn.setBackground(new java.awt.Color(255, 255, 255));
         limpiar_trabajador_btn.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
+        limpiar_trabajador_btn.setForeground(new java.awt.Color(0, 0, 0));
         limpiar_trabajador_btn.setText("Limpiar texto");
         limpiar_trabajador_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -203,6 +209,15 @@ public class TrabajadorFrame extends javax.swing.JFrame {
         fecha_cont_trabajador_txt.setForeground(new java.awt.Color(0, 0, 0));
         jPanel3.add(fecha_cont_trabajador_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 470, 220, 35));
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/mas_img.png"))); // NOI18N
+        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 410, 40, -1));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/mas_img.png"))); // NOI18N
+        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 210, 40, -1));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/mas_img.png"))); // NOI18N
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 350, 40, -1));
+
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 640));
 
         tabla.setModel(new javax.swing.table.DefaultTableModel(
@@ -222,6 +237,7 @@ public class TrabajadorFrame extends javax.swing.JFrame {
 
         eliminar_tr_btn.setBackground(new java.awt.Color(255, 255, 255));
         eliminar_tr_btn.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
+        eliminar_tr_btn.setForeground(new java.awt.Color(0, 0, 0));
         eliminar_tr_btn.setText("Eliminar");
         eliminar_tr_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -232,6 +248,7 @@ public class TrabajadorFrame extends javax.swing.JFrame {
 
         listar_tr_btn.setBackground(new java.awt.Color(255, 255, 255));
         listar_tr_btn.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
+        listar_tr_btn.setForeground(new java.awt.Color(0, 0, 0));
         listar_tr_btn.setText("Listar");
         listar_tr_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -242,6 +259,7 @@ public class TrabajadorFrame extends javax.swing.JFrame {
 
         editar_tr_btn.setBackground(new java.awt.Color(255, 255, 255));
         editar_tr_btn.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
+        editar_tr_btn.setForeground(new java.awt.Color(0, 0, 0));
         editar_tr_btn.setText("Editar");
         editar_tr_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -252,6 +270,7 @@ public class TrabajadorFrame extends javax.swing.JFrame {
 
         actualizar_tr_btn.setBackground(new java.awt.Color(255, 255, 255));
         actualizar_tr_btn.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
+        actualizar_tr_btn.setForeground(new java.awt.Color(0, 0, 0));
         actualizar_tr_btn.setText("Actualizar");
         actualizar_tr_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -265,6 +284,11 @@ public class TrabajadorFrame extends javax.swing.JFrame {
         jLabel24.setForeground(new java.awt.Color(11, 0, 32));
         jLabel24.setText("Tabla de Trabajadores");
         jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 80, 310, -1));
+
+        jButton1.setBackground(java.awt.SystemColor.controlLtHighlight);
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
+        jButton1.setText("Cambiar Contraseña");
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 180, -1, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -357,17 +381,21 @@ public class TrabajadorFrame extends javax.swing.JFrame {
     public javax.swing.JTextField fecha_cont_trabajador_txt;
     public javax.swing.JLabel flecha1;
     public javax.swing.JTextField id_trabajador_txt;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;

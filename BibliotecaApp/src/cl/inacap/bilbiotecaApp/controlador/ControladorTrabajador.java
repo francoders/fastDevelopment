@@ -135,38 +135,49 @@ public class ControladorTrabajador implements ActionListener{
     }
 
     private void agregar() {
-        
+
         try {
 
-            int id = Integer.parseInt(trabajadorVista.id_trabajador_txt.getText());
-            String rutTr = trabajadorVista.rut_trabajador_txt.getText().trim();
-            String nombreTr = trabajadorVista.nom_trabajador_txt.getText().trim();
-            String apellidoPaterno = trabajadorVista.apePa_trabajador_txt.getText().trim();
-            String apellidoMaterno = trabajadorVista.apeMa_trabajador_txt.getText().trim();
-            String direccionTr = trabajadorVista.direccion_trabajador_txt.getText().trim();
-            int telefonoTr = Integer.parseInt(trabajadorVista.telefono_trabajador_txt.getText().toString().trim());
-            String correoTr = trabajadorVista.correo_txt.getText().trim();
-            String fechaContraroTr = trabajadorVista.fecha_cont_trabajador_txt.getText().trim();
-            
-            tr.setIdTrabajador(id);
-            tr.setRutTrabajador(rutTr);
-            tr.setNombreTrabajador(nombreTr);
-            tr.setApePaternoTr(apellidoPaterno);
-            tr.setApeMaternoTr(apellidoMaterno);
-            tr.setDireccionTr(direccionTr);
-            tr.setTelefonoTrabajador(telefonoTr);
-            tr.setCorreoTrabajador(correoTr);
-            tr.setFechaContratoTr(fechaContraroTr);
-
-            int r = dao.agregar(tr);
-            if (r == 1) {
-                JOptionPane.showMessageDialog(trabajadorVista, "Trabajador agregado");
+            if (trabajadorVista.id_trabajador_txt.getText().equals("")) {
+                javax.swing.JOptionPane.showMessageDialog(trabajadorVista, "Debe rellenar el campo ID");
+            } else if (trabajadorVista.rut_trabajador_txt.getText().equals("")) {
+                javax.swing.JOptionPane.showMessageDialog(trabajadorVista, "Debe rellenar el campo RUT");
+            } else if (trabajadorVista.nom_trabajador_txt.getText().equals("")) {
+                javax.swing.JOptionPane.showMessageDialog(trabajadorVista, "Debe rellenar el campo Nombre");
+            } else if (trabajadorVista.apePa_trabajador_txt.getText().equals("")) {
+                javax.swing.JOptionPane.showMessageDialog(trabajadorVista, "Rellene campo Apellido Paterno");
+            } else if (trabajadorVista.apeMa_trabajador_txt.getText().equals("")) {
+                javax.swing.JOptionPane.showMessageDialog(trabajadorVista, "Rellene campo Apellido Materno");
             } else {
-                JOptionPane.showMessageDialog(trabajadorVista, "Error al agregar");
-            }
-            limpiarTabla();
-            nuevo();
+                int id = Integer.parseInt(trabajadorVista.id_trabajador_txt.getText());
+                String rutTr = trabajadorVista.rut_trabajador_txt.getText().trim();
+                String nombreTr = trabajadorVista.nom_trabajador_txt.getText().trim();
+                String apellidoPaterno = trabajadorVista.apePa_trabajador_txt.getText().trim();
+                String apellidoMaterno = trabajadorVista.apeMa_trabajador_txt.getText().trim();
+                String direccionTr = trabajadorVista.direccion_trabajador_txt.getText().trim();
+                int telefonoTr = Integer.parseInt(trabajadorVista.telefono_trabajador_txt.getText().toString().trim());
+                String correoTr = trabajadorVista.correo_txt.getText().trim();
+                String fechaContraroTr = trabajadorVista.fecha_cont_trabajador_txt.getText().trim();
 
+                tr.setIdTrabajador(id);
+                tr.setRutTrabajador(rutTr);
+                tr.setNombreTrabajador(nombreTr);
+                tr.setApePaternoTr(apellidoPaterno);
+                tr.setApeMaternoTr(apellidoMaterno);
+                tr.setDireccionTr(direccionTr);
+                tr.setTelefonoTrabajador(telefonoTr);
+                tr.setCorreoTrabajador(correoTr);
+                tr.setFechaContratoTr(fechaContraroTr);
+
+                int r = dao.agregar(tr);
+                if (r == 1) {
+                    JOptionPane.showMessageDialog(trabajadorVista, "Trabajador agregado");
+                } else {
+                    JOptionPane.showMessageDialog(trabajadorVista, "Error al agregar");
+                }
+                limpiarTabla();
+                nuevo();
+            }
 
         } catch (Exception ex) {
             System.err.println(ex);
@@ -182,7 +193,15 @@ public class ControladorTrabajador implements ActionListener{
     }
 
     private void nuevo() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        trabajadorVista.id_trabajador_txt.setText("");
+        trabajadorVista.rut_trabajador_txt.setText("");
+        trabajadorVista.nom_trabajador_txt.setText("");
+        trabajadorVista.apePa_trabajador_txt.setText("");
+        trabajadorVista.apeMa_trabajador_txt.setText("");
+        trabajadorVista.direccion_trabajador_txt.setText("");
+        trabajadorVista.telefono_trabajador_txt.setText("");
+        trabajadorVista.correo_txt.setText("");
+        trabajadorVista.fecha_cont_trabajador_txt.setText("");
     }
 
     private void actualizar() {
