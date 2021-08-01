@@ -26,12 +26,12 @@ public class EditorialDAO {
      */
     public int agregar(Editorial edi){
         int r=0;
-        String sql ="insert into editorial(Nombre_editorial, Id_editorial) values(?,?)";
+        String sql ="insert into editorial(Id_editorial, Nombre_editorial) values(?,?)";
         try{
             con = conectar.getConnection();
             ps = con.prepareStatement(sql);
-            ps.setString(1, edi.getNombreEditorial());
-            ps.setInt(2, edi.getIdEditorial());
+            ps.setInt(1, edi.getIdEditorial());
+            ps.setString(2, edi.getNombreEditorial());
             r = ps.executeUpdate();
             if (r == 1) {
                 return 1;
@@ -60,8 +60,8 @@ public class EditorialDAO {
             rs = ps.executeQuery();
             while (rs.next()) {
                 Editorial e = new Editorial();
-                e.setNombreEditorial(rs.getString(1));
-                e.setIdEditorial(rs.getInt(2));
+                e.setIdEditorial(rs.getInt(1));
+                e.setNombreEditorial(rs.getString(2));
                 datos.add(e);
             }
         } catch (Exception e) {
