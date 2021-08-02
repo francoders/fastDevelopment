@@ -73,6 +73,15 @@ public class GestionDatosFrame extends javax.swing.JFrame {
         panelEditorial = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
+        panelEditorial1 = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        panelEditorial2 = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        panelEditorial3 = new javax.swing.JPanel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
 
         jToggleButton1.setText("jToggleButton1");
 
@@ -148,7 +157,7 @@ public class GestionDatosFrame extends javax.swing.JFrame {
                 .addContainerGap(8, Short.MAX_VALUE))
         );
 
-        jPanel1.add(panelLibro, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 290, 220, 90));
+        jPanel1.add(panelLibro, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 260, 220, 90));
 
         panelIdioma.setBackground(java.awt.SystemColor.controlLtHighlight);
         panelIdioma.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -188,7 +197,7 @@ public class GestionDatosFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1.add(panelIdioma, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 440, 190, 90));
+        jPanel1.add(panelIdioma, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, 190, 90));
 
         panelDistribuidor.setBackground(java.awt.SystemColor.controlLtHighlight);
         panelDistribuidor.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -268,7 +277,7 @@ public class GestionDatosFrame extends javax.swing.JFrame {
                 .addContainerGap(7, Short.MAX_VALUE))
         );
 
-        jPanel1.add(panelAutor, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 440, 190, 90));
+        jPanel1.add(panelAutor, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 410, 190, 90));
 
         panelCategoria.setBackground(java.awt.SystemColor.controlLtHighlight);
         panelCategoria.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -307,7 +316,7 @@ public class GestionDatosFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel1.add(panelCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, 220, 90));
+        jPanel1.add(panelCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 260, 220, 90));
 
         panelTrabajador.setBackground(java.awt.SystemColor.controlLtHighlight);
         panelTrabajador.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -423,7 +432,123 @@ public class GestionDatosFrame extends javax.swing.JFrame {
                 .addContainerGap(8, Short.MAX_VALUE))
         );
 
-        jPanel1.add(panelEditorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 440, 190, 90));
+        jPanel1.add(panelEditorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 410, 190, 90));
+
+        panelEditorial1.setBackground(java.awt.SystemColor.controlLtHighlight);
+        panelEditorial1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        panelEditorial1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                panelEditorial1MouseClicked(evt);
+            }
+        });
+
+        jLabel28.setBackground(new java.awt.Color(11, 0, 32));
+        jLabel28.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
+        jLabel28.setForeground(new java.awt.Color(11, 0, 32));
+        jLabel28.setText("Vender");
+
+        javax.swing.GroupLayout panelEditorial1Layout = new javax.swing.GroupLayout(panelEditorial1);
+        panelEditorial1.setLayout(panelEditorial1Layout);
+        panelEditorial1Layout.setHorizontalGroup(
+            panelEditorial1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelEditorial1Layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(jLabel28)
+                .addGap(108, 108, 108)
+                .addComponent(jLabel15)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        panelEditorial1Layout.setVerticalGroup(
+            panelEditorial1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelEditorial1Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jLabel15)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelEditorial1Layout.createSequentialGroup()
+                .addContainerGap(8, Short.MAX_VALUE)
+                .addComponent(jLabel28)
+                .addContainerGap())
+        );
+
+        jPanel1.add(panelEditorial1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 560, 120, 50));
+
+        panelEditorial2.setBackground(java.awt.SystemColor.controlLtHighlight);
+        panelEditorial2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        panelEditorial2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                panelEditorial2MouseClicked(evt);
+            }
+        });
+
+        jLabel29.setBackground(new java.awt.Color(11, 0, 32));
+        jLabel29.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
+        jLabel29.setForeground(new java.awt.Color(11, 0, 32));
+        jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel29.setText("Comprar");
+
+        javax.swing.GroupLayout panelEditorial2Layout = new javax.swing.GroupLayout(panelEditorial2);
+        panelEditorial2.setLayout(panelEditorial2Layout);
+        panelEditorial2Layout.setHorizontalGroup(
+            panelEditorial2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelEditorial2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(173, 173, 173)
+                .addComponent(jLabel16)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        panelEditorial2Layout.setVerticalGroup(
+            panelEditorial2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelEditorial2Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jLabel16)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelEditorial2Layout.createSequentialGroup()
+                .addContainerGap(8, Short.MAX_VALUE)
+                .addComponent(jLabel29)
+                .addContainerGap())
+        );
+
+        jPanel1.add(panelEditorial2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 560, 130, 50));
+
+        panelEditorial3.setBackground(java.awt.SystemColor.controlLtHighlight);
+        panelEditorial3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        panelEditorial3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                panelEditorial3MouseClicked(evt);
+            }
+        });
+
+        jLabel30.setBackground(new java.awt.Color(11, 0, 32));
+        jLabel30.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
+        jLabel30.setForeground(new java.awt.Color(11, 0, 32));
+        jLabel30.setText("Arrendar");
+
+        javax.swing.GroupLayout panelEditorial3Layout = new javax.swing.GroupLayout(panelEditorial3);
+        panelEditorial3.setLayout(panelEditorial3Layout);
+        panelEditorial3Layout.setHorizontalGroup(
+            panelEditorial3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelEditorial3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel30)
+                .addGap(118, 118, 118)
+                .addComponent(jLabel17)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        panelEditorial3Layout.setVerticalGroup(
+            panelEditorial3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelEditorial3Layout.createSequentialGroup()
+                .addGroup(panelEditorial3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelEditorial3Layout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(jLabel17))
+                    .addGroup(panelEditorial3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel30)))
+                .addContainerGap(8, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(panelEditorial3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 560, 120, 50));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, 640));
 
@@ -497,6 +622,18 @@ public class GestionDatosFrame extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_panelEditorialMouseClicked
 
+    private void panelEditorial1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelEditorial1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panelEditorial1MouseClicked
+
+    private void panelEditorial2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelEditorial2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panelEditorial2MouseClicked
+
+    private void panelEditorial3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelEditorial3MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panelEditorial3MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -547,6 +684,9 @@ public class GestionDatosFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel22;
@@ -555,7 +695,10 @@ public class GestionDatosFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -568,6 +711,9 @@ public class GestionDatosFrame extends javax.swing.JFrame {
     private javax.swing.JPanel panelCliente;
     private javax.swing.JPanel panelDistribuidor;
     private javax.swing.JPanel panelEditorial;
+    private javax.swing.JPanel panelEditorial1;
+    private javax.swing.JPanel panelEditorial2;
+    private javax.swing.JPanel panelEditorial3;
     private javax.swing.JPanel panelIdioma;
     private javax.swing.JPanel panelLibro;
     private javax.swing.JPanel panelTrabajador;
