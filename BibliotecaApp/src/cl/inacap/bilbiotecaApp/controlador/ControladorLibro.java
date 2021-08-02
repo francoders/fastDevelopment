@@ -79,7 +79,6 @@ public class ControladorLibro implements ActionListener{
         int autor = Integer.parseInt((String) libroVista.cbxAutor.getSelectedItem());
         int editorial = Integer.parseInt((String) libroVista.cbxEditorial.getSelectedItem());
         int categoria = Integer.parseInt((String) libroVista.cbxCategoria.getSelectedItem());
-        int estado = Integer.parseInt((String) libroVista.cbxEstado.getSelectedItem());
         l.setNSerie(nSerie);
         l.setIsbn(isbn);
         l.setTitulo(titulo);
@@ -90,22 +89,8 @@ public class ControladorLibro implements ActionListener{
         l.setAutores(autor);
         l.setEditorial(editorial);
         l.setCategorias(categoria);
-        l.setEstado(estado);
-        
-        //VALIDACION de ISBN que posea 8 dijitos
-        if (isbn <= 8) {
-            int r = dao.agregar(l);
-            if (r == 1) {
-                JOptionPane.showMessageDialog(libroVista, "Libro Agregado.");
+                    int r = dao.agregar(l);
 
-            } else {
-                JOptionPane.showMessageDialog(libroVista, "Error al Registrar");
-                System.out.println(titulo + " " + isbn + " " + idioma + " " + autor + " " + editorial + " " + categoria + " " + estado);
-            }
-            limpiarTabla();
-        } else {
-            JOptionPane.showMessageDialog(libroVista, "EL ISBN tiene que poseer 8 dijitos");
-        }
 
     }
 
@@ -140,7 +125,7 @@ public class ControladorLibro implements ActionListener{
             int autor = Integer.parseInt((String) libroVista.cbxAutor.getSelectedItem());
             int editorial = Integer.parseInt((String) libroVista.cbxEditorial.getSelectedItem());
             int categoria = Integer.parseInt((String) libroVista.cbxCategoria.getSelectedItem());
-            int estado = Integer.parseInt((String) libroVista.cbxEstado.getSelectedItem());;
+   //         int estado = Integer.parseInt((String) libroVista.cbxEstado.getSelectedItem());;
             l.setNSerie(nSerie);
             l.setIsbn(isbn);
             l.setTitulo(titulo);
@@ -151,7 +136,7 @@ public class ControladorLibro implements ActionListener{
             l.setAutores(autor);
             l.setEditorial(editorial);
             l.setCategorias(categoria);
-            l.setEstado(estado);
+  //          l.setEstado(estado);
             int  r = dao.actualizar(l);
             if (r == 1) {
                 JOptionPane.showMessageDialog(libroVista, "El libro se ha actualizado");
@@ -167,7 +152,7 @@ public class ControladorLibro implements ActionListener{
         modelo = (DefaultTableModel) tabla.getModel();
         tabla.setModel(modelo);
         List<Libro> lista = dao.listar();
-        Object[] objeto = new Object[11];
+        Object[] objeto = new Object[10];
         for (int i = 0; i < lista.size(); i++) {
             objeto[0] = lista.get(i).getNSerie();
             objeto[1] = lista.get(i).getIsbn();
@@ -179,7 +164,6 @@ public class ControladorLibro implements ActionListener{
             objeto[7] = lista.get(i).getAutores();
             objeto[8] = lista.get(i).getCategorias();
             objeto[9] = lista.get(i).getEditorial();
-            objeto[10] = lista.get(i).getEstado();
             modelo.addRow(objeto);
         }
         tabla.setRowHeight(35);

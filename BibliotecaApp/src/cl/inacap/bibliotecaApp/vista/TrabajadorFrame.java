@@ -5,6 +5,8 @@
  */
 package cl.inacap.bibliotecaApp.vista;
 
+import cl.inacap.bilbiotecaApp.controlador.ControladorTelefono;
+import cl.inacap.bilbiotecaApp.controlador.ControladorTrabajador;
 import java.awt.Image;
 import java.awt.Toolkit;
 
@@ -21,6 +23,7 @@ public class TrabajadorFrame extends javax.swing.JFrame {
         initComponents();
         setIconImage(getIconImage());
         this.setLocationRelativeTo(null);
+        
     }
 
     @Override
@@ -63,7 +66,7 @@ public class TrabajadorFrame extends javax.swing.JFrame {
         jLabel23 = new javax.swing.JLabel();
         fecha_cont_trabajador_txt = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        mas_telefonos = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabla = new javax.swing.JTable();
@@ -212,8 +215,13 @@ public class TrabajadorFrame extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/mas_img.png"))); // NOI18N
         jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 410, 40, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/mas_img.png"))); // NOI18N
-        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 210, 40, -1));
+        mas_telefonos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/mas_img.png"))); // NOI18N
+        mas_telefonos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mas_telefonosMouseClicked(evt);
+            }
+        });
+        jPanel3.add(mas_telefonos, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 210, 50, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/mas_img.png"))); // NOI18N
         jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 350, 40, -1));
@@ -334,6 +342,12 @@ public class TrabajadorFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_actualizar_tr_btnActionPerformed
 
+    private void mas_telefonosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mas_telefonosMouseClicked
+        TrabajadorTelefonosFrame tr = new TrabajadorTelefonosFrame();
+        ControladorTelefono con = new ControladorTelefono(tr);
+        tr.setVisible(true);
+    }//GEN-LAST:event_mas_telefonosMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -394,13 +408,13 @@ public class TrabajadorFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JButton limpiar_trabajador_btn;
     public javax.swing.JButton listar_tr_btn;
+    public javax.swing.JLabel mas_telefonos;
     public javax.swing.JTextField nom_trabajador_txt;
     public javax.swing.JTextField rut_trabajador_txt;
     public javax.swing.JTable tabla;

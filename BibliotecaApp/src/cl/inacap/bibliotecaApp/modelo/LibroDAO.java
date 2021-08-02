@@ -22,7 +22,7 @@ public class LibroDAO {
 
     public int agregar(Libro li) {
         int r = 0;
-        String sql = "insert into libro (N_serie, Isbn, Titulo, N_paginas, P_referencia, Anio_publicacion, Id_idioma, Id_autor, Id_categoria, Id_editorial, Id_estado) values(?,?,?,?,?,?,?,?,?,?,?)";
+        String sql = "insert into libro (N_serie, Isbn, Titulo, N_paginas, P_referencia, Anio_publicacion, Id_idioma, Id_autor, Id_categoria, Id_editorial) values(?,?,?,?,?,?,?,?,?,?)";
         try {
             con = conectar.getConnection();
             ps = con.prepareStatement(sql);
@@ -36,7 +36,7 @@ public class LibroDAO {
             ps.setInt(8, li.getAutores());
             ps.setInt(9, li.getCategorias());
             ps.setInt(10, li.getEditorial());
-            ps.setInt(11, li.getEstado());
+ //           ps.setInt(11, li.getEstado());
             r = ps.executeUpdate();
             if (r == 1) {
                 return 1;
@@ -97,7 +97,7 @@ public class LibroDAO {
                 l.setAutores(rs.getInt(8));
                 l.setEditorial(rs.getInt(9));
                 l.setCategorias(rs.getInt(10));
-                l.setEstado(rs.getInt(11));
+         //       l.setEstado(rs.getInt(11));
                 datos.add(l);
             }
         } catch (Exception e) {

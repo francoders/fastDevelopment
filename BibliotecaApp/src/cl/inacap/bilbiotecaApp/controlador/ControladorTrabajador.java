@@ -8,6 +8,7 @@ package cl.inacap.bilbiotecaApp.controlador;
 import cl.inacap.bibliotecaApp.modelo.Trabajador;
 import cl.inacap.bibliotecaApp.modelo.TrabajadorDAO;
 import cl.inacap.bibliotecaApp.vista.TrabajadorFrame;
+import cl.inacap.bibliotecaApp.vista.TrabajadorTelefonosFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
@@ -27,7 +28,7 @@ public class ControladorTrabajador implements ActionListener{
     Trabajador tr = new Trabajador();
     TrabajadorFrame trabajadorVista = new TrabajadorFrame();
     DefaultTableModel modelo = new DefaultTableModel();
-
+   
         /**
      * ControladorTrabajador: metodo publico que recibe la vista de los trabajadores, mediante un escuchador activa los botones 
      * btnListar, btnAgregar, btnNuevo, btnEditar, btnActualizar y btnEliminar
@@ -117,7 +118,7 @@ public class ControladorTrabajador implements ActionListener{
         modelo = (DefaultTableModel) tabla.getModel();
         tabla.setModel(modelo);
         List<Trabajador> lista = dao.listar();
-        Object[] objeto = new Object[9];
+        Object[] objeto = new Object[11];
         for (int i = 0; i < lista.size(); i++) {
             objeto[0] = lista.get(i).getIdTrabajador();
             objeto[1] = lista.get(i).getRutTrabajador();
@@ -128,16 +129,16 @@ public class ControladorTrabajador implements ActionListener{
             objeto[6] = lista.get(i).getTelefonoTrabajador();
             objeto[7] = lista.get(i).getCorreoTrabajador();
             objeto[8] = lista.get(i).getFechaContratoTr();
+            objeto[9] = lista.get(i).getTelefono2();
+            objeto[10] = lista.get(i).getTelefono3();
             modelo.addRow(objeto);
         }
         tabla.setRowHeight(35);
         tabla.setRowMargin(10);
     }
-
+    
     private void agregar() {
-
         try {
-
             if (trabajadorVista.id_trabajador_txt.getText().equals("")) {
                 javax.swing.JOptionPane.showMessageDialog(trabajadorVista, "Debe rellenar el campo ID");
             } else if (trabajadorVista.rut_trabajador_txt.getText().equals("")) {
@@ -276,6 +277,8 @@ public class ControladorTrabajador implements ActionListener{
         }
     }
 
+
+    
 
 
 }

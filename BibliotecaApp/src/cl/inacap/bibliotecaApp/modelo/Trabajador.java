@@ -20,6 +20,8 @@ public class Trabajador {
     private int telefonoTrabajador;
     private String correoTrabajador;
     private String fechaContratoTr;
+    private int telefono2;
+    private int telefono3;
     
     
     public Trabajador() {
@@ -31,6 +33,8 @@ public class Trabajador {
         this.telefonoTrabajador = telefonoTrabajador;
         this.correoTrabajador = correoTrabajador;
         this.fechaContratoTr = fechaContratoTr;   
+        this.telefono2 = telefono2;
+        this.telefono3 = telefono3;
     }
 
     public int getIdTrabajador() {
@@ -103,6 +107,22 @@ public class Trabajador {
 
     public void setFechaContratoTr(String fechaContratoTr) {
         this.fechaContratoTr = fechaContratoTr;
+    }
+
+    public int getTelefono2() {
+        return telefono2;
+    }
+
+    public void setTelefono2(int telefono2) {
+        this.telefono2 = telefono2;
+    }
+
+    public int getTelefono3() {
+        return telefono3;
+    }
+
+    public void setTelefono3(int telefono3) {
+        this.telefono3 = telefono3;
     }
 
     

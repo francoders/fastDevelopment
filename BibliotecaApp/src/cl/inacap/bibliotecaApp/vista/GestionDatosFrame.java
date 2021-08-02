@@ -11,6 +11,7 @@ import cl.inacap.bilbiotecaApp.controlador.ControladorCliente;
 import cl.inacap.bilbiotecaApp.controlador.ControladorDistribuidor;
 import cl.inacap.bilbiotecaApp.controlador.ControladorEditorial;
 import cl.inacap.bilbiotecaApp.controlador.ControladorIdioma;
+import cl.inacap.bilbiotecaApp.controlador.ControladorLibro;
 import cl.inacap.bilbiotecaApp.controlador.ControladorTrabajador;
 import java.awt.Image;
 import java.awt.Toolkit;
@@ -430,10 +431,11 @@ public class GestionDatosFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void panelLibroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelLibroMouseClicked
-       LibroFrame libro = new LibroFrame();
-       libro.setVisible(true);
-       this.dispose();
-       
+        LibroFrame libro = new LibroFrame();
+        ControladorLibro con = new ControladorLibro(libro);
+        libro.setVisible(true);
+        this.dispose();
+
     }//GEN-LAST:event_panelLibroMouseClicked
 
     private void panelIdiomaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelIdiomaMouseClicked
@@ -441,16 +443,16 @@ public class GestionDatosFrame extends javax.swing.JFrame {
         ControladorIdioma con = new ControladorIdioma(i);
         i.setVisible(true);
         this.dispose();
-        
+
     }//GEN-LAST:event_panelIdiomaMouseClicked
 
     private void panelDistribuidorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelDistribuidorMouseClicked
-       
-       DistribuidorFrame v =new DistribuidorFrame();
-       ControladorDistribuidor con = new ControladorDistribuidor(v);
-       v.setVisible(true);
-       v.setLocationRelativeTo(null);
-       this.dispose();
+
+        DistribuidorFrame v = new DistribuidorFrame();
+        ControladorDistribuidor con = new ControladorDistribuidor(v);
+        v.setVisible(true);
+        v.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_panelDistribuidorMouseClicked
 
     private void panelAutorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelAutorMouseClicked
