@@ -22,7 +22,7 @@ public class LibroDAO {
 
     public int agregar(Libro li) {
         int r = 0;
-        String sql = "insert into libro (N_serie, Isbn, Titulo, N_paginas, P_referencia, Anio_publicacion, Id_idioma, Id_autor, Id_categoria, Id_editorial) values(?,?,?,?,?,?,?,?,?,?)";
+        String sql = "insert into librito (N_serie, Isbn, Titulo, N_paginas, P_referencia, Anio_publicacion, Idioma, Autor, Categoria, Editorial) values(?,?,?,?,?,?,?,?,?,?)";
         try {
             con = conectar.getConnection();
             ps = con.prepareStatement(sql);
@@ -32,10 +32,10 @@ public class LibroDAO {
             ps.setInt(4, li.getNumeroDePag());
             ps.setInt(5, li.getPrecioReferencia());
             ps.setInt(6, li.getAñoDePublicacion());
-            ps.setInt(7, li.getIdiomas());
-            ps.setInt(8, li.getAutores());
-            ps.setInt(9, li.getCategorias());
-            ps.setInt(10, li.getEditorial());
+            ps.setString(7, li.getIdiomas());
+            ps.setString(8, li.getAutores());
+            ps.setString(9, li.getCategorias());
+            ps.setString(10, li.getEditorial());
  //           ps.setInt(11, li.getEstado());
             r = ps.executeUpdate();
             if (r == 1) {
@@ -53,7 +53,7 @@ public class LibroDAO {
         int r = 0;
         con = conectar.getConnection();
         PreparedStatement ps = null;
-        String sql = "update libro set N_serie=?, Isbn=?, Titulo=?, N_paginas=?, P_referencia=?, Anio_publicacion=?, Id_idioma=?, Id_autor=?, Id_categoria=?, Id_editorial=?, Id_estado=? where N_serie=?";
+        String sql = "update librito set N_serie=?, Isbn=?, Titulo=?, N_paginas=?, P_referencia=?, Anio_publicacion=?, Id_idioma=?, Id_autor=?, Id_categoria=?, Id_editorial=?, Id_estado=? where N_serie=?";
         try {
             ps = con.prepareStatement(sql);
             ps.setInt(1, li.getNSerie());
@@ -62,11 +62,11 @@ public class LibroDAO {
             ps.setInt(4, li.getNumeroDePag());
             ps.setInt(5, li.getPrecioReferencia());
             ps.setInt(6, li.getAñoDePublicacion());
-            ps.setInt(7, li.getIdiomas());
-            ps.setInt(8, li.getAutores());
-            ps.setInt(9, li.getEditorial());
-            ps.setInt(10, li.getCategorias());
-            ps.setInt(11, li.getEstado());
+            ps.setString(7, li.getIdiomas());
+            ps.setString(8, li.getAutores());
+            ps.setString(9, li.getEditorial());
+            ps.setString(10, li.getCategorias());
+       //     ps.setInt(11, li.getEstado());
             r = ps.executeUpdate();
             if (r == 1) {
                 return 1;
@@ -83,7 +83,7 @@ public class LibroDAO {
         List<Libro> datos = new ArrayList<>();
         try {
             con = conectar.getConnection();
-            ps = con.prepareStatement("select * from libro");
+            ps = con.prepareStatement("select * from librito");
             rs = ps.executeQuery();
             while (rs.next()) {
                 Libro l = new Libro();
@@ -93,10 +93,10 @@ public class LibroDAO {
                 l.setNumeroDePag(rs.getInt(4));
                 l.setPrecioReferencia(rs.getInt(5));
                 l.setAñoDePublicacion(rs.getInt(6));
-                l.setIdiomas(rs.getInt(7));
-                l.setAutores(rs.getInt(8));
-                l.setEditorial(rs.getInt(9));
-                l.setCategorias(rs.getInt(10));
+                l.setIdiomas(rs.getString(7));
+                l.setAutores(rs.getString(8));
+                l.setEditorial(rs.getString(9));
+                l.setCategorias(rs.getString(10));
          //       l.setEstado(rs.getInt(11));
                 datos.add(l);
             }

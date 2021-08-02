@@ -50,9 +50,9 @@ public class ClienteFrame extends javax.swing.JFrame {
         id_cliente_txt = new javax.swing.JTextField();
         rut_cliente_txt = new javax.swing.JTextField();
         nom_cliente_txt = new javax.swing.JTextField();
-        ape_pa_cliente_txt = new javax.swing.JTextField();
+        ape_pa_txt = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
-        ape_ma_cliente_txt = new javax.swing.JTextField();
+        ape_ma_txt = new javax.swing.JTextField();
         jLabel19 = new javax.swing.JLabel();
         direccion_cliente_txt = new javax.swing.JTextField();
         fecha_nacimiento_txt = new javax.swing.JTextField();
@@ -148,9 +148,9 @@ public class ClienteFrame extends javax.swing.JFrame {
         nom_cliente_txt.setForeground(new java.awt.Color(0, 0, 0));
         jPanel3.add(nom_cliente_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 174, 35));
 
-        ape_pa_cliente_txt.setBackground(java.awt.SystemColor.controlLtHighlight);
-        ape_pa_cliente_txt.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel3.add(ape_pa_cliente_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, 170, 35));
+        ape_pa_txt.setBackground(java.awt.SystemColor.controlLtHighlight);
+        ape_pa_txt.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel3.add(ape_pa_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, 170, 35));
 
         jLabel18.setBackground(new java.awt.Color(102, 102, 102));
         jLabel18.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
@@ -158,9 +158,9 @@ public class ClienteFrame extends javax.swing.JFrame {
         jLabel18.setText("Apellido Paterno");
         jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 171, -1));
 
-        ape_ma_cliente_txt.setBackground(java.awt.SystemColor.controlLtHighlight);
-        ape_ma_cliente_txt.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel3.add(ape_ma_cliente_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 290, 170, 35));
+        ape_ma_txt.setBackground(java.awt.SystemColor.controlLtHighlight);
+        ape_ma_txt.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel3.add(ape_ma_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 290, 170, 35));
 
         jLabel19.setBackground(new java.awt.Color(102, 102, 102));
         jLabel19.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
@@ -224,7 +224,7 @@ public class ClienteFrame extends javax.swing.JFrame {
 
             },
             new String [] {
-                "ID", "Rut", "Nombre", "Apellido Paterno", "Apellido Materno", "Telefono", "Direccion", "Correo", "Fecha Contrato"
+                "ID", "Fecha Nacimiento", "Apellido Paterno", "Apellido Materno", "Direccion", "Correo", "Telefono", "Rut", "Nombre"
             }
         ));
         jScrollPane1.setViewportView(tabla);
@@ -365,8 +365,8 @@ public class ClienteFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton actualizar_cl_btn;
     public javax.swing.JButton agregar_cliente_btn;
-    public javax.swing.JTextField ape_ma_cliente_txt;
-    public javax.swing.JTextField ape_pa_cliente_txt;
+    public javax.swing.JTextField ape_ma_txt;
+    public javax.swing.JTextField ape_pa_txt;
     public javax.swing.JTextField correo_txt1;
     public javax.swing.JTextField direccion_cliente_txt;
     public javax.swing.JButton editar_cl_btn;

@@ -32,7 +32,7 @@ public class ClienteDAO {
      */
     public int agregar(Cliente cliente) {
         int r = 0;
-        String sql = "insert into cliente(Id_cliente, Fecha_nacimiento_c, Ape_paterno_clinete, Ape_materno_cliente, Direccion_cliente, Correo_cliente, Telefono_cliente, Rut_cliente) values(?,?,?,?,?,?,?,?)";
+        String sql = "insert into cliente(Id_cliente, Fecha_nacimiento_c, Ape_paterno_cliente, Ape_materno_cliente, Direccion_cliente, Correo_cliente, Telefono_cliente, Rut_cliente, Nombre_cliente) values(?,?,?,?,?,?,?,?,?)";
         try {
             con = conectar.getConnection();
             ps = con.prepareStatement(sql);
@@ -43,7 +43,8 @@ public class ClienteDAO {
             ps.setString(5, cliente.getDireccionCliente());
             ps.setString(6, cliente.getCorreoCliente());
             ps.setInt(7, cliente.getTelefonoCliente());
-            ps.setInt(8, cliente.getRutCliente());
+            ps.setString(8, cliente.getRutCliente());
+            ps.setString(9, cliente.getNombreCliente());
             r = ps.executeUpdate();
             if (r == 1) {
                 return 1;
@@ -81,7 +82,8 @@ public class ClienteDAO {
                 cl.setDireccionCliente(rs.getString(5));
                 cl.setCorreoCliente(rs.getString(6));
                 cl.setTelefonoCliente(rs.getInt(7));
-                cl.setRutCliente(rs.getInt(8));
+                cl.setRutCliente(rs.getString(8));
+                cl.setNombreCliente(rs.getString(9));
                 datos.add(cl);
             }
         } catch (Exception e) {
@@ -90,14 +92,53 @@ public class ClienteDAO {
         return datos;
     }
 
-    
-    
-    
-    
-    
-    
-    
-    
+    /**
+     * eliminar: metodo public int que recibe el id de la categoria seleccionada
+     * y lo elimina mediante una sentencia SQL DELETE
+     *
+     * @param idCategoria de tipo int
+     * @return la respuesta del PrepareStatement
+     */
+    public int eliminar(int idCliente) {
+        int r = 0;
+        String sql = "delete from cliente where Id_cliente=" + idCliente;
+        try {
+            con = conectar.getConnection();
+            ps = con.prepareStatement(sql);
+            r = ps.executeUpdate();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return r;
+    }
+
+    public int actualizar(Cliente cl) {
+        int r = 0;
+        con = conectar.getConnection();
+        PreparedStatement ps = null;
+        String sql = "update cliente set Fecha_nacimiento_c=?, Ape_paterno_cliente=?, Ape_materno_cliente=?, Direccion_cliente=?, Correo_cliente=?, Telefono_cliente=?, Rut_cliente=?, Nombre_cliente=? where Id_cliente=?";
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setString(1, cl.getFechaNacimientoCliente());
+            ps.setString(2, cl.getApePaternoCliente());
+            ps.setString(3, cl.getApeMaternoCliente());
+            ps.setString(4, cl.getDireccionCliente());
+            ps.setString(5, cl.getCorreoCliente());
+            ps.setInt(6, cl.getTelefonoCliente());
+            ps.setString(7, cl.getRutCliente());
+            ps.setString(8, cl.getNombreCliente());
+            ps.setInt(9, cl.getIdCliente());
+            r = ps.executeUpdate();
+            if (r == 1) {
+                return 1;
+            } else {
+                return 0;
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return r;
+    }
     
     
 }

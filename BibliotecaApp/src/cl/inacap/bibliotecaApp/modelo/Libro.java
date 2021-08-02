@@ -9,13 +9,13 @@ public class Libro {
     private int nSerie;
     private String titulo;
     private int isbn;
-    private int autores;
-    private int idiomas;
-    private int categorias;
-    private int editorial;
+    private String autores;
+    private String idiomas;
+    private String categorias;
+    private String editorial;
     private int numeroDePag;
     private int añoDePublicacion;
-    private int estado;
+    private String estado;
 
     private int precioReferencia;
     private int stock;
@@ -59,35 +59,35 @@ public class Libro {
         this.isbn = isbn;
     }
 
-    public int getAutores() {
+    public String getAutores() {
         return autores;
     }
 
-    public void setAutores(int autores) {
+    public void setAutores(String autores) {
         this.autores = autores;
     }
 
-    public int getIdiomas() {
+    public String getIdiomas() {
         return idiomas;
     }
 
-    public void setIdiomas(int idiomas) {
+    public void setIdiomas(String idiomas) {
         this.idiomas = idiomas;
     }
 
-    public int getCategorias() {
+    public String getCategorias() {
         return categorias;
     }
 
-    public void setCategorias(int categorias) {
+    public void setCategorias(String categorias) {
         this.categorias = categorias;
     }
 
-    public int getEditorial() {
+    public String getEditorial() {
         return editorial;
     }
 
-    public void setEditorial(int editorial) {
+    public void setEditorial(String editorial) {
         this.editorial = editorial;
     }
 
@@ -107,11 +107,11 @@ public class Libro {
         this.añoDePublicacion = añoDePublicacion;
     }
 
-    public int getEstado() {
+    public String getEstado() {
         return estado;
     }
 
-    public void setEstado(int estado) {
+    public void setEstado(String estado) {
         this.estado = estado;
     }
 

@@ -75,10 +75,10 @@ public class ControladorLibro implements ActionListener{
         int nPaginas = Integer.parseInt(libroVista.txtNPaginas.getText());
         int pReferencia = Integer.parseInt(libroVista.txtPReferencia.getText());
         int anioPublic = Integer.parseInt(libroVista.txtAnio.getText());
-        int idioma = Integer.parseInt((String) libroVista.cbxIdioma.getSelectedItem());
-        int autor = Integer.parseInt((String) libroVista.cbxAutor.getSelectedItem());
-        int editorial = Integer.parseInt((String) libroVista.cbxEditorial.getSelectedItem());
-        int categoria = Integer.parseInt((String) libroVista.cbxCategoria.getSelectedItem());
+        String idioma = (String) libroVista.cbxIdioma.getSelectedItem();
+        String autor = (String) libroVista.cbxAutor.getSelectedItem();
+        String editorial = (String) libroVista.cbxEditorial.getSelectedItem();
+        String categoria = (String) libroVista.cbxCategoria.getSelectedItem();
         l.setNSerie(nSerie);
         l.setIsbn(isbn);
         l.setTitulo(titulo);
@@ -89,7 +89,7 @@ public class ControladorLibro implements ActionListener{
         l.setAutores(autor);
         l.setEditorial(editorial);
         l.setCategorias(categoria);
-                    int r = dao.agregar(l);
+        int r = dao.agregar(l);
 
 
     }
@@ -121,10 +121,10 @@ public class ControladorLibro implements ActionListener{
             int nPaginas = Integer.parseInt(libroVista.txtNPaginas.getText());
             int precio = Integer.parseInt(libroVista.txtPReferencia.getText());
             int anio = Integer.parseInt(libroVista.txtAnio.getText());
-            int idioma = Integer.parseInt((String) libroVista.cbxIdioma.getSelectedItem());
-            int autor = Integer.parseInt((String) libroVista.cbxAutor.getSelectedItem());
-            int editorial = Integer.parseInt((String) libroVista.cbxEditorial.getSelectedItem());
-            int categoria = Integer.parseInt((String) libroVista.cbxCategoria.getSelectedItem());
+            String idioma = (String) libroVista.cbxIdioma.getSelectedItem();
+            String autor = (String) libroVista.cbxAutor.getSelectedItem();
+            String editorial =(String) libroVista.cbxEditorial.getSelectedItem();
+            String categoria = (String) libroVista.cbxCategoria.getSelectedItem();
    //         int estado = Integer.parseInt((String) libroVista.cbxEstado.getSelectedItem());;
             l.setNSerie(nSerie);
             l.setIsbn(isbn);

@@ -12,13 +12,14 @@ package cl.inacap.bibliotecaApp.modelo;
 public class Cliente {
 
     private int idCliente;
-    private int rutCliente;
+    private String rutCliente;
     private String apePaternoCliente;
     private String apeMaternoCliente;
     private String direccionCliente;
     private int telefonoCliente;
     private String correoCliente;
     private String fechaNacimientoCliente;
+    private String nombreCliente;
 
     /**
      * Constructor completo de la clase.
@@ -31,6 +32,7 @@ public class Cliente {
         this.telefonoCliente = telefonoCliente;
         this.correoCliente = correoCliente;
         this.fechaNacimientoCliente = fechaNacimientoCliente;
+        this.nombreCliente = nombreCliente;
     }
 
     public int getIdCliente() {
@@ -41,11 +43,11 @@ public class Cliente {
         this.idCliente = idCliente;
     }
 
-    public int getRutCliente() {
+    public String getRutCliente() {
         return rutCliente;
     }
 
-    public void setRutCliente(int rutCliente) {
+    public void setRutCliente(String rutCliente) {
         this.rutCliente = rutCliente;
     }
 
@@ -95,6 +97,14 @@ public class Cliente {
 
     public void setFechaNacimientoCliente(String fechaNacimientoCliente) {
         this.fechaNacimientoCliente = fechaNacimientoCliente;
+    }
+
+    public String getNombreCliente() {
+        return nombreCliente;
+    }
+
+    public void setNombreCliente(String nombreCliente) {
+        this.nombreCliente = nombreCliente;
     }
     
     
