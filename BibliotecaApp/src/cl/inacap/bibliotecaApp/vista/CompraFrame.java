@@ -40,8 +40,8 @@ public class CompraFrame extends javax.swing.JFrame {
         jLabel21 = new javax.swing.JLabel();
         flecha = new javax.swing.JLabel();
         txtFolio = new javax.swing.JTextField();
-        txtNSerie = new javax.swing.JTextField();
-        txtRutDistr = new javax.swing.JTextField();
+        txtRutDistrCBX = new javax.swing.JComboBox<>();
+        txtNSerieCBX = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel18 = new javax.swing.JLabel();
@@ -68,13 +68,14 @@ public class CompraFrame extends javax.swing.JFrame {
 
         btnAgregar.setBackground(new java.awt.Color(255, 255, 255));
         btnAgregar.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
+        btnAgregar.setForeground(new java.awt.Color(0, 0, 0));
         btnAgregar.setText("Realizar Compra");
         btnAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAgregarActionPerformed(evt);
             }
         });
-        jPanel2.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 448, 160, 50));
+        jPanel2.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 450, 210, 50));
 
         jLabel11.setBackground(new java.awt.Color(11, 0, 32));
         jLabel11.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 24)); // NOI18N
@@ -98,7 +99,7 @@ public class CompraFrame extends javax.swing.JFrame {
         jLabel21.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(255, 255, 255));
         jLabel21.setText("Rut del distribuidor");
-        jPanel2.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, -1, -1));
+        jPanel2.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, -1, -1));
 
         flecha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/flecha_img.png"))); // NOI18N
         flecha.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -110,15 +111,17 @@ public class CompraFrame extends javax.swing.JFrame {
 
         txtFolio.setBackground(java.awt.SystemColor.controlLtHighlight);
         txtFolio.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel2.add(txtFolio, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 320, 30));
+        jPanel2.add(txtFolio, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 290, 40));
 
-        txtNSerie.setBackground(java.awt.SystemColor.controlLtHighlight);
-        txtNSerie.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel2.add(txtNSerie, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 272, 320, 30));
+        txtRutDistrCBX.setBackground(java.awt.SystemColor.controlLtHighlight);
+        txtRutDistrCBX.setForeground(new java.awt.Color(0, 0, 0));
+        txtRutDistrCBX.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel2.add(txtRutDistrCBX, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, 290, 40));
 
-        txtRutDistr.setBackground(java.awt.SystemColor.controlLtHighlight);
-        txtRutDistr.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel2.add(txtRutDistr, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, 320, 30));
+        txtNSerieCBX.setBackground(java.awt.SystemColor.controlLtHighlight);
+        txtNSerieCBX.setForeground(new java.awt.Color(0, 0, 0));
+        txtNSerieCBX.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel2.add(txtNSerieCBX, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 290, 40));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 470, 590));
 
@@ -200,16 +203,14 @@ public class CompraFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBackMouseClicked
-        IngresoVentas ventas = new IngresoVentas();
-        ventas.setVisible(true);
+        GestionDatosFrame gtFrame = new GestionDatosFrame();
+        gtFrame.setVisible(true);
         this.dispose();
-        // TODO add your handling code here:
     }//GEN-LAST:event_btnBackMouseClicked
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
-        if (txtFolio.getText().isEmpty() || txtNSerie.getText().isEmpty() || txtRutDistr.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Los campos no deben estar vacios");
-        };
+
+        
     }//GEN-LAST:event_btnAgregarActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -229,8 +230,8 @@ public class CompraFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void flechaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_flechaMouseClicked
-        IngresoVentas ventas = new IngresoVentas();
-        ventas.setVisible(true);
+        GestionDatosFrame gtFrame = new GestionDatosFrame();
+        gtFrame.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_flechaMouseClicked
 
@@ -271,7 +272,7 @@ public class CompraFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAgregar;
+    public javax.swing.JButton btnAgregar;
     private javax.swing.JLabel btnBack;
     public javax.swing.JLabel flecha;
     private javax.swing.JButton jButton2;
@@ -288,7 +289,7 @@ public class CompraFrame extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     public javax.swing.JTextField txtFolio;
-    public javax.swing.JTextField txtNSerie;
-    public javax.swing.JTextField txtRutDistr;
+    public javax.swing.JComboBox<String> txtNSerieCBX;
+    public javax.swing.JComboBox<String> txtRutDistrCBX;
     // End of variables declaration//GEN-END:variables
 }

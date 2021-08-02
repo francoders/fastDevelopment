@@ -53,20 +53,19 @@ public class LibroDAO {
         int r = 0;
         con = conectar.getConnection();
         PreparedStatement ps = null;
-        String sql = "update librito set N_serie=?, Isbn=?, Titulo=?, N_paginas=?, P_referencia=?, Anio_publicacion=?, Id_idioma=?, Id_autor=?, Id_categoria=?, Id_editorial=?, Id_estado=? where N_serie=?";
+        String sql = "update librito set Isbn, Titulo, N_paginas, P_referencia, Anio_publicacion, Idioma, Autor, Categoria, Editorial where N_serie=?";
         try {
             ps = con.prepareStatement(sql);
-            ps.setInt(1, li.getNSerie());
-            ps.setInt(2, li.getIsbn());
-            ps.setString(3, li.getTitulo());
-            ps.setInt(4, li.getNumeroDePag());
-            ps.setInt(5, li.getPrecioReferencia());
-            ps.setInt(6, li.getAñoDePublicacion());
-            ps.setString(7, li.getIdiomas());
-            ps.setString(8, li.getAutores());
+            ps.setInt(1, li.getIsbn());
+            ps.setString(2, li.getTitulo());
+            ps.setInt(3, li.getNumeroDePag());
+            ps.setInt(4, li.getPrecioReferencia());
+            ps.setInt(5, li.getAñoDePublicacion());
+            ps.setString(6, li.getIdiomas());
+            ps.setString(7, li.getAutores());
+            ps.setString(8, li.getCategorias());
             ps.setString(9, li.getEditorial());
-            ps.setString(10, li.getCategorias());
-       //     ps.setInt(11, li.getEstado());
+            ps.setInt(10, li.getNSerie());
             r = ps.executeUpdate();
             if (r == 1) {
                 return 1;
@@ -97,7 +96,6 @@ public class LibroDAO {
                 l.setAutores(rs.getString(8));
                 l.setEditorial(rs.getString(9));
                 l.setCategorias(rs.getString(10));
-         //       l.setEstado(rs.getInt(11));
                 datos.add(l);
             }
         } catch (Exception e) {
@@ -107,7 +105,7 @@ public class LibroDAO {
 
     public int eliminar(int nSerie) {
         int r = 0;
-        String sql = "delete from libro where N_serie=" + nSerie;
+        String sql = "delete from librito where N_serie=" + nSerie;
         try {
             con = conectar.getConnection();
             ps = con.prepareStatement(sql);
@@ -175,7 +173,7 @@ public class LibroDAO {
             rs = ps.executeQuery();
             cbxEstado.removeAllItems();
             while (rs.next()) {
-                cbxEstado.addItem(rs.getInt("id_estado") + "");
+                cbxEstado.addItem(rs.getString("Nombre_estado") + "");
             }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error estado");

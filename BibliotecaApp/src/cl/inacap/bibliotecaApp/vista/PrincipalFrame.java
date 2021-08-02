@@ -37,12 +37,6 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
         jToggleButton1 = new javax.swing.JToggleButton();
         jPanel1 = new javax.swing.JPanel();
-        panelIngresoDatos = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        gestionDatoPanel = new javax.swing.JLabel();
-        ventaLibroPanel = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         txt_password = new javax.swing.JTextField();
@@ -66,84 +60,6 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        panelIngresoDatos.setBackground(java.awt.SystemColor.controlHighlight);
-        panelIngresoDatos.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        panelIngresoDatos.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                panelIngresoDatosMouseClicked(evt);
-            }
-        });
-
-        gestionDatoPanel.setBackground(new java.awt.Color(11, 0, 32));
-        gestionDatoPanel.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 10)); // NOI18N
-        gestionDatoPanel.setForeground(new java.awt.Color(11, 0, 32));
-        gestionDatoPanel.setText("Gestión de Datos");
-
-        javax.swing.GroupLayout panelIngresoDatosLayout = new javax.swing.GroupLayout(panelIngresoDatos);
-        panelIngresoDatos.setLayout(panelIngresoDatosLayout);
-        panelIngresoDatosLayout.setHorizontalGroup(
-            panelIngresoDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelIngresoDatosLayout.createSequentialGroup()
-                .addGroup(panelIngresoDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelIngresoDatosLayout.createSequentialGroup()
-                        .addGap(288, 288, 288)
-                        .addComponent(jLabel5))
-                    .addGroup(panelIngresoDatosLayout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(gestionDatoPanel)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        panelIngresoDatosLayout.setVerticalGroup(
-            panelIngresoDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelIngresoDatosLayout.createSequentialGroup()
-                .addGap(11, 11, 11)
-                .addGroup(panelIngresoDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(gestionDatoPanel)
-                    .addComponent(jLabel5))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jPanel1.add(panelIngresoDatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 460, 130, 40));
-
-        ventaLibroPanel.setBackground(java.awt.SystemColor.controlHighlight);
-        ventaLibroPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        ventaLibroPanel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ventaLibroPanelMouseClicked(evt);
-            }
-        });
-
-        jLabel20.setBackground(new java.awt.Color(11, 0, 32));
-        jLabel20.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 10)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(11, 0, 32));
-        jLabel20.setText("Ingreso de Ventas");
-
-        javax.swing.GroupLayout ventaLibroPanelLayout = new javax.swing.GroupLayout(ventaLibroPanel);
-        ventaLibroPanel.setLayout(ventaLibroPanelLayout);
-        ventaLibroPanelLayout.setHorizontalGroup(
-            ventaLibroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ventaLibroPanelLayout.createSequentialGroup()
-                .addGroup(ventaLibroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(ventaLibroPanelLayout.createSequentialGroup()
-                        .addGap(288, 288, 288)
-                        .addComponent(jLabel7))
-                    .addGroup(ventaLibroPanelLayout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(jLabel20)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        ventaLibroPanelLayout.setVerticalGroup(
-            ventaLibroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ventaLibroPanelLayout.createSequentialGroup()
-                .addGap(11, 11, 11)
-                .addGroup(ventaLibroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel20)
-                    .addComponent(jLabel7))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jPanel1.add(ventaLibroPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 510, 130, 40));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo_libro.png"))); // NOI18N
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 90, 450, 570));
@@ -179,6 +95,11 @@ public class PrincipalFrame extends javax.swing.JFrame {
         entrar_btn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         entrar_btn.setForeground(new java.awt.Color(0, 0, 0));
         entrar_btn.setText("Iniciar Sesion");
+        entrar_btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                entrar_btnMouseClicked(evt);
+            }
+        });
         jPanel1.add(entrar_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 350, 110, 40));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo_inicio.png"))); // NOI18N
@@ -216,25 +137,17 @@ public class PrincipalFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void panelIngresoDatosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelIngresoDatosMouseClicked
-       GestionDatosFrame datos = new GestionDatosFrame();
-       datos.setVisible(true);
-       this.dispose();
-       
-    }//GEN-LAST:event_panelIngresoDatosMouseClicked
-
-    private void ventaLibroPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ventaLibroPanelMouseClicked
-       IngresoVentas ventas = new IngresoVentas(); 
-       ventas.setVisible(true);
-       this.dispose();
-       
-    }//GEN-LAST:event_ventaLibroPanelMouseClicked
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         RegistroTrabajadorFrame registroTrabajador = new RegistroTrabajadorFrame();
         registroTrabajador.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void entrar_btnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_entrar_btnMouseClicked
+        GestionDatosFrame datos = new GestionDatosFrame();
+        datos.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_entrar_btnMouseClicked
 
     /**
      * @param args the command line arguments
@@ -275,26 +188,20 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton entrar_btn;
-    private javax.swing.JLabel gestionDatoPanel;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JToggleButton jToggleButton1;
-    private javax.swing.JPanel panelIngresoDatos;
     public javax.swing.JTextField txt_password;
     public javax.swing.JTextField txt_rut;
-    private javax.swing.JPanel ventaLibroPanel;
     // End of variables declaration//GEN-END:variables
 }

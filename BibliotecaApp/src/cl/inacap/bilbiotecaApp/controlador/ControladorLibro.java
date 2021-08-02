@@ -44,13 +44,10 @@ public class ControladorLibro implements ActionListener{
         if (e.getSource() == libroVista.btnListar) {
             limpiarTabla();
             listar(libroVista.tabla);
+            nuevo();
         }
         if (e.getSource() == libroVista.btnAgregar) {
             agregar();
-            listar(libroVista.tabla);
-        }
-        if (e.getSource() == libroVista.btnEliminar) {
-            eliminar();
             listar(libroVista.tabla);
         }
         if (e.getSource() == libroVista.btnEditar) {
@@ -58,40 +55,100 @@ public class ControladorLibro implements ActionListener{
             if (fila == -1) {
                 JOptionPane.showMessageDialog(libroVista, "Debe seleccionar una fila");
             } else {
-                JOptionPane.showMessageDialog(libroVista, "Modifica el dato y haz click en Actualizar");
+                int nSerie = Integer.parseInt((String) libroVista.tabla.getValueAt(fila, 0).toString());
+                int isbn = Integer.parseInt((String) libroVista.tabla.getValueAt(fila, 1).toString());
+                String titulo = libroVista.tabla.getValueAt(fila, 2).toString();
+                
+                int nPaginas = Integer.parseInt((String) libroVista.tabla.getValueAt(fila, 3).toString());
+                int pReferencia = Integer.parseInt((String) libroVista.tabla.getValueAt(fila, 4).toString());
+                int anioPublic = Integer.parseInt((String) libroVista.tabla.getValueAt(fila, 5).toString());
+                String idioma =  libroVista.tabla.getValueAt(fila, 6).toString();
+                String autor =  libroVista.tabla.getValueAt(fila, 7).toString();
+                String editorial =  libroVista.tabla.getValueAt(fila, 8).toString();
+                String categoria = libroVista.tabla.getValueAt(fila, 9).toString();
+                String estado = libroVista.tabla.getValueAt(fila, 10).toString();
+
+                libroVista.txtNSerie.setText("" + nSerie);
+                libroVista.txtIsbn.setText("" +isbn);
+                libroVista.txtTitulo.setText(titulo);
+
             }
         }
         if (e.getSource() == libroVista.btnActualizar) {
             actualizar();
             listar(libroVista.tabla);
+            nuevo();
 
+        } 
+        if (e.getSource() == libroVista.btnEliminar) {
+            eliminar();
+            listar(libroVista.tabla);
+            nuevo();
         }
+        if (e.getSource() == libroVista.btnNuevo) {
+            nuevo();
+        }
+
     }
 
     public void agregar() {
-        int nSerie = Integer.parseInt(libroVista.txtNSerie.getText());
-        int isbn = Integer.parseInt(libroVista.txtIsbn.getText());
-        String titulo = libroVista.txtTitulo.getText();
-        int nPaginas = Integer.parseInt(libroVista.txtNPaginas.getText());
-        int pReferencia = Integer.parseInt(libroVista.txtPReferencia.getText());
-        int anioPublic = Integer.parseInt(libroVista.txtAnio.getText());
-        String idioma = (String) libroVista.cbxIdioma.getSelectedItem();
-        String autor = (String) libroVista.cbxAutor.getSelectedItem();
-        String editorial = (String) libroVista.cbxEditorial.getSelectedItem();
-        String categoria = (String) libroVista.cbxCategoria.getSelectedItem();
-        l.setNSerie(nSerie);
-        l.setIsbn(isbn);
-        l.setTitulo(titulo);
-        l.setNumeroDePag(nPaginas);
-        l.setPrecioReferencia(pReferencia);
-        l.setAñoDePublicacion(anioPublic);
-        l.setIdiomas(idioma);
-        l.setAutores(autor);
-        l.setEditorial(editorial);
-        l.setCategorias(categoria);
-        int r = dao.agregar(l);
+        try {
+            int nSerie = Integer.parseInt(libroVista.txtNSerie.getText());
+            int isbn = Integer.parseInt(libroVista.txtIsbn.getText());
+            String titulo = libroVista.txtTitulo.getText();
+            int nPaginas = Integer.parseInt(libroVista.txtNPaginas.getText());
+            int pReferencia = Integer.parseInt(libroVista.txtPReferencia.getText());
+            int anioPublic = Integer.parseInt(libroVista.txtAnio.getText());
+            String idioma = (String) libroVista.cbxIdioma.getSelectedItem();
+            String autor = (String) libroVista.cbxAutor.getSelectedItem();
+            String editorial = (String) libroVista.cbxEditorial.getSelectedItem();
+            String categoria = (String) libroVista.cbxCategoria.getSelectedItem();
+            String estado = (String) libroVista.cbxEstado.getSelectedItem();
+            l.setNSerie(nSerie);
+            l.setIsbn(isbn);
+            l.setTitulo(titulo);
+            l.setNumeroDePag(nPaginas);
+            l.setPrecioReferencia(pReferencia);
+            l.setAñoDePublicacion(anioPublic);
+            l.setIdiomas(idioma);
+            l.setAutores(autor);
+            l.setEditorial(editorial);
+            l.setCategorias(categoria);
+            l.setEstado(estado);
 
-
+            //VALIDACION CAMPO VACIO
+            if (libroVista.txtNSerie.getText().equals("")) {
+                JOptionPane.showMessageDialog(libroVista, "Ingrese un Numero de Serie");
+                limpiarTabla();
+            } else if (libroVista.txtIsbn.getText().equals("")) {
+                JOptionPane.showMessageDialog(libroVista, "Ingrese un ISBN");
+                limpiarTabla();
+            }else if (libroVista.txtTitulo.getText().equals("")) {
+                JOptionPane.showMessageDialog(libroVista, "Ingrese un Titulo");
+                limpiarTabla();
+            } else if (libroVista.txtNPaginas.getText().equals("")) {
+                JOptionPane.showMessageDialog(libroVista, "Ingrese una cantidad de Paginas");
+                limpiarTabla();
+            } else if (nPaginas <= 0) {
+                JOptionPane.showMessageDialog(libroVista, "El libro debe poseer Paginas");
+                limpiarTabla();
+            } else if (pReferencia <= 0) {
+                JOptionPane.showMessageDialog(libroVista, "ingrese un valor valido para libro");
+                limpiarTabla();
+            } else if (libroVista.txtPReferencia.getText().equals("")) {
+                JOptionPane.showMessageDialog(libroVista, "Ingrese un Precio de Referencia");
+                limpiarTabla();
+            } else if (libroVista.txtAnio.getText().equals("")) {
+                JOptionPane.showMessageDialog(libroVista, "Ingrese un año de publicacion");
+                limpiarTabla();
+            } else {
+                int r = dao.agregar(l);
+                limpiarTabla();
+            }
+        } catch (Exception ex) {
+            System.err.println(ex);
+        }
+        limpiarTabla();
     }
 
     public void eliminar() {
@@ -125,7 +182,7 @@ public class ControladorLibro implements ActionListener{
             String autor = (String) libroVista.cbxAutor.getSelectedItem();
             String editorial =(String) libroVista.cbxEditorial.getSelectedItem();
             String categoria = (String) libroVista.cbxCategoria.getSelectedItem();
-   //         int estado = Integer.parseInt((String) libroVista.cbxEstado.getSelectedItem());;
+            String estado = (String) libroVista.cbxEstado.getSelectedItem();
             l.setNSerie(nSerie);
             l.setIsbn(isbn);
             l.setTitulo(titulo);
@@ -136,7 +193,7 @@ public class ControladorLibro implements ActionListener{
             l.setAutores(autor);
             l.setEditorial(editorial);
             l.setCategorias(categoria);
-  //          l.setEstado(estado);
+           l.setEstado(estado);
             int  r = dao.actualizar(l);
             if (r == 1) {
                 JOptionPane.showMessageDialog(libroVista, "El libro se ha actualizado");
@@ -181,6 +238,10 @@ public class ControladorLibro implements ActionListener{
         for (int i = 0; i < libroVista.tabla.getColumnCount(); i++) {
             tabla.getColumnModel().getColumn(i).setCellRenderer(tcr);
         }
+    }
+
+    private void nuevo() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
    

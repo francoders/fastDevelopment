@@ -135,9 +135,7 @@ public class ControladorDistribuidor implements ActionListener{
      * los añade usando el metodo agregar de la clase DistribuidorDAO
      */
     public void agregar() {
- 
         try {
-
             if (distribuidorVista.id_distribuidor_txt.getText().equals("")) {
                 javax.swing.JOptionPane.showMessageDialog(distribuidorVista, "Debe rellenar el campo ID");
                 limpiarTabla();
